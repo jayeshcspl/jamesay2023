@@ -1,0 +1,5 @@
+#theme get --password=879ff4471263ed20720170052ce79bbf --store=jamesay.myshopify.com --themeid=80403234869
+development:
+  password: 879ff4471263ed20720170052ce79bbf
+  theme_id: "80403234869"
+  store: jamesay.myshopify.com
