@@ -51,10 +51,10 @@
 	}
 	a.total_price_wrapper {
 		position: absolute;
-		top: 0; 
+		top: 15px; 
 		/* left: 0;  */
-		bottom: 0; 
-		right: 0;	
+		bottom: 15px; 
+		right: 25px;	
 		background: #000;
 		color: #fff !important;
 		width: 180px;
@@ -95,15 +95,48 @@
 	.search-bar form {
     padding: 20px 20px 50px;
 	}
-	.section-fourth .overlay_txt{
-		padding-left: 40px;
-      	margin-left: -2px;
+	.premium_packing .no-gutters .dpr {
+		padding-right: 10px !important;
 	}
-	.section-fourth .story {
+	.premium_packing .no-gutters .dpl {
+		padding-left: 10px !important;
+	}
+}
+@media only screen and (max-width: 1400px) {
+	.fs120{
+		font-size: 96px;
+	}
+	.fs80{
+		font-size: 70px;
+	}
+	#signUpModal,
+	.footer { 
+		padding: 40px;
+	}
+	.header-top {
+		padding: 25px 40px;
+	}
+	.pl-50 {
 		padding-left: 40px;
+	}
+	.pr-50 {
+		padding-right: 40px;
 	}	
+	nav.main_menu {
+		padding: 70px 40px 30px;
+	}
+	#pic{
+		height: calc(100vh - 100px);
+	}
+	.homemade_glasses .title {
+		font-size: 60px;
+	}
 }
 @media only screen and (max-width: 991px) {
+	h3 br,
+	h1 br {
+    display: none;
+	}
 	.not_want_end img {
 		margin-top: 0rem;
 	}
@@ -240,12 +273,6 @@
 		right: 17px;
 		display: none;
 	}
-	.social-media{
-		text-align: left;
-	}
-	.social-media ul{
-		text-align: center;
-	}
 	.community_txt h2 {
 		font-size: 20px;
 		line-height: 28px;
@@ -308,12 +335,12 @@
 	.search-bar input {
 		text-align: center;
 	}
-	.shop1_imgr {
-		min-height: inherit;
-		margin: 90px 0 50px;
+	#signUpModal .btn-signup,
+	.shop1_imgr .btn-signup {
+		max-width: 100%;
 	}
-	#signUpModal .btn-signup {
-		width: 170px;
+	.shop1_imgr {
+		margin: 30px 0 30px;
 	}
 	.contentWidth {
 		width: calc(100% - 5px);
@@ -328,46 +355,24 @@
 	[class*="js-conveyor-"] ul li {
 		width: calc(100%/2 - 10px);
 	}
-	.product-container .product-order {
-		order: 2;
-	}
-	.product-container .shop1_imgr {
-		order: 1;
-	}
-	.shop1_imgr h1, .col.money {
-		text-align: center;
-	}
 	.swaporder1 {
 		order: 2;
 	}
 	.swaporder2 {
 		order: 1;
 	}
-	.swatch_area {
-		border-top: 0px solid transparent !important;
-		border-bottom: 0px solid transparent !important;
-		text-align: center;
-	}
 	.swatch_area .swatch {
 		display: inline-block;
-	}
-	.shop1_imgr p {
-		display: none;
 	}
 	.template-index h2.overlay_txt {
 		font-size: 22px;
 	}
-	.shop1_imgr h1 {
-		font-size: 24px;
-	}
-	.main_menu{
-		height: 100%;
-	}
 	.fix-bottom{
-		position: fixed;
-		width:100%;
+		position: absolute;
 		bottom:0;
-		z-index: 1030;
+	}
+	.contact-track-ord {
+		font-size: 15px;
 	}
 	nav li{
 		height:auto;
@@ -395,7 +400,116 @@
 	.stories_selected_section.city_life_wrapper {
 		min-height: inherit;
 		display: inherit;
-	}	
+	}
+	#signUpModal,
+	.header-top { 
+		padding: 20px;
+	}
+	.footer { 
+		padding: 30px 20px 20px;
+		font-size: 15px;
+	}
+	.pl-50 {
+		padding-left: 20px;
+	}
+	.pr-50 {
+		padding-right: 20px;
+	}
+	nav.main_menu {
+		padding: 80px 20px 30px;
+	}
+	.fs120 {
+		font-size: 38px;
+	}
+	nav.main_menu .fs120 {
+		font-size: 54px;
+		line-height: 1.1;
+	}
+	.fs80 {
+		font-size: 38px;
+	}
+	.fs60 {
+		font-size: 38px;
+		line-height: 1.05;
+	}
+	#about .fs60,
+	#about-2021 .fs60 {
+		font-size: 30px;
+		line-height: 1.1;
+	}
+	.homemade_glasses .title {
+    font-size: 30px;
+	}
+	.slide_title_bottom  {
+		bottom: 50px;
+	}
+	.slide_description_bottom_right {
+		position: absolute;
+		right: inherit;
+		bottom: 35px;
+	}
+	.one_column_story .slide_description_bottom_right {
+    bottom: 35px;
+	}
+	.template-index .slide_title_bottom,
+	.template-blog .slide_title_bottom,
+	.template-article .slide_title_bottom {
+		bottom: 150px;
+	}
+	.template-index .slide_description_bottom_right,
+	.template-blog .slide_description_bottom_right,
+	.template-article .slide_description_bottom_right {
+		position: absolute;
+		right: inherit;
+		bottom: 135px;
+	}
+	.template-index .one_column_story .slide_description_bottom_right {
+    bottom: 135px;
+	}
+	.template-article .one_column_story_in_product_page .slide_title_bottom {
+		bottom: 50px;
+	}
+	.template-article .one_column_story_in_product_page .slide_description_bottom_right {
+		bottom: 35px;
+	}
+	nav.main_menu .menu_contact {
+		display: block;
+	}
+	nav.main_menu .contact-track-ord .menu_contact {
+		display: none;
+	}
+	nav.main_menu .social-media_header {
+		justify-content: space-between;
+		display: flex;
+	}
+	.toggle-menu i {
+		width: 30px;
+	}
+	.product_overview { 
+		margin-top: 100px;
+	}
+	.toggle-menu i:nth-child(1) {
+    top: 2px;
+	}
+	.toggle-menu i {
+		height: 2px;
+	}
+	.l-right span.show_open {
+		font-size: 14px;
+		line-height: 1.16;
+	}
+	section.followthesun_gif h1 {
+    color: #F1F512;
+	}
+	.two_column_one_product .section1_imgl,
+	.two_column_two_product .section1_imgl {
+		background-size: contain;
+		background-position: 100% 35%;
+	}
+	.template-index .slide_description_bottom_right.price_txt {
+		right: 30px;
+		bottom: 150px;
+	}
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
 	.mt-30,.mt-40,.mt-50 {
@@ -432,12 +546,13 @@
 		display: none;
 	}
 }
+
 @media only screen and (min-width: 700px) {
 	#store-locator div#storemapper #storemapper-left {
 		position: fixed !important;
 		z-index: 12;
-		top: 120px;
-		left: 35px;
+		top: 80px;
+		left: 40px;
 		float: none;
 		width: 320px;
 		height: auto;
@@ -454,6 +569,11 @@
 	#store-locator #storemapper #storemapper-list li, 
 	#store-locator #storemapper #storemapper-form {
 		padding: 20px;
+	}
+}
+@media only screen and (min-width: 1400px) { 
+	#store-locator div#storemapper #storemapper-left {
+		left: 50px;
 	}
 }
 @media only screen and (max-width: 669px) {
@@ -476,11 +596,11 @@
 	#store-locator .open-menu .nav-hmenu i:nth-child(2) {
     background: transparent;
 	}
-	#store-locator .l-right svg #search_icon {
-		stroke: #000000;
-	}
-	#store-locator .l-right svg #cart {
-		stroke: #000000;
+	#store-locator .l-right span #search_icon {
+		color: #000000;
+	}	
+	#store-locator .l-right span.show_open #CartCount {
+		color: #000000;
 	}
 	#store-locator #CartCount {
 		color: #000000 !important;
@@ -491,9 +611,37 @@
 	#store-locator #storemapper #storemapper-list {
     max-height: 300px;
 	}
+	.product-filter a {
+		padding-right: 11px;
+	}
+	.mobile_min-vh-40 {
+		padding-top: 30vh;
+    padding-bottom: 30vh;
+	}
 }
 @media only screen and (max-width: 320px) {
 	[class*="js-conveyor-"] ul li {
 		padding: 0 7px;
 	}
+}
+@media only screen and (max-width: 991px)  and (max-height: 414px) and (orientation: landscape) {
+	.fix-bottom {
+		position: absolute;
+    bottom: 7px;
+    right: 0;
+    text-align: right;
+	}
+	nav.main_menu {
+		overflow-y: auto;
+	}
+}
+@media only screen 
+and (device-width : 375px) 
+and (device-height : 667px) 
+and (-webkit-device-pixel-ratio : 2) 
+and (orientation : portrait) { 
+	nav.main_menu .fs120 {
+		font-size: 40px;
+	}
+	
 }

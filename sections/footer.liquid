@@ -3,83 +3,106 @@
     <div class="js-conveyor-example">
       <ul>
         <li>Free shipping worldwide</li>
-        <li class="d-none d-lg-inline-block">1 order = 1 kg of plastic waste removed</li>
+        <li class="d-none d-lg-inline-block"><span class="hide">1 order = 1 kg of plastic waste removed</span></li>
         <li>1 order = 1 planted tree</li>
       </ul>
     </div>
   </div>
-  <div id="signUpModal" class="col-xs-12 col-lg-5 mx-auto mt-10 mb-4">
-    <h5 class="modal-title text-center my-4 pb-0 pt-3">Join our newsletter</h5>
-    <p class="text-center my-4 mx-auto newsletter_text">We wish to give you inspiration on how to live a more fulfilling life. So, sign up to our newsletter to follow what goes on in our universe.</p>
-
-    <form class="omnisend-subscribe-form myclass" name="omnisend-subscribe-form">
-      <!-- {% form 'customer' %} -->
-          {{ form.errors | default_errors }}
-          {% if form.posted_successfully? %}
-            <p class="form--success">{{ 'general.newsletter_form.confirmation' | t }}</p>
-          {% else %}
-            <div class="row form-row input-group1 password__input-group no-gutters">
-              <div class="col-6 text-center divider">
-                <input type="hidden" name="contact[tags]" value="newsletter">
-                <input type="text"
-                name="contact[name]"
-                id="Name"
-                class="input-group__field newsletter__input omnisend-subscribe-input-first-name form-control"
-                value="{% if customer %}{{ customer.name }}{% endif %}"
-                placeholder="Your name" required>
-                <div class="invalid-feedback"></div> 
-              </div>
-              <div class="col-6 text-center">
-                <input type="email"
-                name="contact[email]"
-                id="Email"
-                class="input-group__field newsletter__input omnisend-subscribe-input-email form-control"
-                value="{% if customer %}{{ customer.email }}{% endif %}"
-                placeholder="Your email"
-                autocorrect="off"
-                autocapitalize="off" required>
-                <div class="invalid-feedback"></div>
-              </div>        
-            </div>
-            <div class="row">
-              <span class="col-12 input-group__btn text-center">
-                <button type="submit" class="btn-signup newsletter__submit" name="commit" id="Subscribe">
-                  <span class="btn-signup newsletter__submit-text--large">Sign up</span>
-                </button>
-              </span>
-            </div>
-          {% endif %}
-        <!-- {% endform %} -->
-      </form>
-  </div>  
-  <div class="container-fluid footer mt-10 text-center text-lg-left">
-    <div class="row px-5">
-      <div class="col-lg-4 links">
-        <ul class="mb-0">
-          <li><a href="/pages/about">About</a></li>
-          <li><a href="/blogs/stories">Stories</a></li>
-          <li><a href="/pages/contact">Contact us</a></li>
-          <li><a href="/pages/shipping-return">Shipping & returns</a></li>
-        </ul>
+  <div id="signUpModal" class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6">
+        <h5 class="modal-title mb-4 pb-0">Join our newsletter</h5>
+        <p class="my-4 newsletter_text">We wish to give you inspiration on how to live a more fulfilling life. So, sign up to our newsletter to follow what goes on in our universe.</p>
       </div>
-      <div class="col-lg-4 trustpilot_area mt-5 mt-lg-0 text-center">
+      <div class="col-lg-4 offset-lg-1">
+        <form class="omnisend-subscribe-form myclass" name="omnisend-subscribe-form">
+        <!-- {% form 'customer' %} -->
+            {{ form.errors | default_errors }}
+            {% if form.posted_successfully? %}
+              <p class="form--success">{{ 'general.newsletter_form.confirmation' | t }}</p>
+            {% else %}
+              <div class="row form-row input-group1 password__input-group no-gutters">
+                <div class="col-12 mb-4">
+                  <input type="hidden" name="contact[tags]" value="newsletter">
+                  <input type="text"
+                  name="contact[name]"
+                  id="Name"
+                  class="input-group__field newsletter__input omnisend-subscribe-input-first-name form-control"
+                  value="{% if customer %}{{ customer.name }}{% endif %}"
+                  placeholder="Your name" required>
+                  <div class="invalid-feedback"></div> 
+                </div>
+                <div class="col-12 mb-4">
+                  <input type="email"
+                  name="contact[email]"
+                  id="Email"
+                  class="input-group__field newsletter__input omnisend-subscribe-input-email form-control"
+                  value="{% if customer %}{{ customer.email }}{% endif %}"
+                  placeholder="Your email"
+                  autocorrect="off"
+                  autocapitalize="off" required>
+                  <div class="invalid-feedback"></div>
+                </div>
+                <div class="col-12 mb-4 mt-4 newslater_privacy_text">On sign up you accept our <a href="/pages/cookies-privacy-policy" style="text-decoration: underline !important;">privacy policy</a></div>
+              </div>
+              <div class="row">
+                <span class="col-12 input-group__btn">
+                  <button type="submit" class="btn-signup newsletter__submit" name="commit" id="Subscribe">
+                    <span class="newsletter__submit-text--large">Sign up</span>
+                  </button>
+                </span>
+              </div>
+            {% endif %}
+          <!-- {% endform %} -->
+        </form>
+      </div>
+    </div>
+  </div>  
+  <div class="container-fluid footer mt-5">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="row no-gutters">
+        <div class="col-6  col-lg-5 links">
+          <p class="footer_title">ABOUT US</p>
+          <ul class="mb-0">
+            <li><a href="/pages/about">About</a></li>
+            <li><a href="/blogs/stories">Stories</a></li>
+            <li><a href="/pages/contact">Contact us</a></li>
+            <li><a href="/pages/shipping-return">Shipping & returns</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6  col-lg-7  social-media">
+          <p class="footer_title">CONNECT</p>
+          <ul class="mb-0">
+            <li><a href="https://www.instagram.com/jamesay_com" target="_blank">Instagram</a></li>
+            <li><a href="https://www.facebook.com/jamesayofficial/" target="_blank">Facebook</a></li>
+            <li><a href="https://www.youtube.com/channel/UCGzO6K0bWZlRD1trP3N64Tg" target="_blank">Youtube</a></li>
+          </ul>
+        </div>
+        </div>
+      </div>
+      <div class="col-lg-5 offset-lg-1 trustpilot_area pt-4 pt-lg-0 mt-5 mt-lg-0">
+        <p class="footer_title">REVIEWS</p>
         <div class="trustpilot-widget" data-locale="da-DK" data-template-id="5613c9cde69ddc09340c6beb" data-businessunit-id="5e20c5bba5ef500001737b06" data-style-height="100%" data-style-width="150px" data-theme="light">
           <a href="https://dk.trustpilot.com/review/jamesay.com" target="_blank" rel="noopener">Trustpilot</a>
         </div>
-      </div>
-      <div class="col-lg-4 social-media mt-5 mt-lg-0">
-        <ul class="mb-0">
-          <li><a href="https://www.instagram.com/jamesay_com" target="_blank">Instagram</a></li>
-          <li><a href="https://www.facebook.com/jamesayofficial/" target="_blank">Facebook</a></li>
-          <li><a href="https://www.youtube.com/channel/UCGzO6K0bWZlRD1trP3N64Tg" target="_blank">Youtube</a></li>
-        </ul>
-      </div>
+      </div>      
     </div>
-    <div class="row px-0 px-lg-5 terms-privacy mb-5 mt-3">
-      <div class="col d-lg-flex justify-content-between">
-        <p class="text-center text-lg-left mb-0"><a href="/pages/terms-conditions">Terms and conditions</a></p>
-        <p class="text-center text-lg-right mb-0"><a href="/pages/cookies-privacy-policy">Cookies - privacy policy</a></p>
+    <div class="row terms-privacy pt-4 mb-5 mt-5">
+      <div class="col-lg-6">
+        <div class="row no-gutters">
+          <div class="col-5">
+            <p class="mb-0"><a href="/pages/terms-conditions">Terms & conditions</a></p>
+          </div>
+          <div class="col-7 text-right text-sm-left">
+            <p class="mb-0"><a href="/pages/cookies-privacy-policy">Cookies - privacy policy</a></p>
+          </div>
+        </div>
       </div>
+      <div class="col-lg-5 offset-lg-1 d-none d-lg-block">
+        <p class="mb-0"><a href="https://dk.trustpilot.com/review/jamesay.com">See all reviews / Write Review</a></p>
+      </div>      
     </div>
   </div>
 	<a id="return-to-top">

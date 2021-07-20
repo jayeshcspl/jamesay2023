@@ -1,7 +1,7 @@
 {% comment %}
   Set the extension of your color files below. Use 'png', 'jpeg', 'jpg' or 'gif'.
 {% endcomment %}
-{% assign file_extension = 'png' %}
+{% assign file_extension = 'svg' %}
 
 {% if dots == blank %}
 <div class="swatch error">
@@ -54,13 +54,13 @@
         {% endif %}
         <input id="swatch-{{ option_index }}-{{ value | handle }}" type="radio" name="options[{{ dots | escape }}]" value="{{ value | escape }}"{% if option.selected_value == value %} checked{% endif %} {% unless variant.available %}disabled{% endunless %} />
         {% if is_color %}
-        <label for="swatch-{{ option_index }}-{{ value | handle }}" style="border-color: {{ value | split: ' ' | last | handle }};background-color: {{ value | split: ' ' | last | handle }}; background-image: url({{ value | handle | append: '.' | append: file_extension | asset_url }})">
-          <img class="crossed-out" src="{{ 'soldout.png' | asset_url }}" />
+        <label for="swatch-{{ option_index }}-{{ value | handle }}" style="border-color: {{ value | split: ' ' | last | handle }};background-color: {{ value | split: ' ' | last | handle }}; background-image: url({{ value | handle | append: '_10.' | append: file_extension | asset_url }})">
+          <!-- <img class="crossed-out" src="{{ 'soldout.png' | asset_url }}" /> -->
         </label>
         {% else %}
         <label for="swatch-{{ option_index }}-{{ value | handle }}">
           {{ value }}
-          <img class="crossed-out" src="{{ 'soldout.png' | asset_url }}" />
+          <!-- <img class="crossed-out" src="{{ 'soldout.png' | asset_url }}" /> -->
         </label>
         {% endif %}
       </div>

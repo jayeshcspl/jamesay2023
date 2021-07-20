@@ -49,9 +49,8 @@
 {% else %}
 {% assign mobile_img = desktop_img %}
 {% endif %}
-
-{% if article.metafields.cf_story.vimeo_video_id != blank %}
-{% assign vimeo_video_id = article.metafields.cf_story.vimeo_video_id %}
+{% if article.metafields.other_information.vimeo_video_id != blank %}
+{% assign vimeo_video_id = article.metafields.other_information.vimeo_video_id %}
 {% else %}
 {% assign vimeo_video_id = 253989945 %}
 {% endif %}
@@ -80,7 +79,7 @@
   {% endif %}
   <section class="vertical-scrolling mx-auto mw-100">
     <div class="container-fluid h-100 pl-50 pr-50">
-      {{ article.content }}
+      {% include 'article_content' %}
     </div>
   </section>  
   <section class="poducts_in_story vertical-scrolling mb-10 mt-10 mx-auto contentWidth">

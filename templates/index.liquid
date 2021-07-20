@@ -1,59 +1,27 @@
 <div id="fullpage" class="homepage">
-  {% if shop.metafields.fp_slide_reorder.template_number != blank %}
-  {% assign template_number = shop.metafields.fp_slide_reorder.template_number %}
-  {% else %}
-  {% assign template_number = 1 %}
+  {% if shop.metafields.one_column_story.display_slide == 1  %}
+    {% include 'one_column_story', section_number:"one_column_story" %}
+  {% endif %} 
+  {% comment %}
+  {% if shop.metafields.2_column_1_product.display_slide == 1  %}
+    {% include 'two_column_one_product', section_number:"two_column_one_product" %}
   {% endif %}
-  {% if template_number == 1 %}
-    {% include 'section-first', section_number:"section-first" %}
-    {% include 'section-fifth', section_number:"section-fifth" %}
-    {% include 'section-second', section_number:"section-second" %}
-    {% include 'section-third', section_number:"section-third" %}
-    {% include 'section-fourth', section_number:"section-fourth" %}
-    {% include 'section-sixth', section_number:"section-sixth" %}
-  {% elsif template_number == 2 %}
-    {% include 'section-fourth', section_number:"section-fourth" %}
-    {% include 'section-fifth', section_number:"section-fifth" %}
-    {% include 'section-first', section_number:"section-first" %}
-    {% include 'section-third', section_number:"section-second" %}
-    {% include 'section-second', section_number:"section-third" %}
-    {% include 'section-sixth', section_number:"section-sixth" %}
-  {% elsif template_number == 3 %}
-    {% include 'section-second', section_number:"section-first" %}
-    {% include 'section-fifth', section_number:"section-fifth" %}
-    {% include 'section-fourth', section_number:"section-fourth" %}
-    {% include 'section-first', section_number:"section-second" %}
-    {% include 'section-third', section_number:"section-third" %}
-    {% include 'section-sixth', section_number:"section-sixth" %}
-  {% elsif template_number == 4 %}
-    {% include 'section-second', section_number:"section-first" %}
-    {% include 'section-fifth', section_number:"section-fifth" %}
-    {% include 'section-third', section_number:"section-second" %}
-    {% include 'section-fourth', section_number:"section-fourth" %}
-    {% include 'section-first', section_number:"section-third" %}
-    {% include 'section-sixth', section_number:"section-sixth" %}
-  {% elsif template_number == 5 %}
-    {% include 'section-fourth', section_number:"section-fourth" %}
-    {% include 'section-fifth', section_number:"section-fifth" %}
-    {% include 'section-third', section_number:"section-first" %}
-    {% include 'section-first', section_number:"section-second" %}
-    {% include 'section-second', section_number:"section-third" %}
-    {% include 'section-sixth', section_number:"section-sixth" %}
-  {% elsif template_number == 6 %}
-    {% include 'section-third', section_number:"section-third" %}
-    {% include 'section-fifth', section_number:"section-fifth" %}
-    {% include 'section-second', section_number:"section-second" %}
-    {% include 'section-first', section_number:"section-first" %}
-    {% include 'section-fourth', section_number:"section-fourth" %}
-    {% include 'section-sixth', section_number:"section-sixth" %}
-  {% elsif template_number == 7 %}
-  	{% include 'section-sixth', section_number:"section-sixth" %}
-    {% include 'section-first', section_number:"section-first" %}
-    {% include 'section-fifth', section_number:"section-fifth" %}
-    {% include 'section-second', section_number:"section-second" %}
-    {% include 'section-third', section_number:"section-third" %}
-    {% include 'section-fourth', section_number:"section-fourth" %}
+  {% endcomment %}
+  {% include 'two_column_one_product', section_number:"two_column_one_product" %}
+  {% include 'homemade_glasses', section_number:"homemade_glasses" %}
+  {% comment %}
+  {% if shop.metafields.2_column_2_product.display_slide == 1  %}
+    {% include 'two_column_two_product', section_number:"two_column_two_product" %}
   {% endif %}
+  {% endcomment %}
+  {% include 'two_column_two_product', section_number:"two_column_two_product" %}
+  {% if shop.metafields.one_column_general.display_slide == 1  %}
+    {% include 'one_column_general_slide', section_number:"one_column_general_slide" %}
+  {% endif %}  
+  {% if shop.metafields.two_column_slide.display_slide == 1  %}
+    {% include 'two_column_slide', section_number:"two_column_slide" %}
+  {% endif %}
+  {% include 'followthesun_gif', section_number:"followthesun_gif" %}
 </div>
 
 {% if shop.metafields.fp_fullslide_video.disable_video_slide != 1 %}

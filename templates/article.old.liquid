@@ -56,14 +56,26 @@
 {% assign vimeo_video_id = 253989945 %}
 {% endif %}
 
-{% if article.metafields.cf_story.display_video != blank %}
-{% assign display_video = article.metafields.cf_story.display_video | downcase %}
-{% else %}
-{% assign display_video = "" %}
-{% endif %}
-
+<style>
+@media screen and (min-width: 992px) {
+  .vimeo-wrapper {
+    background-image: url({{ desktop_img }});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (max-width: 991px) {
+  .vimeo-wrapper {
+    background-image: url({{ mobile_img }});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;        
+  }
+}
+</style>
 <div id="fullpage1">
-  {% if display_video != "yes" %}
+  {% if article.metafields.cf_story.display_video != 1 %}
     <section class="vertical-scrolling stories_selected" style="background-image: url('{{desktop_img}}'); background-size: cover; background-repeat: no-repeat; background-position: center center;" data-desktop-url="{{desktop_img}}" data-mobile-url="{{mobile_img}}">
       <div class="container-fluid h-100">
         <div class="row h-100">
@@ -94,14 +106,14 @@
   </section>  
   {% endif %}
   {{ article.content }}
-  <section class="vertical-scrolling mb-10 mt-10 mx-auto contentWidth">
+  <section class="poducts_in_story vertical-scrolling mb-10 mt-10 mx-auto contentWidth">
     <div class="container-fluid h-100">
       <div class="row h-100 d-flex align-items-center no-gutters">
         <div class="col-12 text-center adventure_txt">
           <h2>{{is_wearing_title}}</h2>
         </div>
       </div>
-      <div class="row h-100 mt-0 mt-lg-5 no-gutters">
+      <div class="row h-100 mt-3 mt-lg-5 no-gutters">
         <div class="col-lg-6 products section_center1">
           <div class="row no-gutters">
             <div class="col-lg-12" style="text-align: left;">
@@ -133,10 +145,10 @@
       </div>
     </div>
   </section>
-  {% assign article = articles[other_story] %}
-  {% assign desktop_img = article.image | img_url: "master" %}
-  {% if article.metafields.cf_story.mobile_img %}
-  {% assign mobile_img = article.metafields.cf_story.mobile_img | file_url %}
+  {% assign other_article = articles[other_story] %}
+  {% assign desktop_img = other_article.image | img_url: "master" %}
+  {% if other_article.metafields.cf_story.mobile_img %}
+  {% assign mobile_img = other_article.metafields.cf_story.mobile_img | file_url %}
   {% else %}
   {% assign mobile_img = desktop_img %}
   {% endif %}
@@ -144,8 +156,8 @@
     <div class="container-fluid h-100">
       <div class="row h-100 no-gutters mx-auto contentWidth">
         <div class="col-lg-12 my-auto h-100 stories_selected_section">
-          <h5 class="text-left"><a href="{{ article.url }}" class="d-block">STORY</a</h5>
-          <h2><a href="{{ article.url }}" class="d-block">{{ article.title | link_to: article.url }}</a></h2>
+          <h5 class="text-left"><a href="{{ other_article.url }}" class="d-block">STORY</a</h5>
+          <h2><a href="{{ other_article.url }}" class="d-block">{{ other_article.title | link_to: other_article.url }}</a></h2>
         </div>
       </div>
     </div>

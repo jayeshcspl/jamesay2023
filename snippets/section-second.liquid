@@ -1,4 +1,4 @@
-{% if shop.metafields.fp_halfslide_product.disable_product_slide != 1 %}
+{% if shop.metafields.fp_halfslide_product.disable_product_slide %}
   {% if shop.metafields.fp_halfslide_product.product_model_image != blank %}
   {% assign product_model_image_desktop = shop.metafields.fp_halfslide_product.product_model_image | file_url %}
   {% else %}
@@ -49,8 +49,9 @@
             <h2 class="overlay_txt is-animated mb-0">{{product_model_description}}</h2>
           </a>
         </div>
-        <div class="d-none d-lg-flex col-lg-6 my-auto h-100 section1_imgr text-center">
-          <a href="{{json_product1.url}}"><img src="{{ json_product1.image.src | img_url: '420x' }}" srcset="{{ json_product1.image.src | img_url: '2000x' }} 2000w,
+        <div class="d-none d-lg-flex col-lg-6 my-auto h-100 section1_imgr text-center align-items-center">
+          <a href="{{json_product1.url}}">
+            <img src="{{ json_product1.image.src | img_url: '420x' }}" srcset="{{ json_product1.image.src | img_url: '2000x' }} 2000w,
             {{ json_product1.image.src | img_url: '1800x' }} 1800w,
             {{ json_product1.image.src | img_url: '1600x' }} 1600w,
             {{ json_product1.image.src | img_url: '1400x' }} 1400w,

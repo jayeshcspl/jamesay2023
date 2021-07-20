@@ -1,0 +1,87 @@
+{% if shop.metafields.2_column_1_product.left_title != blank %}
+{% assign left_title = shop.metafields.2_column_1_product.left_title %}
+{% else %}
+{% assign left_title = "" %}
+{% endif %}
+
+{% if shop.metafields.2_column_1_product.left_description != blank %}
+{% assign left_description = shop.metafields.2_column_1_product.left_description %}
+{% else %}
+{% assign left_description = "" %}
+{% endif %}
+
+{% if shop.metafields.2_column_1_product.left_link != blank %}
+{% assign left_link = shop.metafields.2_column_1_product.left_link %}
+{% else %}
+{% assign left_link = "#" %}
+{% endif %}
+
+{% if shop.metafields.2_column_1_product.left_bg_image != blank %}
+{% assign left_bg_image_desktop = shop.metafields.2_column_1_product.left_bg_image | file_url %}
+{% else %}
+{% assign left_bg_image_desktop = "default.png" | file_url %}
+{% endif %}
+{% if shop.metafields.2_column_1_product.left_bg_image_mobile != blank %}
+{% assign left_bg_image_mobile = shop.metafields.2_column_1_product.left_bg_image_mobile | file_img_url: '800x' %}
+{% else %}
+{% assign left_bg_image_mobile = left_bg_image_desktop %}
+{% endif %} 
+
+{% if shop.metafields.2_column_1_product.product_variant_id != blank %}
+{% assign productname_variantid = shop.metafields.2_column_1_product.product_variant_id %}
+{% else %}
+{% assign productname_variantid = "glance=39462324633653" %}
+{% endif %}
+
+{% assign result1 = productname_variantid | split: "=" %}
+{% assign product_name1 = result1[0] | strip %}
+{% assign product_id1 = result1[1] | strip | plus: 0 %}
+{% assign product = all_products[product_name1] %}
+
+{% for variant in product.variants %}
+  {% if variant != blank %}
+    {% if variant.id == product_id1 %} 
+      {% assign json_product1 = variant %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% assign right_bg_image_desktop = json_product1.image.src | img_url : '1600x' %}
+{% assign right_bg_image_mobile = right_bg_image_desktop %}
+
+<section class="fp-auto-height-responsive vertical-scrolling {{section_number}}" data-section="two-image">
+  <div class="container-fluid h-100">
+    <div class="row h-100">
+      <div class="d-none d-lg-flex col-lg-6 pl-50 my-auto section1_imgl  custom_overlay1" style="background-image: url({{ left_bg_image_desktop }});" data-desktop-url="{{left_bg_image_desktop}}" data-mobile-url="{{left_bg_image_mobile}}">
+        <a href="{{left_link}}">  
+          <div class="overlay">
+            <h2 class="slide_title_bottom fs80 text-white mb-lg-0">{{left_title}}</h2>
+            <h5 class="slide_description_bottom_right text-white mb-0"><u>{{left_description}}</u></h5>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-6 pl-50 my-auto section1_imgl custom_overlay1" style="background-image: url({{ right_bg_image_desktop }});" data-desktop-url="{{right_bg_image_desktop}}" data-mobile-url="{{right_bg_image_mobile}}">
+        <a href="{{json_product1.url}}">
+          <div class="overlay">
+            <table class="product_info slide_title_bottom">
+              <tr>
+                <td>{{product.title}} / {{json_product1.sku}}</td>
+              </tr>
+              <tr>
+                <td>{{product.metafields.product_frame_sizing.lens_length}}-{{product.metafields.product_frame_sizing.nose_bridge_size}}-{{product.metafields.product_frame_sizing.temple_size}} / {{json_product1.metafields.product_variant_info.color_code}}</td>
+              </tr>
+              <tr>
+                <td>{{product.metafields.product_frame_sizing.material}}</td>
+              </tr>
+            </table>
+            <table class="product_info slide_description_bottom_right price_txt">
+              <tr>
+                <td>{{json_product1.price | money}}</td>
+              </tr>
+            </table>
+          </div>
+        </a>          
+      </div>
+    </div>
+  </div>
+</section>

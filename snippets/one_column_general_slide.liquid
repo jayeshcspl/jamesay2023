@@ -1,0 +1,41 @@
+{% if shop.metafields.one_column_general.title != blank %}
+{% assign title = shop.metafields.one_column_general.title %}
+{% else %}
+{% assign title = "Title" %}
+{% endif %}
+{% if shop.metafields.one_column_general.description != blank %}
+{% assign description = shop.metafields.one_column_general.description %}
+{% else %}
+{% assign description = "Description" %}
+{% endif %}
+
+{% if shop.metafields.one_column_general.link != blank %}
+{% assign link_url = shop.metafields.one_column_general.link %}
+{% else %}
+{% assign link_url = "#" %}
+{% endif %}
+
+{% if shop.metafields.one_column_general.image_url != blank %}
+{% assign desktop_img = shop.metafields.one_column_general.image_url %}
+{% else %}
+{% assign desktop_img = "default.png" | file_url %}
+{% endif %}
+{% if shop.metafields.one_column_general.mobile_image_url != blank %}
+{% assign mobile_img = shop.metafields.one_column_general.mobile_image_url %}
+{% else %}
+{% assign mobile_img = desktop_img %}
+{% endif %} 
+
+
+<section class="vertical-scrolling {{section_number}}" style="background-image: url('{{desktop_img}}'); background-size: cover; background-repeat: no-repeat; background-position: center center;" data-desktop-url="{{desktop_img}}" data-mobile-url="{{mobile_img}}">
+  <div class="container-fluid h-100">
+    <div class="row min-vh-100">
+      <div class="col-lg-12 pl-50" style="z-index: 1000;">
+        <a href="{{ link_url }}" class="testbg">
+          <p class="slide_title_bottom story_title fs120 text-white mb-lg-0">{{ title }}</p>
+          <p class="slide_description_bottom_right text-white mb-0"><u>{{description}}</u></p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

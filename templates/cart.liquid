@@ -110,7 +110,7 @@
             <div class="row no-gutters">
               <div class="col-12 d-none d-md-block mb-4 text-right euro no-gutter" style="border-bottom: 1px solid #dee2e6;">
                 <p id="subtotal" class="cart-money mb-0">{{ 'cart.general.subtotal' | t }} {{ cart.total_price | money }}</p>
-                <p class="usp_text">(Every pair of AY's you purchase plants one tree and removes a kilo of plastic waste from our oceans)</p>
+                <p class="usp_text d-none">(Every pair of AY's you purchase plants one tree and removes a kilo of plastic waste from our oceans)</p>
                 {% if cart.total_discounts > 0 %}
                   <p>{{ 'cart.general.savings' | t }} {{ cart.total_discounts | money }}</p>
                 {% endif %}
@@ -143,7 +143,7 @@
               </div>
             </div>
             <div class="row pt-2 no-gutters">
-              <div class="col-md-4 mt-5 mt-md-2 text-center text-md-left swaporder1">
+              <div class="col-md-6 mt-5 mt-md-2 text-center text-md-left swaporder1">
                 <ul class="payment-icons list-inline">
                   {% for type in shop.enabled_payment_types %}
                   <li class="list-inline-item mr-1 pb-1">
@@ -152,7 +152,7 @@
                   {% endfor %}
                 </ul>
               </div>
-              <div class="col-md-8 text-center text-md-right swaporder2">
+              <div class="col-md-6 text-center text-md-right swaporder2">
                 <button class="continue-shopping mb-3" type="submit" name="update" value="">{{ 'cart.general.update' | t }}</button>
                 <button class="continue-shopping black_btn" type="submit" name="checkout" class="button" value="">{{ 'cart.general.checkout' | t }}</button>
               </div>
