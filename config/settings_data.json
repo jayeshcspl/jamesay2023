@@ -19,7 +19,7 @@
     "social_youtube_link": "",
     "social_vimeo_link": "",
     "cart_notes_enable": false,
-    "favicon": "shopify:\/\/shop_images\/ay_favicon.gif",
+    "favicon": "shopify:\/\/shop_images\/ay_favicon_32x32_b5423a58-89b9-44f3-992b-7108326bfcb5.gif",
     "checkout_header_image": "",
     "checkout_logo_image": "shopify:\/\/shop_images\/logo_mark_black.png",
     "checkout_logo_position": "left",
@@ -93,11 +93,13 @@
       },
       "header": {
         "type": "header",
-        "settings": {}
+        "settings": {
+        }
       },
       "footer": {
         "type": "footer",
-        "settings": {}
+        "settings": {
+        }
       }
     },
     "content_for_index": [
@@ -114,15 +116,18 @@
           "blocks": {
             "collection-list-0": {
               "type": "collection",
-              "settings": {}
+              "settings": {
+              }
             },
             "collection-list-1": {
               "type": "collection",
-              "settings": {}
+              "settings": {
+              }
             },
             "collection-list-2": {
               "type": "collection",
-              "settings": {}
+              "settings": {
+              }
             }
           },
           "block_order": [
@@ -130,7 +135,8 @@
             "collection-list-1",
             "collection-list-2"
           ],
-          "settings": {}
+          "settings": {
+          }
         },
         "featured-collection": {
           "type": "featured-collection",
@@ -140,11 +146,13 @@
         },
         "featured-product": {
           "type": "featured-product",
-          "settings": {}
+          "settings": {
+          }
         },
         "announcement-banner": {
           "type": "announcement-banner",
-          "settings": {}
+          "settings": {
+          }
         }
       },
       "content_for_index": [
