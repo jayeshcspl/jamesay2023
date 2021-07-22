@@ -18,16 +18,15 @@
 
 {% if shop.metafields.2_column_1_product.left_bg_image != blank %}
   {% if request.host != "jamesay.myshopify.com" and request.host != "jamesay.com" %}
-    iffffffffffffffffffff
+    iffffffffffffffffffffffffffffffff
     {% assign left_bg_image_desktop = "https://cdn.shopify.com/s/files/1/0224/6066/1824/files" | concat: shop.metafields.2_column_1_product.left_bg_image %}
+    ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
   {% else %}
-    elseeeeeeeeeeeeeeeeeee
     {% assign left_bg_image_desktop = shop.metafields.2_column_1_product.left_bg_image | file_url %}
   {% endif %}
 {% else %}
 {% assign left_bg_image_desktop = "default.png" | file_url %}
 {% endif %}
-{{left_bg_image_desktop}} XXXXXXXXXXX
 {% if shop.metafields.2_column_1_product.left_bg_image_mobile != blank %}
 {% assign left_bg_image_mobile = shop.metafields.2_column_1_product.left_bg_image_mobile | file_img_url: '800x' %}
 {% else %}
