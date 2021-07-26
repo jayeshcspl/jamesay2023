@@ -47,7 +47,7 @@ YYYYYYYY  {{productname_variantid}} ZZZZZZZZZZ
 {% assign product = all_products[product_name1] %}
 
 {% for variant in product.variants %}
-  {{variant.title}}
+  {{variant.id}}
   {% if variant != blank %}
     {% if variant.id == product_id1 %} 
       {% assign json_product1 = variant %}
