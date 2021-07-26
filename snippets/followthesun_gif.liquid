@@ -1,7 +1,7 @@
 
 {% if request.host != "jamesay.myshopify.com" and request.host != "jamesay.com" %}
-  {% assign desktop_img_src = "https://cdn.shopify.com/s/files/1/0224/6066/1824/files/followthesun_new.gif" | file_url %}
-  {% assign mobile_img_src = "https://cdn.shopify.com/s/files/1/0224/6066/1824/files/followthesun_new.gif" | file_url %}
+  {% assign desktop_img_src = "https://cdn.shopify.com/s/files/1/0224/6066/1824/files/followthesun_new.gif" %}
+  {% assign mobile_img_src = "https://cdn.shopify.com/s/files/1/0224/6066/1824/files/followthesun_new.gif" %}
 {% else %}
   {% assign desktop_img_src = "followthesun_new.gif" | file_url %}
   {% assign mobile_img_src = "followthesun_new.gif" | file_url %}
