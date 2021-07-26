@@ -40,14 +40,13 @@
 {% else %}
 {% assign productname_variantid = "glance=39462324633653" %}
 {% endif %}
-YYYYYYYY  {{productname_variantid}} ZZZZZZZZZZ
+
 {% assign result1 = productname_variantid | split: "=" %}
 {% assign product_name1 = result1[0] | strip %}
 {% assign product_id1 = result1[1] | strip | plus: 0 %}
 {% assign product = all_products[product_name1] %}
 
 {% for variant in product.variants %}
-  {{variant.id}}
   {% if variant != blank %}
     {% if variant.id == product_id1 %} 
       {% assign json_product1 = variant %}
@@ -55,17 +54,7 @@ YYYYYYYY  {{productname_variantid}} ZZZZZZZZZZ
   {% endif %}
 {% endfor %}
 
-{% if request.host != "jamesay.myshopify.com" and request.host != "jamesay.com" %}
-  {% assign product_img_url = json_product1.image %}
-  {% assign right_bg_image_desktop = "https://cdn.shopify.com/s/files/1/0224/6066/1824/" | append: product_img_url  %}
-  {% assign right_bg_image_desktop = json_product1.image.src | img_url : '1600x' %}
-  {{right_bg_image_desktop}}
-  {{json_product1.url}}
-  {{json_product1.title}}
-  XXXXXXXXXXXXXXXXXXXXX
-{% else %}
-  {% assign right_bg_image_desktop = json_product1.image.src | img_url : '1600x' %}
-{% endif %}
+{% assign right_bg_image_desktop = json_product1.image.src | img_url : '1600x' %}
 {% assign right_bg_image_mobile = right_bg_image_desktop %}
 
 <section class="fp-auto-height-responsive vertical-scrolling {{section_number}}" data-section="two-image">
