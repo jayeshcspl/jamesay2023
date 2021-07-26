@@ -59,6 +59,9 @@
   {% assign right_bg_image_desktop = "https://cdn.shopify.com/s/files/1/0224/6066/1824/" | append: product_img_url  %}
   {% assign right_bg_image_desktop = json_product1.image.src | img_url : '1600x' %}
   {{right_bg_image_desktop}}
+  {{json_product1.url}}
+  {{json_product1.title}}
+  XXXXXXXXXXXXXXXXXXXXX
 {% else %}
   {% assign right_bg_image_desktop = json_product1.image.src | img_url : '1600x' %}
 {% endif %}
