@@ -1,7 +1,25 @@
 {% if request.host != "jamesay.myshopify.com" and request.host != "jamesay.com" %}
+  {% assign about_us_txt = "OM OS" %}
+  {% assign about_txt = "Om os" %}
   {% assign stories_txt = "Historier" %}
+  {% assign contact_us_txt = "Kontakt us" %}
+  {% assign shipping_returns_txt = "Shipping & returns" %}
+  {% assign connect_txt = "CONNECT" %}
+  {% assign reviews_txt = "REVIEWS" %}
+  {% assign terms_conditions_txt = "Handelsbetingelser" %}
+  {% assign cookies_txt = "Cookies - privacy policy" %}
+  {% assign see_all_review_txt = "See all reviews / Write Review" %}
 {% else %}
+  {% assign about_us_txt = "ABOUT US" %}
+  {% assign about_txt = "About" %}
   {% assign stories_txt = "Stories" %}
+  {% assign contact_us_txt = "Contact us" %}
+  {% assign shipping_returns_txt = "Shipping & returns" %}
+  {% assign connect_txt = "CONNECT" %}
+  {% assign reviews_txt = "REVIEWS" %}
+  {% assign terms_conditions_txt = "Terms & conditions" %}
+  {% assign cookies_txt = "Cookies - privacy policy" %}
+  {% assign see_all_review_txt = "See all reviews / Write Review" %}  
 {% endif %}
 {% if template != 'cart' %}
   <div class="footer_lifetime">
@@ -68,17 +86,17 @@
       <div class="col-lg-6">
         <div class="row no-gutters">
         <div class="col-6  col-lg-5 links">
-          <p class="footer_title">ABOUT US</p>
+          <p class="footer_title">{{about_us_txt}}</p>
           <ul class="mb-0">
-            <li><a href="/pages/about">About</a></li>
+            <li><a href="/pages/about">{{about_txt}}</a></li>
             <li><a href="/blogs/stories">{{stories_txt}}</a></li>
-            <li><a href="/pages/contact">Contact us</a></li>
-            <li><a href="/pages/shipping-return">Shipping & returns</a></li>
+            <li><a href="/pages/contact">{{contact_us_txt}}</a></li>
+            <li><a href="/pages/shipping-return">{{shipping_returns_txt}}</a></li>
           </ul>
         </div>
 
         <div class="col-6  col-lg-7  social-media">
-          <p class="footer_title">CONNECT</p>
+          <p class="footer_title">{{connect_txt}}</p>
           <ul class="mb-0">
             <li><a href="https://www.instagram.com/jamesay_com" target="_blank">Instagram</a></li>
             <li><a href="https://www.facebook.com/jamesayofficial/" target="_blank">Facebook</a></li>
@@ -88,7 +106,7 @@
         </div>
       </div>
       <div class="col-lg-5 offset-lg-1 trustpilot_area pt-4 pt-lg-0 mt-5 mt-lg-0">
-        <p class="footer_title">REVIEWS</p>
+        <p class="footer_title">{{reviews_txt}}</p>
         <div class="trustpilot-widget" data-locale="da-DK" data-template-id="5613c9cde69ddc09340c6beb" data-businessunit-id="5e20c5bba5ef500001737b06" data-style-height="100%" data-style-width="150px" data-theme="light">
           <a href="https://dk.trustpilot.com/review/jamesay.com" target="_blank" rel="noopener">Trustpilot</a>
         </div>
@@ -98,15 +116,15 @@
       <div class="col-lg-6">
         <div class="row no-gutters">
           <div class="col-5">
-            <p class="mb-0"><a href="/pages/terms-conditions">Terms & conditions</a></p>
+            <p class="mb-0"><a href="/pages/terms-conditions">{{terms_conditions_txt}}</a></p>
           </div>
           <div class="col-7 text-right text-sm-left">
-            <p class="mb-0"><a href="/pages/cookies-privacy-policy">Cookies - privacy policy</a></p>
+            <p class="mb-0"><a href="/pages/cookies-privacy-policy">{{cookies_txt}}</a></p>
           </div>
         </div>
       </div>
       <div class="col-lg-5 offset-lg-1 d-none d-lg-block">
-        <p class="mb-0"><a href="https://dk.trustpilot.com/review/jamesay.com">See all reviews / Write Review</a></p>
+        <p class="mb-0"><a href="https://dk.trustpilot.com/review/jamesay.com">{{see_all_review_txt}}</a></p>
       </div>      
     </div>
   </div>
