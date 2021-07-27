@@ -1,3 +1,8 @@
+{% if request.host != "jamesay.myshopify.com" and request.host != "jamesay.com" %}
+  {% assign stories_txt = "Historier" %}
+{% else %}
+  {% assign stories_txt = "Stories" %}
+{% endif %}
 {% if template != 'cart' %}
   <div class="footer_lifetime">
     <div class="js-conveyor-example">
