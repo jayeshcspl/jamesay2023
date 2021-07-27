@@ -149,14 +149,6 @@
           </div>
         </div>
         {% if request.host != "jamesay.myshopify.com" and request.host != "jamesay.com" %}
-          {% assign sustainability = "Sustainability" %}
-          {% assign we_give_back = "We give back" %}
-          {% assign become_a_retailer = "Become a retailer" %}
-          {% assign terms_and_conditions = "Terms and conditions" %}
-          {% assign customer_service = "Customer service" %}
-          {% assign join_newsletter = "Join newsletter" %}
-          {% assign contact = "Contact" %}
-        {% else %}
           {% assign sustainability = "Bæredygtighed" %}
           {% assign we_give_back = "Vi giver tilbage" %}
           {% assign become_a_retailer = "Bliv forhandler" %}
@@ -164,6 +156,14 @@
           {% assign customer_service = "Customer service" %}
           {% assign join_newsletter = "Join newsletter" %}
           {% assign contact = "Kontakt" %}
+        {% else %}
+          {% assign sustainability = "Sustainability" %}
+          {% assign we_give_back = "We give back" %}
+          {% assign become_a_retailer = "Become a retailer" %}
+          {% assign terms_and_conditions = "Terms and conditions" %}
+          {% assign customer_service = "Customer service" %}
+          {% assign join_newsletter = "Join newsletter" %}
+          {% assign contact = "Contact" %}
         {% endif %}
         <div class="row fix-bottom">
           <div class="col-lg-4 contact-track-ord">
