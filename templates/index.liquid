@@ -8,7 +8,9 @@
   {% endif %}
   {% endcomment %}
   {% include 'two_column_one_product', section_number:"two_column_one_product" %}
-  {% include 'homemade_glasses', section_number:"homemade_glasses" %}
+  {% if shop.metafields.we_make_handmade.display_slide == 1  %}
+    {% include 'homemade_glasses', section_number:"homemade_glasses" %}
+  {% endif %}
   {% comment %}
   {% if shop.metafields.2_column_2_product.display_slide == 1  %}
     {% include 'two_column_two_product', section_number:"two_column_two_product" %}
