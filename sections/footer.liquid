@@ -9,6 +9,11 @@
   {% assign terms_conditions_txt = "Handelsbetingelser" %}
   {% assign cookies_txt = "Cookies - privacy policy" %}
   {% assign see_all_review_txt = "See all reviews / Write Review" %}
+  {% assign join_our_newsletter_txt = "Join our newsletter" %}
+  {% assign join_our_newsletter_desc = "We wish to give you inspiration on how to live a more fulfilling life. So, sign up to our newsletter to follow what goes on in our universe." %}
+  {% assign accept_txt = "On sign up you accept our" %}
+  {% assign privacy_policy_txt = "privacy policy" %}
+  {% assign sign_up_txt = "Sign up" %}
 {% else %}
   {% assign about_us_txt = "ABOUT US" %}
   {% assign about_txt = "About" %}
@@ -19,7 +24,12 @@
   {% assign reviews_txt = "REVIEWS" %}
   {% assign terms_conditions_txt = "Terms & conditions" %}
   {% assign cookies_txt = "Cookies - privacy policy" %}
-  {% assign see_all_review_txt = "See all reviews / Write Review" %}  
+  {% assign see_all_review_txt = "See all reviews / Write Review" %}
+  {% assign join_our_newsletter_txt = "Join our newsletter" %}
+  {% assign join_our_newsletter_desc = "We wish to give you inspiration on how to live a more fulfilling life. So, sign up to our newsletter to follow what goes on in our universe." %}
+  {% assign accept_txt = "On sign up you accept our" %}
+  {% assign privacy_policy_txt = "privacy policy" %}
+  {% assign sign_up_txt = "Sign up" %}
 {% endif %}
 {% if template != 'cart' %}
   <div class="footer_lifetime">
@@ -34,8 +44,8 @@
   <div id="signUpModal" class="container-fluid">
     <div class="row">
       <div class="col-lg-6">
-        <h5 class="modal-title mb-4 pb-0">Join our newsletter</h5>
-        <p class="my-4 newsletter_text">We wish to give you inspiration on how to live a more fulfilling life. So, sign up to our newsletter to follow what goes on in our universe.</p>
+        <h5 class="modal-title mb-4 pb-0">{{join_our_newsletter_txt}}</h5>
+        <p class="my-4 newsletter_text">{{join_our_newsletter_desc}}</p>
       </div>
       <div class="col-lg-4 offset-lg-1">
         <form class="omnisend-subscribe-form myclass" name="omnisend-subscribe-form">
@@ -66,12 +76,12 @@
                   autocapitalize="off" required>
                   <div class="invalid-feedback"></div>
                 </div>
-                <div class="col-12 mb-4 mt-4 newslater_privacy_text">On sign up you accept our <a href="/pages/cookies-privacy-policy" style="text-decoration: underline !important;">privacy policy</a></div>
+                <div class="col-12 mb-4 mt-4 newslater_privacy_text">{{accept_txt}} <a href="/pages/cookies-privacy-policy" style="text-decoration: underline !important;">{{privacy_policy_txt}}</a></div>
               </div>
               <div class="row">
                 <span class="col-12 input-group__btn">
                   <button type="submit" class="btn-signup newsletter__submit" name="commit" id="Subscribe">
-                    <span class="newsletter__submit-text--large">Sign up</span>
+                    <span class="newsletter__submit-text--large">{{sign_up_txt}}</span>
                   </button>
                 </span>
               </div>
