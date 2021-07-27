@@ -1,4 +1,12 @@
-{% assign desktop_img = "find_store-james-ay.jpg" | file_url %}
+{% if request.host != "jamesay.myshopify.com" and request.host != "jamesay.com" %}
+  {% assign frame_sizing_txt = "Find forhandler" %}
+  {% assign go_to_storelocator_txt = "GO TO STORE LOCATOR" %}
+  {% assign desktop_img = "https://cdn.shopify.com/s/files/1/0224/6066/1824/files/find_store-james-ay.jpg" %}
+{% else %}
+  {% assign frame_sizing_txt = "Find stores" %}
+  {% assign go_to_storelocator_txt = "GO TO STORE LOCATOR" %}
+  {% assign desktop_img = "find_store-james-ay.jpg" | file_url %}
+{% endif %}
 {% assign mobile_img = desktop_img %}
 <section class="vertical-scrolling {{section_number}}" style="background-image: url('{{desktop_img}}'); background-size: cover; background-repeat: no-repeat; background-position: center center;" data-desktop-url="{{desktop_img}}" data-mobile-url="{{mobile_img}}">
   <div class="container-fluid h-100">
@@ -13,8 +21,8 @@
                 +64 9-283 0158</td>
             </tr>
           </table>
-          <p class="slide_title_bottom story_title fs120 text-white mb-lg-0">Find stores</p>
-          <p class="slide_description_bottom_right text-white mb-0"><u>GO TO STORE LOCATOR</u></p>
+          <p class="slide_title_bottom story_title fs120 text-white mb-lg-0">{{frame_sizing_txt}}</p>
+          <p class="slide_description_bottom_right text-white mb-0"><u>{{go_to_storelocator_txt}}</u></p>
         </a>
       </div>
     </div>
