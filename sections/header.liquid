@@ -148,16 +148,33 @@
             </ul>
           </div>
         </div>
+        {% if request.host != "jamesay.myshopify.com" and request.host != "jamesay.com" %}
+          {% assign sustainability = "Sustainability" %}
+          {% assign we_give_back = "We give back" %}
+          {% assign become_a_retailer = "Become a retailer" %}
+          {% assign terms_and_conditions = "Terms and conditions" %}
+          {% assign customer_service = "Customer service" %}
+          {% assign join_newsletter = "Join newsletter" %}
+          {% assign contact = "Contact" %}
+        {% else %}
+          {% assign sustainability = "Bæredygtighed" %}
+          {% assign we_give_back = "Vi giver tilbage" %}
+          {% assign become_a_retailer = "Bliv forhandler" %}
+          {% assign terms_and_conditions = "Handelsbetingelser" %}
+          {% assign customer_service = "Customer service" %}
+          {% assign join_newsletter = "Join newsletter" %}
+          {% assign contact = "Kontakt" %}
+        {% endif %}
         <div class="row fix-bottom">
           <div class="col-lg-4 contact-track-ord">
             <ul>
-              <li><a href="/pages/sustainability">Sustainability</a></li>
-              <li><a href="/pages/we-give-back">We give back</a></li>
-              <li><a href="/pages/become-a-retailer">Become a retailer</a></li>
-              <li><a href="/pages/terms-conditions">Terms and conditions</a></li>
-              <li class="d-none"><a href="/pages/contact">Customer service</a></li>
-              <li class="join_newsletter">Join newsletter</li>
-              <li><a href="/pages/contact"  class="menu_contact" >Contact</a></li>
+              <li><a href="/pages/sustainability">{{sustainability}}</a></li>
+              <li><a href="/pages/we-give-back">{{we_give_back}}</a></li>
+              <li><a href="/pages/become-a-retailer">{{become_a_retailer}}</a></li>
+              <li><a href="/pages/terms-conditions">{{terms_and_conditions}}</a></li>
+              <li class="d-none"><a href="/pages/contact">{{customer_service}}</a></li>
+              <li class="join_newsletter">{{join_newsletter}}</li>
+              <li><a href="/pages/contact"  class="menu_contact" >{{contact}}</a></li>
             </ul>
           </div>
           <div class="col-lg-6">
