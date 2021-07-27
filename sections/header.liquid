@@ -10,6 +10,27 @@
   {% assign color_code = "#FFFFFF" %}
   {% assign color_class = "white" %}
 {% endif %}
+{% if request.host != "jamesay.myshopify.com" and request.host != "jamesay.com" %}
+  {% assign sustainability = "Bæredygtighed" %}
+  {% assign we_give_back = "Vi giver tilbage" %}
+  {% assign become_a_retailer = "Bliv forhandler" %}
+  {% assign terms_and_conditions = "Handelsbetingelser" %}
+  {% assign customer_service = "Customer service" %}
+  {% assign join_newsletter = "Join newsletter" %}
+  {% assign contact = "Kontakt" %}
+  {% assign search_txt = "SØG" %}
+  {% assign bag_txt = "KURV" %}
+{% else %}
+  {% assign sustainability = "Sustainability" %}
+  {% assign we_give_back = "We give back" %}
+  {% assign become_a_retailer = "Become a retailer" %}
+  {% assign terms_and_conditions = "Terms and conditions" %}
+  {% assign customer_service = "Customer service" %}
+  {% assign join_newsletter = "Join newsletter" %}
+  {% assign contact = "Contact" %}
+  {% assign search_txt = "SEARCH" %}
+  {% assign bag_txt = "BAG" %}
+{% endif %}
 <header>
   <div class="header-top clearfix">
     <a class="toggle-menu nav-hmenu menu_middle {{color_class}} fadein href="javaScript:void(0);">
@@ -98,7 +119,7 @@
     <a class="l-right count{{ cart.item_count }} fadein">
       <ul>
         <li class="d-none d-md-inline-block">
-          <span class="search" OnClick="document.searchform.q.focus();""><span id="search_icon" style="color : {{color_code}}">SEARCH</span></span>
+          <span class="search" OnClick="document.searchform.q.focus();""><span id="search_icon" style="color : {{color_code}}">{{search_txt}}</span></span>
         </li>
         <li class="d-none d-md-inline-block">
           <span class="currency_switcher">
@@ -113,7 +134,7 @@
           {% if cart.item_count > -1 %}
             <span class="show_open">
               <span id="CartCount" class="site-header__cart-count" style="color : {{color_code}}">
-                BAG (<span>{{ cart.item_count }}</span>)
+                {{bag_txt}} (<span>{{ cart.item_count }}</span>)
               </span>
             </span>
           {% endif %}
@@ -148,23 +169,6 @@
             </ul>
           </div>
         </div>
-        {% if request.host != "jamesay.myshopify.com" and request.host != "jamesay.com" %}
-          {% assign sustainability = "Bæredygtighed" %}
-          {% assign we_give_back = "Vi giver tilbage" %}
-          {% assign become_a_retailer = "Bliv forhandler" %}
-          {% assign terms_and_conditions = "Handelsbetingelser" %}
-          {% assign customer_service = "Customer service" %}
-          {% assign join_newsletter = "Join newsletter" %}
-          {% assign contact = "Kontakt" %}
-        {% else %}
-          {% assign sustainability = "Sustainability" %}
-          {% assign we_give_back = "We give back" %}
-          {% assign become_a_retailer = "Become a retailer" %}
-          {% assign terms_and_conditions = "Terms and conditions" %}
-          {% assign customer_service = "Customer service" %}
-          {% assign join_newsletter = "Join newsletter" %}
-          {% assign contact = "Contact" %}
-        {% endif %}
         <div class="row fix-bottom">
           <div class="col-lg-4 contact-track-ord">
             <ul>
