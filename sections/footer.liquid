@@ -1,19 +1,19 @@
 {% if request.host != "jamesay.myshopify.com" and request.host != "jamesay.com" %}
   {% assign about_us_txt = "OM OS" %}
-  {% assign about_txt = "Om os" %}
+  {% assign about_txt = "Om James Ay" %}
   {% assign stories_txt = "Historier" %}
-  {% assign contact_us_txt = "Kontakt us" %}
-  {% assign shipping_returns_txt = "Shipping & returns" %}
-  {% assign connect_txt = "CONNECT" %}
-  {% assign reviews_txt = "REVIEWS" %}
+  {% assign contact_us_txt = "Kontakt" %}
+  {% assign shipping_returns_txt = "Fragt og retur" %}
+  {% assign connect_txt = "FØLG OS" %}
+  {% assign reviews_txt = "ANMELDELSER" %}
   {% assign terms_conditions_txt = "Handelsbetingelser" %}
-  {% assign cookies_txt = "Cookies - privacy policy" %}
-  {% assign see_all_review_txt = "See all reviews / Write Review" %}
-  {% assign join_our_newsletter_txt = "Join our newsletter" %}
-  {% assign join_our_newsletter_desc = "We wish to give you inspiration on how to live a more fulfilling life. So, sign up to our newsletter to follow what goes on in our universe." %}
-  {% assign accept_txt = "On sign up you accept our" %}
-  {% assign privacy_policy_txt = "privacy policy" %}
-  {% assign sign_up_txt = "Sign up" %}
+  {% assign cookies_txt = "Cookies – fortrolighedspolitik" %}
+  {% assign see_all_review_txt = "Se alle anmeldelser / Skriv en anmeldelse" %}
+  {% assign join_our_newsletter_txt = "Tilmeld nyhedsbrev" %}
+  {% assign join_our_newsletter_desc = "Modtag vores nyhedsbrev 1-2 gange i måneden, og få inspiration til dit liv i form af musik, rejser, historier og meget mere." %}
+  {% assign accept_txt = "Ved tilmelding accepterer du vores" %}
+  {% assign privacy_policy_txt = "fortrolighedspolitik" %}
+  {% assign sign_up_txt = "Tilmeld dig" %}
 {% else %}
   {% assign about_us_txt = "ABOUT US" %}
   {% assign about_txt = "About" %}
@@ -35,9 +35,9 @@
   <div class="footer_lifetime">
     <div class="js-conveyor-example">
       <ul>
-        <li>Free shipping worldwide</li>
-        <li class="d-none d-lg-inline-block"><span class="hide">1 order = 1 kg of plastic waste removed</span></li>
-        <li>1 order = 1 planted tree</li>
+        <li>{{shop.metafields.string_translation.free_shipping_worldwide}}</li>
+        <li class="d-none d-lg-inline-block"><span class="hide">{{shop.metafields.string_translation.one_order_one_kg_plastic}}</span></li>
+        <li>{{shop.metafields.string_translation.one_order_one_kg_planted_tree}}</li>
       </ul>
     </div>
   </div>

@@ -12,7 +12,8 @@
   {% assign sizefit_txt = "STØRRELSE OG PASFORM" %}
   {% assign shipping_returns_txt = "FRAGT OG RETUR" %}
   {% assign reviews_txt = "ANMELDELSER" %}
-
+  {% assign add_to_cart_txt = "Tilføj til kurv" %}
+  {% assign sold_out_txt = "Sold out" %}
 {% else %}
   {% assign frame_sizing_txt = "Frame sizing" %}
   {% assign width_txt = "Width" %}
@@ -25,6 +26,8 @@
   {% assign sizefit_txt = "SIZE & FIT" %}
   {% assign shipping_returns_txt = "SHIPPING & RETURNS" %}
   {% assign reviews_txt = "REVIEWS" %}
+  {% assign add_to_cart_txt = "Add to cart" %}
+  {% assign sold_out_txt = "Sold out" %}
 {% endif %}
 <div id="fullpage1">
   <section data-section-id="{{ section.id }}" data-section-type="product" class="vertical-scrolling">
@@ -173,9 +176,11 @@
             {% unless current_variant.available %}disabled="disabled"{% endunless %}>
               <span data-submit-button-text>
                 {% if current_variant.available %}
-                {{ 'products.product.add_to_cart' | t }}
+                  {% comment %}{{ 'products.product.add_to_cart' | t }}{% endcomment %}
+
                 {% else %}
-                {{ 'products.product.sold_out' | t }}
+                  {% comment %}{{ 'products.product.sold_out' | t }}{% endcomment %}
+
                 {% endif %}
               </span>
             </button>
@@ -277,20 +282,15 @@
                 <p>{{ product.title }} / {{current_variant.sku}}<br>
                   {{product.metafields.product_frame_sizing.lens_length}}-{{product.metafields.product_frame_sizing.nose_bridge_size}}-{{product.metafields.product_frame_sizing.temple_size}} / {{current_variant.metafields.product_variant_info.color_code}}<br>
                   {{product.metafields.product_frame_sizing.material}}<br><br>
-                  EN ISO 12312-1:2013<br>
-                  AS/NZS 1067:2003</p>
+                  {{shop.metafields.string_translation.EN_ISO_AS_NZS}}</p>
               </div>
               <div class="col-lg-6">
-                <p>Polyamide sun lenses (PA)<br> 
-                  Anti reflection coating in green<br>
-                  UV 400 nm filter / index 1.5</p>
+                <p>{{shop.metafields.string_translation.polyamide_sun_lenses}}</p>
               </div>
             </div>
           </div>
           <div class="col-lg-4 offset-lg-1">
-            <p>The fully plant based acetate Mazzucchelli M49 combines cellulose acetate and a plasticizer from natural resources. Cellulose is a structural protein in plants, and the other components derive from cotton seeds and wood fibres - making it 100% biodegradable.</p>
-            <p>90% of the material is converted into natural gasses after only 115 days. The remaining share is converted into water and biomass.</p>
-            <p>We use OBE hinges with a special rubber coating, making the friction and longevity perfect. They are made from 60% reused metal chips from old hinges. </p>
+            {{shop.metafields.string_translation.the_fully_plant_based_acetate}}
           </div>
       </div>
     </section>  
