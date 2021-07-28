@@ -177,10 +177,10 @@
               <span data-submit-button-text>
                 {% if current_variant.available %}
                   {% comment %}{{ 'products.product.add_to_cart' | t }}{% endcomment %}
-
+                  {{add_to_cart_txt}}
                 {% else %}
                   {% comment %}{{ 'products.product.sold_out' | t }}{% endcomment %}
-
+                  {{sold_out_txt}}
                 {% endif %}
               </span>
             </button>
