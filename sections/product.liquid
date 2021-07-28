@@ -1,11 +1,18 @@
 {% if request.host != "jamesay.myshopify.com" and request.host != "jamesay.com" %}
-  {% assign frame_sizing_txt = "Frame sizing" %}
-  {% assign width_txt = "Width" %}
-  {% assign lens_length_txt = "Lens length" %}
-  {% assign nose_bridge_txt = "Nose bridge" %}
-  {% assign temple_txt = "Temple" %}
-  {% assign dimensions_txt = "Dimensions" %}
-  {% assign frame_sizing_desc_txt = "Frame measurements are important to keep in mind if you are wanting a precise fit. Thanks to a standard system of measurements it is fairly easy to pin point a size that works for you." %}
+  {% assign frame_sizing_txt = "Størrelsesguide" %}
+  {% assign width_txt = "Bredde" %}
+  {% assign lens_length_txt = "Linse længde" %}
+  {% assign nose_bridge_txt = "Næsebredde" %}
+  {% assign temple_txt = "Stanglængde" %}
+  {% assign dimensions_txt = "Størrelse" %}
+  {% assign frame_sizing_desc_txt = "Størrelsen er vigtig at huske på, hvis du ønsker en præcis pasform. 
+  Takket være et standardmålesystem er det ret nemt at angive en 
+  størrelse, der fungerer for dig." %}
+  {% assign product_detail_txt = "PRODUKTDETALJER" %}
+  {% assign sizefit_txt = "STØRRELSE OG PASFORM" %}
+  {% assign shipping_returns_txt = "FRAGT OG RETUR" %}
+  {% assign reviews_txt = "ANMELDELSER" %}
+
 {% else %}
   {% assign frame_sizing_txt = "Frame sizing" %}
   {% assign width_txt = "Width" %}
@@ -14,6 +21,10 @@
   {% assign temple_txt = "Temple" %}
   {% assign dimensions_txt = "Dimensions" %}
   {% assign frame_sizing_desc_txt = "Frame measurements are important to keep in mind if you are wanting a precise fit. Thanks to a standard system of measurements it is fairly easy to pin point a size that works for you." %}
+  {% assign product_detail_txt = "PRODUCT DETAILS" %}
+  {% assign sizefit_txt = "SIZE & FIT" %}
+  {% assign shipping_returns_txt = "SHIPPING & RETURNS" %}
+  {% assign reviews_txt = "REVIEWS" %}
 {% endif %}
 <div id="fullpage1">
   <section data-section-id="{{ section.id }}" data-section-type="product" class="vertical-scrolling">
@@ -170,7 +181,7 @@
             </button>
           </div>
           <div class="col-lg-8 offset-lg-2 product-tabs-wrapper">
-            <p data-toggle="collapse" aria-expanded="false" data-target="#tab_product_details" class="mb-1 mt-5 tab_title">PRODUCT DETAILS<span><i></i><i></i></span></p>
+            <p data-toggle="collapse" aria-expanded="false" data-target="#tab_product_details" class="mb-1 mt-5 tab_title">{{product_detail_txt}}<span><i></i><i></i></span></p>
             {% if product.metafields.product_info.product_details != blank %}
               {% assign tab_product_details = product.metafields.product_info.product_details %}
             {% else %}
@@ -178,7 +189,7 @@
             {% endif %}
             <div id="tab_product_details" class="tab_content collapse"><div>{{ tab_product_details }}</div></div>
 
-            <p data-toggle="collapse" aria-expanded="false" data-target="#size_and_fit" class="mb-1 tab_title">SIZE & FIT<span><i></i><i></i></span></p>
+            <p data-toggle="collapse" aria-expanded="false" data-target="#size_and_fit" class="mb-1 tab_title">{{sizefit_txt}}<span><i></i><i></i></span></p>
             {% if product.metafields.product_info.size_and_fit != blank %}
               {% assign size_and_fit = product.metafields.product_info.size_and_fit %}
             {% else %}
@@ -186,7 +197,7 @@
             {% endif %}
             <div id="size_and_fit" class="tab_content collapse"><div>{{size_and_fit}}</div></div>
 
-            <p data-toggle="collapse" aria-expanded="false" data-target="#shiping_and_returns" class="mb-1 tab_title">SHIPPING & RETURNS<span><i></i><i></i></span></p>
+            <p data-toggle="collapse" aria-expanded="false" data-target="#shiping_and_returns" class="mb-1 tab_title">{{shipping_returns_txt}}<span><i></i><i></i></span></p>
             {% if product.metafields.product_info.shiping_and_returns != blank %}
               {% assign shiping_and_returns = product.metafields.product_info.shiping_and_returns %}
             {% else %}
@@ -194,7 +205,7 @@
             {% endif %}
             <div id="shiping_and_returns" class="tab_content collapse"><div>{{ shiping_and_returns }}</div></div>
 
-            <p data-toggle="collapse" aria-expanded="false" data-target="#reviews" class="mb-1 tab_title">REVIEWS<span><i></i><i></i></span></p>
+            <p data-toggle="collapse" aria-expanded="false" data-target="#reviews" class="mb-1 tab_title">{{reviews_txt}}<span><i></i><i></i></span></p>
             {% if product.metafields.product_info.reviews != blank %}
               {% assign reviews = product.metafields.product_info.reviews %}
             {% else %}
