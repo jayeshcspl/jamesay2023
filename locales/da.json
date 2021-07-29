@@ -330,9 +330,7 @@
       "nose_bridge_txt" : "Næsebredde",
       "temple_txt" : "Stanglængde",
       "dimensions_txt" : "Størrelse",
-      "frame_sizing_desc_txt" : "Størrelsen er vigtig at huske på, hvis du ønsker en præcis pasform. 
-      Takket være et standardmålesystem er det ret nemt at angive en 
-      størrelse, der fungerer for dig.",
+      "frame_sizing_desc_txt" : "Størrelsen er vigtig at huske på, hvis du ønsker en præcis pasform. Takket være et standardmålesystem er det ret nemt at angive en størrelse, der fungerer for dig.",
       "product_detail_txt" : "PRODUKTDETALJER",
       "sizefit_txt" : "STØRRELSE OG PASFORM",
       "shipping_returns_txt" : "FRAGT OG RETUR",
