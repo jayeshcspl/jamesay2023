@@ -4,7 +4,7 @@
     <div class="container-fluid h-100 px-0">
       <div class="row pl-50 no-gutters">
         <div class="col">
-          <h1 class="fs80 mb-5 mlm-5">Shop</h1>
+          <h1 class="fs80 mb-5 mlm-5">{{ 'general.label.Shop' | t }}</h1>
         </div>
       </div>
       <div class="row pl-50 no-gutters pr-50">
@@ -15,11 +15,11 @@
           <!-- <ul class="subnav clearfix"> -->
             <div{% unless current_tags %} class="active"{% endunless %}>
               {% if collection.handle %}
-              <a href="/collections/{{ collection.handle }}{% if collection.sort_by %}?sort_by={{ collection.sort_by }}{% endif %}">All</a>
+              <a href="/collections/{{ collection.handle }}{% if collection.sort_by %}?sort_by={{ collection.sort_by }}{% endif %}">{{ 'general.label.All' | t }}</a>
               {% elsif collection.current_type %}
-              <a href="{{ collection.current_type | url_for_type | sort_by: collection.sort_by }}">All</a>
+              <a href="{{ collection.current_type | url_for_type | sort_by: collection.sort_by }}">{{ 'general.label.All' | t }}</a>
               {% elsif collection.current_vendor %}
-              <a href="{{ collection.current_vendor | url_for_vendor | sort_by: collection.sort_by }}">All</a>
+              <a href="{{ collection.current_vendor | url_for_vendor | sort_by: collection.sort_by }}">{{ 'general.label.All' | t }}</a>
               {% endif %}
             </div>
             {% assign tags = 'Female,Male,Gender Neutral,Lifestyle' | split: ',' %}

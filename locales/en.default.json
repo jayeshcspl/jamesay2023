@@ -9,7 +9,7 @@
     },
     "404": {
       "title": "404 Page Not Found",
-      "subtext_html": "The page you requested does not exist. Click <a href=\"\/collections\/all\">here<\/a> to continue shopping."
+      "subtext_html": "The page you requested does not exist. Click <a href:\"\/collections\/all\">here<\/a> to continue shopping."
     },
     "password_page": {
       "opening_soon": "Opening Soon",
@@ -23,7 +23,7 @@
       "signup_form_email_placeholder": "Your email",
       "signup_form_submit": "Submit",
       "signup_form_success": "We will send you an email right before we open!",
-      "admin_link_html": "Are you the store owner? <a href=\"\/admin\">Log in here<\/a>",
+      "admin_link_html": "Are you the store owner? <a href:\"\/admin\">Log in here<\/a>",
       "password_link": "Enter using password",
       "powered_by_shopify_html": "This shop will be powered by {{ shopify }}"
     },
@@ -49,13 +49,54 @@
         "one": "{{ count }} result for \"{{ terms }}\"",
         "other": "{{ count }} results for \"{{ terms }}\""
       },
-      "no_results_html": "Please try a different search term or go back to the <a href=\"\/\">homepage<\/a>."
+      "no_results_html": "Please try a different search term or go back to the <a href:\"\/\">homepage<\/a>."
     },
     "newsletter_form": {
       "newsletter_email": "Join our mailing list",
       "email_placeholder": "Email address",
       "confirmation": "Thanks for subscribing",
-      "submit": "Subscribe"
+      "submit": "Subscribe",
+      "join_our_newsletter_txt": "Join our newsletter",
+      "join_our_newsletter_desc": "We wish to give you inspiration on how to live a more fulfilling life. So, sign up to our newsletter to follow what goes on in our universe.",
+      "accept_txt": "On sign up you accept our",
+      "privacy_policy_txt":"privacy policy",
+      "sign_up_txt":"Sign up",
+      "your_name_txt":"Your name",
+      "your_email_txt":"Your email"
+    },
+    "label": {
+      "2021_collection": "2021  Collection",
+      "SEE_FULL_COLLECTION": "SEE FULL COLLECTION",
+      "Find_stores": "Find stores",
+      "GO_TO_STORE_LOCATOR": "GO TO STORE LOCATOR",
+      "find_store_image": "https://cdn.shopify.com/s/files/1/0224/6066/1824/files/find_store-james-ay.jpg",
+      "COLOURS": "COLOURS",
+      "Home":"Home",
+      "All":"All",
+      "Shop":"Shop"
+    },
+    "header": {
+      "sustainability": "Sustainability",
+      "we_give_back": "We give back",
+      "become_a_retailer": "Become a retailer",
+      "terms_and_conditions":"Terms and conditions",
+      "customer_service":"Customer service",
+      "join_newsletter":"Join newsletter",
+      "contact": "Contact",
+      "search_txt": "SEARCH",
+      "bag_txt": "BAG"
+    },
+    "footer": {
+      "about_us_txt" : "ABOUT US",
+      "about_txt" : "About",
+      "stories_txt" : "Stories",
+      "contact_us_txt" : "Contact us",
+      "shipping_returns_txt" : "Shipping & returns",
+      "connect_txt" : "CONNECT",
+      "reviews_txt" : "REVIEWS",
+      "terms_conditions_txt" : "Terms & conditions",
+      "cookies_txt" : "Cookies - privacy policy",
+      "see_all_review_txt" : "See all reviews / Write Review"
     }
   },
   "blogs": {
@@ -96,9 +137,18 @@
       "checkout": "Check Out",
       "empty": "Your cart is currently empty.",
       "cookies_required": "Enable cookies to use the shopping cart",
-      "continue_browsing_html": "Continue browsing <a href=\"\/collections\/all\">here<\/a>.",
+      "continue_browsing_html": "Continue browsing <a href:\"\/collections\/all\">here<\/a>.",
       "item_quantity": "Item quantity",
-      "savings": "You're saving"
+      "savings": "You're saving",
+      "buy_now": "Buy now",
+      "continue_shopping": "Continue shopping",
+      "total_excl_vat": "Total excl. VAT",
+      "total_incl_vat": "Total incl. VAT",
+      "Subtotal_incl_taxes": "Subtotal incl. taxes",
+      "purchase_plants_tree_remove_waste": "(Every pair of AY's you purchase plants one tree and removes a kilo of plastic waste from our oceans)",
+      "free_shipping_worldwide": "Free shipping worldwide",
+      "I_agree_with_the": "I agree with the",
+      "terms_and_conditions": "terms and conditions"
     },
     "label": {
       "product": "Product",
@@ -272,6 +322,19 @@
       "from_text_html": "From {{ price }}",
       "quantity": "Quantity",
       "add_to_cart": "Add to cart"
+    },
+    "label": {
+      "frame_sizing_txt" : "Frame sizing",
+      "width_txt" : "Width",
+      "lens_length_txt" : "Lens length",
+      "nose_bridge_txt" : "Nose bridge",
+      "temple_txt" : "Temple",
+      "dimensions_txt" : "Dimensions",
+      "frame_sizing_desc_txt" : "Frame measurements are important to keep in mind if you are wanting a precise fit. Thanks to a standard system of measurements it is fairly easy to pin point a size that works for you.",
+      "product_detail_txt" : "PRODUCT DETAILS",
+      "sizefit_txt" : "SIZE & FIT",
+      "shipping_returns_txt" : "SHIPPING & RETURNS",
+      "reviews_txt" : "REVIEWS"
     }
   },
   "gift_cards": {

@@ -55,7 +55,48 @@
       "newsletter_email": "Deltag i vores mailingliste",
       "email_placeholder": "Email",
       "confirmation": "Tak for at abonnere",
-      "submit": "Abonnere"
+      "submit": "Abonnere",
+      "join_our_newsletter_txt": "Tilmeld nyhedsbrev",
+      "join_our_newsletter_desc": "Modtag vores nyhedsbrev 1-2 gange i måneden, og få inspiration til dit liv i form af musik, rejser, historier og meget mere.",
+      "accept_txt": "Ved tilmelding accepterer du vores",
+      "privacy_policy_txt":"fortrolighedspolitik",
+      "sign_up_txt":"Tilmeld dig",
+      "your_name_txt":"Dit navn",
+      "your_email_txt":"Din email"
+    },
+    "label": {
+      "2021_collection": "2021  Kollektion",
+      "SEE_FULL_COLLECTION": "SE KOLLEKTIONEN",
+      "Find_stores": "Find forhandler",
+      "GO_TO_STORE_LOCATOR": "GÅ TIL FORHANDLERKORT",
+      "find_store_image": "https://cdn.shopify.com/s/files/1/0224/6066/1824/files/find_store-james-ay.jpg",
+      "COLOURS": "FARVER",
+      "Home":"Hjem",
+      "All":"Alle",
+      "Shop":"Produkter"
+    },
+    "header": {
+      "sustainability": "Bæredygtighed",
+      "we_give_back": "Vi giver tilbage",
+      "become_a_retailer": "Bliv forhandler",
+      "terms_and_conditions":"Handelsbetingelser",
+      "customer_service":"Customer service",
+      "join_newsletter":"Join newsletter",
+      "contact": "Kontakt",
+      "search_txt": "SØG",
+      "bag_txt": "KURV"
+    },
+    "footer": {
+      "about_us_txt" : "OM OS",
+      "about_txt" : "Om James Ay",
+      "stories_txt" : "Historier",
+      "contact_us_txt" : "Kontakt",
+      "shipping_returns_txt" : "Fragt og retur",
+      "connect_txt" : "FØLG OS",
+      "reviews_txt" : "ANMELDELSER",
+      "terms_conditions_txt" : "Handelsbetingelser",
+      "cookies_txt" : "Cookies - fortrolighedspolitik",
+      "see_all_review_txt" : "Se alle anmeldelser / Skriv en anmeldelse"
     }
   },
   "blogs": {
@@ -94,11 +135,20 @@
       "shipping_at_checkout": "Forsendelse og skatter bliver beregnet ved betaling",
       "update": "Opdater Kurv",
       "checkout": "Gå til betaling",
-      "empty": "Din kurv er i øjeblikket tom.",
-      "cookies_required": "Slå cookies til for at bruge indkøbskurven",
+      "empty": "Din kurv er tom",
+      "cookies_required": "Aktiver cookies for at bruge indkøbskurven",
       "continue_browsing_html": "Fortsæt med at handle <a href=\"\/collections\/all\">her<\/a>.",
       "item_quantity": "Produkt antal",
-      "savings": "Du sparer"
+      "savings": "Du sparer",
+      "buy_now": "Køb nu",
+      "continue_shopping": "Forsæt med at handle",
+      "total_excl_vat": "Total ekskl. moms",
+      "total_incl_vat": "Total inkl. moms",
+      "Subtotal_incl_taxes": "Subtotal incl. taxes",
+      "purchase_plants_tree_remove_waste": "(Every pair of AY's you purchase plants one tree and removes a kilo of plastic waste from our oceans)",
+      "free_shipping_worldwide": "Gratis fragt",
+      "I_agree_with_the": "Jeg accepterer",
+      "terms_and_conditions": "handelsbetingelserne"
     },
     "label": {
       "product": "Produkt",
@@ -272,6 +322,21 @@
       "from_text_html": "Fra {{ price }}",
       "quantity": "Antal",
       "add_to_cart": "Tilføj til Kurv"
+    },
+    "label": {
+      "frame_sizing_txt" : "Størrelsesguide",
+      "width_txt" : "Bredde",
+      "lens_length_txt" : "Linse længde",
+      "nose_bridge_txt" : "Næsebredde",
+      "temple_txt" : "Stanglængde",
+      "dimensions_txt" : "Størrelse",
+      "frame_sizing_desc_txt" : "Størrelsen er vigtig at huske på, hvis du ønsker en præcis pasform. 
+      Takket være et standardmålesystem er det ret nemt at angive en 
+      størrelse, der fungerer for dig.",
+      "product_detail_txt" : "PRODUKTDETALJER",
+      "sizefit_txt" : "STØRRELSE OG PASFORM",
+      "shipping_returns_txt" : "FRAGT OG RETUR",
+      "reviews_txt" : "ANMELDELSER"
     }
   },
   "gift_cards": {

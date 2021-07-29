@@ -1,34 +1,3 @@
-{% if request.host != "jamesay.myshopify.com" and request.host != "jamesay.com" %}
-  {% assign frame_sizing_txt = "Størrelsesguide" %}
-  {% assign width_txt = "Bredde" %}
-  {% assign lens_length_txt = "Linse længde" %}
-  {% assign nose_bridge_txt = "Næsebredde" %}
-  {% assign temple_txt = "Stanglængde" %}
-  {% assign dimensions_txt = "Størrelse" %}
-  {% assign frame_sizing_desc_txt = "Størrelsen er vigtig at huske på, hvis du ønsker en præcis pasform. 
-  Takket være et standardmålesystem er det ret nemt at angive en 
-  størrelse, der fungerer for dig." %}
-  {% assign product_detail_txt = "PRODUKTDETALJER" %}
-  {% assign sizefit_txt = "STØRRELSE OG PASFORM" %}
-  {% assign shipping_returns_txt = "FRAGT OG RETUR" %}
-  {% assign reviews_txt = "ANMELDELSER" %}
-  {% assign add_to_cart_txt = "Tilføj til kurv" %}
-  {% assign sold_out_txt = "Sold out" %}
-{% else %}
-  {% assign frame_sizing_txt = "Frame sizing" %}
-  {% assign width_txt = "Width" %}
-  {% assign lens_length_txt = "Lens length" %}
-  {% assign nose_bridge_txt = "Nose bridge" %}
-  {% assign temple_txt = "Temple" %}
-  {% assign dimensions_txt = "Dimensions" %}
-  {% assign frame_sizing_desc_txt = "Frame measurements are important to keep in mind if you are wanting a precise fit. Thanks to a standard system of measurements it is fairly easy to pin point a size that works for you." %}
-  {% assign product_detail_txt = "PRODUCT DETAILS" %}
-  {% assign sizefit_txt = "SIZE & FIT" %}
-  {% assign shipping_returns_txt = "SHIPPING & RETURNS" %}
-  {% assign reviews_txt = "REVIEWS" %}
-  {% assign add_to_cart_txt = "Add to cart" %}
-  {% assign sold_out_txt = "Sold out" %}
-{% endif %}
 <div id="fullpage1">
   <section data-section-id="{{ section.id }}" data-section-type="product" class="vertical-scrolling">
     {%- assign current_variant = product.selected_or_first_available_variant -%}
@@ -176,17 +145,15 @@
             {% unless current_variant.available %}disabled="disabled"{% endunless %}>
               <span data-submit-button-text>
                 {% if current_variant.available %}
-                  {% comment %}{{ 'products.product.add_to_cart' | t }}{% endcomment %}
-                  {{add_to_cart_txt}}
+                  {{ 'products.product.add_to_cart' | t }}
                 {% else %}
-                  {% comment %}{{ 'products.product.sold_out' | t }}{% endcomment %}
-                  {{sold_out_txt}}
+                  {{ 'products.product.sold_out' | t }}
                 {% endif %}
               </span>
             </button>
           </div>
           <div class="col-lg-8 offset-lg-2 product-tabs-wrapper">
-            <p data-toggle="collapse" aria-expanded="false" data-target="#tab_product_details" class="mb-1 mt-5 tab_title">{{product_detail_txt}}<span><i></i><i></i></span></p>
+            <p data-toggle="collapse" aria-expanded="false" data-target="#tab_product_details" class="mb-1 mt-5 tab_title">{{ 'products.label.product_detail_txt' | t }}<span><i></i><i></i></span></p>
             {% if product.metafields.product_info.product_details != blank %}
               {% assign tab_product_details = product.metafields.product_info.product_details %}
             {% else %}
@@ -194,7 +161,7 @@
             {% endif %}
             <div id="tab_product_details" class="tab_content collapse"><div>{{ tab_product_details }}</div></div>
 
-            <p data-toggle="collapse" aria-expanded="false" data-target="#size_and_fit" class="mb-1 tab_title">{{sizefit_txt}}<span><i></i><i></i></span></p>
+            <p data-toggle="collapse" aria-expanded="false" data-target="#size_and_fit" class="mb-1 tab_title">{{ 'products.label.sizefit_txt' | t }}<span><i></i><i></i></span></p>
             {% if product.metafields.product_info.size_and_fit != blank %}
               {% assign size_and_fit = product.metafields.product_info.size_and_fit %}
             {% else %}
@@ -202,7 +169,7 @@
             {% endif %}
             <div id="size_and_fit" class="tab_content collapse"><div>{{size_and_fit}}</div></div>
 
-            <p data-toggle="collapse" aria-expanded="false" data-target="#shiping_and_returns" class="mb-1 tab_title">{{shipping_returns_txt}}<span><i></i><i></i></span></p>
+            <p data-toggle="collapse" aria-expanded="false" data-target="#shiping_and_returns" class="mb-1 tab_title">{{ 'products.label.shipping_returns_txt' | t }}<span><i></i><i></i></span></p>
             {% if product.metafields.product_info.shiping_and_returns != blank %}
               {% assign shiping_and_returns = product.metafields.product_info.shiping_and_returns %}
             {% else %}
@@ -210,7 +177,7 @@
             {% endif %}
             <div id="shiping_and_returns" class="tab_content collapse"><div>{{ shiping_and_returns }}</div></div>
 
-            <p data-toggle="collapse" aria-expanded="false" data-target="#reviews" class="mb-1 tab_title">{{reviews_txt}}<span><i></i><i></i></span></p>
+            <p data-toggle="collapse" aria-expanded="false" data-target="#reviews" class="mb-1 tab_title">{{ 'products.label.reviews_txt' | t }}<span><i></i><i></i></span></p>
             {% if product.metafields.product_info.reviews != blank %}
               {% assign reviews = product.metafields.product_info.reviews %}
             {% else %}
@@ -298,7 +265,7 @@
       <div class="container-fluid h-100 px-0">
         <div class="row pl-50 pr-50 no-gutters min-vh-100 text-white">
           <div class="col-12 mt-5">
-            <h1 class="fs80">{{frame_sizing_txt}}</h1>
+            <h1 class="fs80">{{ 'products.label.frame_sizing_txt' | t }}</h1>
           </div>
           <div class="col-12">
             <div class="row mt-5 align-items-center">
@@ -309,7 +276,7 @@
                   {% assign frame_width_image = "https://cdn.shopify.com/s/files/1/0224/6066/1824/files/cannes_frame_width.png?v=1617622313" %}
                 {% endif %}
                 <img src="{{frame_width_image}}" class="img-fluid mb-5" alt="">
-                <p>{{width_txt}}: {{product.metafields.product_frame_sizing.frame_width}}mm</p>
+                <p>{{ 'products.label.width_txt' | t }}: {{product.metafields.product_frame_sizing.frame_width}}mm</p>
               </div>
               <div class="col-lg-3 mb-5 mt-5 text-center">
                 {% if product.metafields.product_frame_sizing.lens_length_image != blank %}
@@ -318,7 +285,7 @@
                   {% assign lens_length_image = "https://cdn.shopify.com/s/files/1/0224/6066/1824/files/cannes_frame_lens_length.png?v=1617624722" %}
                 {% endif %}
                 <img src="{{lens_length_image}}" class="img-fluid mb-5" alt="">
-                <p>{{lens_length_txt}}: {{product.metafields.product_frame_sizing.lens_length}}mm</p>
+                <p>{{ 'products.label.lens_length_txt' | t }}: {{product.metafields.product_frame_sizing.lens_length}}mm</p>
               </div>
               <div class="col-lg-3 mb-5 mt-5 text-center">
                 {% if product.metafields.product_frame_sizing.nose_bridge_size_image != blank %}
@@ -327,7 +294,7 @@
                   {% assign nose_bridge_size_image = "https://cdn.shopify.com/s/files/1/0224/6066/1824/files/cannes_frame_nose_bridge.png?v=1617622313" %}
                 {% endif %}
                 <img src="{{nose_bridge_size_image}}" class="img-fluid mb-5" alt="">
-                <p>{{nose_bridge_txt}}: {{product.metafields.product_frame_sizing.nose_bridge_size}}mm</p>
+                <p>{{ 'products.label.nose_bridge_txt' | t }}: {{product.metafields.product_frame_sizing.nose_bridge_size}}mm</p>
               </div>
               <div class="col-lg-3 mb-5 mt-5 text-center">
                 {% if product.metafields.product_frame_sizing.temple_size_image != blank %}
@@ -336,15 +303,15 @@
                   {% assign temple_size_image = "https://cdn.shopify.com/s/files/1/0224/6066/1824/files/cannes_frame_temple1.png?v=1617629431" %}
                 {% endif %}
                 <img src="{{temple_size_image}}" class="img-fluid mb-5" alt="">
-                <p>{{temple_txt}}: {{product.metafields.product_frame_sizing.temple_size}}mm</p>
+                <p>{{ 'products.label.temple_txt' | t }}: {{product.metafields.product_frame_sizing.temple_size}}mm</p>
               </div>
             </div>
           </div>
           <div class="col-lg-7 d-none d-lg-block">
-            <p class="slide_title_bottom">{{dimensions_txt}}: {{product.metafields.product_frame_sizing.lens_length}}-{{product.metafields.product_frame_sizing.nose_bridge_size}}-{{product.metafields.product_frame_sizing.temple_size}}</p>
+            <p class="slide_title_bottom">{{ 'products.label.dimensions_txt' | t }}: {{product.metafields.product_frame_sizing.lens_length}}-{{product.metafields.product_frame_sizing.nose_bridge_size}}-{{product.metafields.product_frame_sizing.temple_size}}</p>
           </div>
           <div class="col-lg-4 d-none d-lg-block">
-            <p class="slide_description_bottom_right mt-5">{{frame_sizing_desc_txt}}</p>
+            <p class="slide_description_bottom_right mt-5">{{ 'products.label.frame_sizing_desc_txt' | t }}</p>
           </div>
       </div>
     </section>

@@ -110,7 +110,7 @@
             <div class="row no-gutters">
               <div class="col-12 d-none d-md-block mb-4 text-right euro no-gutter" style="border-bottom: 1px solid #dee2e6;">
                 <p id="subtotal" class="cart-money mb-0">{{ 'cart.general.subtotal' | t }} {{ cart.total_price | money }}</p>
-                <p class="usp_text d-none">(Every pair of AY's you purchase plants one tree and removes a kilo of plastic waste from our oceans)</p>
+                <p class="usp_text d-none">{{ 'cart.general.purchase_plants_tree_remove_waste' | t }}</p>
                 {% if cart.total_discounts > 0 %}
                   <p>{{ 'cart.general.savings' | t }} {{ cart.total_discounts | money }}</p>
                 {% endif %}
@@ -118,7 +118,7 @@
               <div class="col-12 d-block d-md-none mb-4 no-gutter" style="border-bottom: 1px solid #dee2e6;">
                 <div class="row">
                   <div class="col-6">
-                    <p class="mt-2">Subtotal incl. taxes</p>
+                    <p class="mt-2">{{ 'cart.general.Subtotal_incl_taxes' | t }}</p>
                   </div>
                   <div class="col-6 text-right euro">
                     <p id="subtotal" class="cart-money">{{ cart.total_price | money }}</p>
@@ -126,18 +126,18 @@
                       <p>{{ 'cart.general.savings' | t }} {{ cart.total_discounts | money }}</p>
                     {% endif %}
                   </div>
-                  <div class="col"><p style="font-size: 1rem;">(Every pair of AY's you purchase plants one tree and removes a kilo of plastic waste from our oceans)</p></div>
+                  <div class="col"><p style="font-size: 1rem;">{{ 'cart.general.purchase_plants_tree_remove_waste' | t }}</p></div>
                 </div>                  
               </div>              
             </div>
             <div class="row pt-2 no-gutters">
               <div class="col-md-6 text-center text-md-left">
-                <p>{{ 'cart.general.shipping_at_checkout' | t }} (Free shipping worldwide)</p>
+                <p>{{ 'cart.general.shipping_at_checkout' | t }} ({{ 'cart.general.free_shipping_worldwide' | t }})</p>
               </div>
               <div class="col-md-6 text-center text-md-right">
                 <p>
                   <label class="agree-check">
-                      <input type="checkbox" class="option-input" id="agree">I agree with the <a href="/pages/terms-conditions" target="_blank">terms and conditions</a>.
+                      <input type="checkbox" class="option-input" id="agree">{{ 'cart.general.I_agree_with_the' | t }} <a href="/pages/terms-conditions" target="_blank">{{ 'cart.general.terms_and_conditions' | t }}</a>.
                   </label>
                 </p>
               </div>
@@ -161,7 +161,7 @@
         {% else %}
           <div class="supports-cookies text-center m-5">
               <h4 class="mb-5">{{ 'cart.general.empty' | t }}</h4>
-              <a href="/collections/all" class="continue-shopping" title="Continue shopping">Continue shopping</a>
+              <a href="/collections/all" class="continue-shopping" title="{{ 'cart.general.continue_shopping' | t }}">{{ 'cart.general.continue_shopping' | t }}</a>
           </div>
       
           {% comment %}
