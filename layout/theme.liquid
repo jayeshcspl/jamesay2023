@@ -56,11 +56,11 @@
     @media screen and (min-width: 992px) {
       body:after{
         display:none;
-        content: {% if template == 'index' %} url({{ 'videobg_vimeo.jpg' | file_url }}) {% endif %}
-        url({{ 'shop_menu.jpg' | file_url }})
-        url({{ 'stories-menu.jpg' | file_url }})
-        url({{ 'about_menu.jpg' | file_url }})
-        url({{ 'stores-menu.jpg' | file_url }});
+        content: {% if template == 'index' %} url({{ 'general.label.videobg_vimeo_image' | t }}) {% endif %}
+        url({{ 'general.label.shop_menu_image' | t }})
+        url({{ 'general.label.stories_menu_image' | t }})
+        url({{ 'general.label.about_menu_image' | t }})
+        url({{ 'general.label.stores_menu_image' | t }});
       }
       #pic {
         opacity: 1;
@@ -69,22 +69,22 @@
         -webkit-transition: opacity .25s ease-in-out;
       }
       #pic.p1 {
-        background-image: url({{ 'shop_menu.jpg' | file_url }});
+        background-image: url({{ 'general.label.shop_menu_image' | t }});
         background-size: cover;
         background-position: center center;
       }
       #pic.p2 {
-        background-image: url({{ 'stories-menu.jpg' | file_url }});
+        background-image: url({{ 'general.label.stories_menu_image' | t }});
         background-size: cover;
         background-position: center center;
       }
       #pic.p3 {
-        background-image: url({{ 'about_menu.jpg' | file_url }});
+        background-image: url({{ 'general.label.about_menu_image' | t }});
         background-size: cover;
         background-position: center center;
       }
       #pic.p4 {
-        background-image: url({{ 'stores-menu.jpg' | file_url }});
+        background-image: url({{ 'general.label.stores_menu_image' | t }});
         background-size: cover;
         background-position: center center;
       }
@@ -93,7 +93,7 @@
       {% if template == 'index' %}
       body:after{
         display:none;
-        content: url({{ 'videobg_vimeo_mobile.jpg' | file_url }});
+        content: url({{ 'general.label.videobg_vimeo_mobile_image' | t }});
       }
       {% endif %}
     }    
@@ -109,7 +109,7 @@
     } */
     @media screen and (min-width: 992px) {
       .vimeo-wrapper {
-        background-image: url({{ 'videobg_vimeo.jpg' | file_url }});
+        background-image: url({{ 'general.label.videobg_vimeo_image' | t }});
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -117,7 +117,7 @@
     }
     @media screen and (max-width: 991px) {
       .vimeo-wrapper {
-        background-image: url({{ 'videobg_vimeo_mobile.jpg' | file_url }});
+        background-image: url({{ 'general.label.videobg_vimeo_mobile_image' | t }});
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;        
