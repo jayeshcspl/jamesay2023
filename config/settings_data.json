@@ -20,7 +20,7 @@
     "social_vimeo_link": "",
     "cart_notes_enable": false,
     "favicon": "shopify:\/\/shop_images\/ay_favicon_32x32_b5423a58-89b9-44f3-992b-7108326bfcb5.gif",
-    "checkout_header_image": "",
+    "checkout_header_image": "shopify:\/\/shop_images\/logo_mark_black.png",
     "checkout_logo_image": "shopify:\/\/shop_images\/logo_mark_black.png",
     "checkout_logo_position": "left",
     "checkout_logo_size": "large",
