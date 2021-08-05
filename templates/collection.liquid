@@ -22,7 +22,7 @@
               <a href="{{ collection.current_vendor | url_for_vendor | sort_by: collection.sort_by }}">{{ 'general.label.All' | t }}</a>
               {% endif %}
             </div>
-            {% assign tags = 'Female,Male,Gender Neutral,Lifestyle' | split: ',' %}
+            {% assign tags = 'general.label.tags' | t | split: ',' %}
             {% for tag in tags  %}
               {% if current_tags contains tag %}
               <div class="active">
