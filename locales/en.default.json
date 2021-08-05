@@ -65,6 +65,7 @@
       "your_email_txt":"Your email"
     },
     "label": {
+      "accept_term_and_condition_alert": "You must agree with the terms and conditions of sales to check out.",
       "2021_collection": "2021  Collection",
       "SEE_FULL_COLLECTION": "SEE FULL COLLECTION",
       "Find_stores": "Find stores",
@@ -80,7 +81,8 @@
       "COLOURS": "COLOURS",
       "Home":"Home",
       "All":"All",
-      "Shop":"Shop"
+      "Shop":"Shop",
+      "READ_STORY": "READ STORY"
     },
     "header": {
       "sustainability": "Sustainability",

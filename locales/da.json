@@ -65,6 +65,7 @@
       "your_email_txt":"Din email"
     },
     "label": {
+      "accept_term_and_condition_alert": "Du skal acceptere vores handelsbetingelser for at gå videre til betaling.",
       "2021_collection": "2021  Kollektion",
       "SEE_FULL_COLLECTION": "SE KOLLEKTIONEN",
       "Find_stores": "Find forhandler",
@@ -80,7 +81,8 @@
       "COLOURS": "FARVER",
       "Home":"Hjem",
       "All":"Alle",
-      "Shop":"Produkter"
+      "Shop":"Produkter",
+      "READ_STORY": "LÆS HISTORIE"
     },
     "header": {
       "sustainability": "Bæredygtighed",
