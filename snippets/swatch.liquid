@@ -54,15 +54,15 @@
         {% if is_color %}
         <!-- <div class="tooltip">{{ value }}</div> -->
         {% endif %}
-        <input id="swatch-{{ option_index }}-{{ value | handle }}" type="radio" name="options[{{ swatch | escape }}]" value="{{ value | escape }}"{% if option.selected_value == value %} checked{% endif %} {% unless variant.available %}disabled{% endunless %} />
+        <input id="swatch-{{ option_index }}-{{ value | handle }}" type="radio" name="options[{{ swatch | escape }}]" value="{{ value | escape }}"{% if option.selected_value == value %} checked{% endif %} />
         {% if is_color %}
         <label for="swatch-{{ option_index }}-{{ value | handle }}" style="border-color: {{ value | split: ' ' | last | handle }};background-color: {{ value | split: ' ' | last | handle }}; background-image: url({{ value | handle | append: '.' | append: file_extension | asset_url }})">
-          <img class="crossed-out" src="{{ 'soldout.png' | asset_url }}" />
+          <!-- <img class="crossed-out" src="{{ 'soldout.png' | asset_url }}" /> -->
         </label>
         {% else %}
         <label for="swatch-{{ option_index }}-{{ value | handle }}">
           {{ value }}
-          <img class="crossed-out" src="{{ 'soldout.png' | asset_url }}" />
+          <!-- <img class="crossed-out" src="{{ 'soldout.png' | asset_url }}" /> -->
         </label>
         {% endif %}
       </div>

@@ -64,6 +64,57 @@
         <div class="col-lg-6 d-lg-flex text-left shop1_imgr position-relative">
           {% form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' %}
           <div class="col-lg-8 offset-lg-2">
+            <div class="pb-2 pt-4 d-block d-lg-none">
+              <div class="form-group">
+                {% if product.has_only_default_variant %}
+                  <input name="id" value="{{ product.variants.first.id }}" type="hidden">
+                {% else %}
+                  {% for option in product.options_with_values %}
+                    <div class="js">
+  
+                      {% if forloop.index0 > 0 %}
+  
+                        {% for value in option.values %}
+                          <input type="radio" id="Option{{ option.position }}-{{ value }}" name="options[{{ option.name }}]" value="{{ value }}"{% if option.selected_value == value %} checked{% endif %}>
+                          <label for="Option{{ option.position }}-{{ value }}">{{ value }}</label>
+                        {% endfor %}
+  
+                      {% else %}
+                        <select
+                          class="custom-select single-option-selector"
+                          id="Option{{ option.position }}"
+                          name="options[{{ option.name | escape }}]" style="display: none;">
+                          {% for value in option.values %}
+                            <option
+                              value="{{ value | escape }}"
+                              {% if option.selected_value == value %}selected="selected"{% endif %}>
+                            {{ value }}
+                            </option>
+                          {% endfor %}
+                        </select>
+                        <div class="swatch_area">
+                            {% include 'swatch' with 'Color' %}
+                        </div>
+                      {% endif %}
+                    </div>
+                  {% endfor %}
+                {% endif %}
+  
+                <noscript>
+                  <select name="id" class="single-option-selector">
+                    {% for variant in product.variants %}
+                      <option
+                        {% if variant == current_variant %}selected="selected"{% endif %}
+                        {% unless variant.available %}disabled="disabled"{% endunless %}
+                        value="{{ variant.id }}">
+                      {{ variant.title }}
+                      </option>
+                    {% endfor %}
+                  </select>
+                </noscript>
+                <input class="form-control" type="hidden" id="quantity" name="quantity" value="1" min="1">
+              </div>
+            </div>
             <h1 class="fs60 mb-5">{{ product.title }}</h1>
             <div class="row border-bottom pb-4 mb-5 border-dark no-gutters">
               <div class="col-6 fs19">{{current_variant.sku}}</div>
@@ -82,7 +133,7 @@
             {% endif %}
              
             <p>{{ short_description }}</p>
-            <div class="pb-2 pt-4">
+            <div class="pb-2 pt-4 d-none d-lg-block">
   
               <div class="form-group">
                 {% if product.has_only_default_variant %}
