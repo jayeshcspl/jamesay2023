@@ -60,35 +60,35 @@
 <section class="fp-auto-height-responsive vertical-scrolling {{section_number}}" data-section="two-image">
   <div class="container-fluid h-100">
     <div class="row h-100">
-      <div class="d-none d-lg-flex col-lg-6 pl-50 my-auto section1_imgl  custom_overlay1" style="background-image: url({{ left_bg_image_desktop }});" data-desktop-url="{{left_bg_image_desktop}}" data-mobile-url="{{left_bg_image_mobile}}">
+      <div class="d-none d-lg-flex col-lg-6 pl-50 my-auto section1_imgl  custom_overlay" style="background-image: url({{ left_bg_image_desktop }});" data-desktop-url="{{left_bg_image_desktop}}" data-mobile-url="{{left_bg_image_mobile}}">
         <a href="{{left_link}}">  
           <div class="overlay">
-            <h2 class="slide_title_bottom fs80 text-white mb-lg-0">{{left_title}}</h2>
-            <h5 class="slide_description_bottom_right text-white mb-0"><u>{{left_description}}</u></h5>
           </div>
         </a>
+        <h2 class="slide_title_bottom fs80 text-white mb-lg-0">{{left_title}}</h2>
+        <h5 class="slide_description_bottom_right text-white mb-0"><u>{{left_description}}</u></h5>
       </div>
-      <div class="col-lg-6 pl-50 my-auto section1_imgl custom_overlay1" style="background-image: url({{ right_bg_image_desktop }});" data-desktop-url="{{right_bg_image_desktop}}" data-mobile-url="{{right_bg_image_mobile}}">
+      <div class="col-lg-6 pl-50 my-auto section1_imgl custom_overlay" style="background-image: url({{ right_bg_image_desktop }});" data-desktop-url="{{right_bg_image_desktop}}" data-mobile-url="{{right_bg_image_mobile}}">
         <a href="{{json_product1.url}}">
           <div class="overlay">
-            <table class="product_info slide_title_bottom">
-              <tr>
-                <td>{{product.title}} / {{json_product1.sku}}</td>
-              </tr>
-              <tr>
-                <td>{{product.metafields.product_frame_sizing.lens_length}}-{{product.metafields.product_frame_sizing.nose_bridge_size}}-{{product.metafields.product_frame_sizing.temple_size}} / {{json_product1.metafields.product_variant_info.color_code}}</td>
-              </tr>
-              <tr>
-                <td>{{product.metafields.product_frame_sizing.material}}</td>
-              </tr>
-            </table>
-            <table class="product_info slide_description_bottom_right price_txt">
-              <tr>
-                <td>{{json_product1.price | money}}</td>
-              </tr>
-            </table>
           </div>
         </a>          
+        <table class="product_info slide_title_bottom">
+          <tr>
+            <td>{{product.title}} / {{json_product1.sku}}</td>
+          </tr>
+          <tr>
+            <td>{{product.metafields.product_frame_sizing.lens_length}}-{{product.metafields.product_frame_sizing.nose_bridge_size}}-{{product.metafields.product_frame_sizing.temple_size}} / {{json_product1.metafields.product_variant_info.color_code}}</td>
+          </tr>
+          <tr>
+            <td>{{product.metafields.product_frame_sizing.material}}</td>
+          </tr>
+        </table>
+        <table class="product_info slide_description_bottom_right price_txt">
+          <tr>
+            <td>{{json_product1.price | money}}</td>
+          </tr>
+        </table>
       </div>
     </div>
   </div>

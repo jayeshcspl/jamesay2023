@@ -43,52 +43,52 @@
 <section class="fp-auto-height-responsive vertical-scrolling {{section_number}}" data-section="two-image" style="background-color: #f5f5f5;">
   <div class="container-fluid h-100">
     <div class="row h-100">
-      <div class="d-none d-lg-flex col-lg-6 pl-50 my-auto section1_imgl  custom_overlay1" style="background-image: url({{ left_bg_image_desktop }}); border-right: 3px solid #ffffff;" data-desktop-url="{{left_bg_image_desktop}}" data-mobile-url="{{left_bg_image_mobile}}">
+      <div class="d-none d-lg-flex col-lg-6 pl-50 my-auto section1_imgl  custom_overlay" style="background-image: url({{ left_bg_image_desktop }}); border-right: 3px solid #ffffff;" data-desktop-url="{{left_bg_image_desktop}}" data-mobile-url="{{left_bg_image_mobile}}">
         <a href="{{json_product1.url}}">
           <div class="overlay">
-            <p class="slide_title_bottom fs80 mb-lg-0 text-capitalize">{{product_name1}}</p>
-            <table class="product_info slide_description_bottom_right">
-              <tr>
-                <td>{{product.title}} / {{json_product1.sku}}</td>
-              </tr>
-              <tr>
-                <td>{{product.metafields.product_frame_sizing.lens_length}}-{{product.metafields.product_frame_sizing.nose_bridge_size}}-{{product.metafields.product_frame_sizing.temple_size}} / {{json_product1.metafields.product_variant_info.color_code}}</td>
-              </tr>
-              <tr>
-                <td>{{product.metafields.product_frame_sizing.material}}</td>
-              </tr>
-              <tr>
-                <td><p class="mt-3 mb-1">{{product.price | money}}</p></td>
-              </tr>
-            </table>
           </div>
         </a>
+        <p class="slide_title_bottom fs80 mb-lg-0 text-capitalize">{{product_name1}}</p>
+        <table class="product_info slide_description_bottom_right">
+          <tr>
+            <td>{{product.title}} / {{json_product1.sku}}</td>
+          </tr>
+          <tr>
+            <td>{{product.metafields.product_frame_sizing.lens_length}}-{{product.metafields.product_frame_sizing.nose_bridge_size}}-{{product.metafields.product_frame_sizing.temple_size}} / {{json_product1.metafields.product_variant_info.color_code}}</td>
+          </tr>
+          <tr>
+            <td>{{product.metafields.product_frame_sizing.material}}</td>
+          </tr>
+          <tr>
+            <td><p class="mt-3 mb-1">{{product.price | money}}</p></td>
+          </tr>
+        </table>
       </div>
-      <div class="col-lg-6 pl-50 my-auto section1_imgl custom_overlay1" style="background-image: url({{ right_bg_image_desktop }}); border-left: 3px solid #ffffff;" data-desktop-url="{{right_bg_image_desktop}}" data-mobile-url="{{right_bg_image_mobile}}">
+      <div class="col-lg-6 pl-50 my-auto section1_imgl custom_overlay" style="background-image: url({{ right_bg_image_desktop }}); border-left: 3px solid #ffffff;" data-desktop-url="{{right_bg_image_desktop}}" data-mobile-url="{{right_bg_image_mobile}}">
         <a href="{{right_json_product1.url}}">
           <div class="overlay">
-            <p class="slide_title_bottom fs80 mb-lg-0 text-capitalize d-none d-lg-flex">{{right_product_name1}}</p>
-            <table class="product_info slide_description_bottom_right">
-              <tr>
-                <td>{{right_product.title}} / {{right_json_product1.sku}}</td>
-              </tr>
-              <tr>
-                <td>{{right_product.metafields.product_frame_sizing.lens_length}}-{{right_product.metafields.product_frame_sizing.nose_bridge_size}}-{{right_product.metafields.product_frame_sizing.temple_size}} / {{right_json_product1.metafields.product_variant_info.color_code}}</td>
-              </tr>
-              <tr>
-                <td>{{right_product.metafields.product_frame_sizing.material}}</td>
-              </tr>
-                <tr class="d-none d-lg-flex">
-                  <td><p class="mt-3 mb-1">{{right_json_product1.price | money}}</p></td>
-                </tr>
-            </table>
-            <table class="product_info slide_description_bottom_right d-flex d-lg-none" style="right:30px;">
-                <tr>
-                  <td><p class="mt-3 mb-1">{{right_json_product1.price | money}}</p></td>
-                </tr>
-            </table>
           </div>
-        </a>          
+        </a>
+        <p class="slide_title_bottom fs80 mb-lg-0 text-capitalize d-none d-lg-flex">{{right_product_name1}}</p>
+        <table class="product_info slide_description_bottom_right">
+          <tr>
+            <td>{{right_product.title}} / {{right_json_product1.sku}}</td>
+          </tr>
+          <tr>
+            <td>{{right_product.metafields.product_frame_sizing.lens_length}}-{{right_product.metafields.product_frame_sizing.nose_bridge_size}}-{{right_product.metafields.product_frame_sizing.temple_size}} / {{right_json_product1.metafields.product_variant_info.color_code}}</td>
+          </tr>
+          <tr>
+            <td>{{right_product.metafields.product_frame_sizing.material}}</td>
+          </tr>
+            <tr class="d-none d-lg-flex">
+              <td><p class="mt-3 mb-1">{{right_json_product1.price | money}}</p></td>
+            </tr>
+        </table>
+        <table class="product_info slide_description_bottom_right d-flex d-lg-none" style="right:30px;">
+            <tr>
+              <td><p class="mt-3 mb-1">{{right_json_product1.price | money}}</p></td>
+            </tr>
+        </table>
       </div>
     </div>
   </div>
