@@ -44,8 +44,8 @@
 {% endfor %}
 
 {% assign desktop_img = article.image | img_url: "master" %}
-{% if article.metafields.cf_story.mobile_img %}
-{% assign mobile_img = article.metafields.cf_story.mobile_img | file_url %}
+{% if article.metafields.other_information.mobile_image %}
+{% assign mobile_img = article.metafields.other_information.mobile_image %}
 {% else %}
 {% assign mobile_img = desktop_img %}
 {% endif %}
