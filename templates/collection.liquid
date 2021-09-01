@@ -54,7 +54,9 @@
                       
                       <a href="{{ variant.url | within: collection }}">
                         <div class="reveal">
-                        <img src="{{ variant | img_url: 'master' }}" data-sizes="auto" data-srcset="{{ variant | img_url: '2000x' }} 2000w,
+                        <img src="{{ variant | img_url: '150x' }}" 
+                        data-sizes="auto" 
+                        data-src="{{ variant | img_url: '2000x' }} 2000w,
                         {{ variant | img_url: '1800x' }} 1800w,
                         {{ variant | img_url: '1600x' }} 1600w,
                         {{ variant | img_url: '1400x' }} 1400w,
@@ -62,11 +64,27 @@
                         {{ variant | img_url: '1000x' }} 1000w,
                         {{ variant | img_url: '800x' }} 800w,
                         {{ variant | img_url: '600x' }} 600w,
-                        {{ variant | img_url: '420x' }} 420w" alt="{{ variant.image.alt | escape }}" class="img-fluid w-100 lazyload">
+                        {{ variant | img_url: '420x' }} 420w,
+                        {{ variant | img_url: '300x' }} 300w" 
+                        alt="{{ variant.image.alt | escape }}" 
+                        class="img-fluid w-100 lazyload">
                         {% for image in product.images %}
                         {% assign model_image = variant.image.alt | append: " - Model" %}
                           {% if model_image == image.alt %}
-                            <img class="hidden" src="{{image | img_url: 'master'}}" alt="{{ image.alt | escape }}" />
+                            <img src="{{image | img_url: '150x'}}" 
+                            data-sizes="auto" 
+                            data-src="{{ image | img_url: '2000x' }} 2000w,
+                            {{ image | img_url: '1800x' }} 1800w,
+                            {{ image | img_url: '1600x' }} 1600w,
+                            {{ image | img_url: '1400x' }} 1400w,
+                            {{ image | img_url: '1200x' }} 1200w,
+                            {{ image | img_url: '1000x' }} 1000w,
+                            {{ image | img_url: '800x' }} 800w,
+                            {{ image | img_url: '600x' }} 600w,
+                            {{ image | img_url: '420x' }} 420w,
+                            {{ image | img_url: '300x' }} 300w" 
+                            alt="{{ image.alt | escape }}" 
+                            class="hidden img-fluid w-100 lazyload">
                           {% endif %}
                         {% endfor %}
                         </div>
@@ -122,9 +140,9 @@
     }
     .swatch label {
       /* Rounded corners */
-      -webkit-border-radius:2px;
+      /* -webkit-border-radius:2px;
       -moz-border-radius:2px;
-      border-radius:50%;
+      border-radius:50%; */
       /* To give width and height */
       float:left;
       /* Color swatches contain no text so they need to have a width. */
