@@ -40,13 +40,12 @@
   {% if request.host != 'jamesay.myshopify.com' %}
     {{ content_for_header }}
   {% endif %}
-  <!-- {% if template == 'product' %}
-  <link defer rel="stylesheet" type="text/css" href="{{ 'jquery.fancybox.min.css' | asset_url }}">
-  {% endif %} -->
   {% if template == 'index' or template == 'blog' %}
   <link defer rel="stylesheet" type="text/css" href="{{ 'jquery.fullPage.css' | asset_url }}">
   {% endif %}
+  {% if template == 'product' %}
   <link defer rel="stylesheet" type="text/css" href="{{ 'jquery.bxslider.min.css' | asset_url }}">
+  {% endif %}
   <link defer rel="stylesheet" type="text/css" href="{{ 'animate.min.css' | asset_url }}">
   <link defer rel="stylesheet" type="text/css" href="{{ 'aos.css' | asset_url }}">
   <link defer rel="stylesheet" type="text/css" href="{{ 'style.scss' | asset_url }}">
@@ -115,6 +114,9 @@
         background-position: center;
         background-repeat: no-repeat;
       }
+      .followthesun_video .vimeo-wrapper {
+        background-image: none;
+      }
     }
     @media screen and (max-width: 991px) {
       .vimeo-wrapper {
@@ -123,23 +125,24 @@
         background-position: center;
         background-repeat: no-repeat;        
       }
+      .followthesun_video .vimeo-wrapper {
+        background-image: none;
+      }
     }
   </style>
   <script src="{{ 'jquery-3.4.1.min.js' | asset_url }}"></script>
-  <!-- {% if template == 'product' %}
-  <script defer src="{{ 'jquery.fancybox.js' | asset_url }}"></script>
-  {% endif %} -->
   {% if template == 'index' or template == 'blog' %}
   <script defer src="{{ 'jquery.fullPage.min.js' | asset_url }}"></script>
   {% endif %}
+  {% if template == 'product' %}
   <script defer src="{{ 'jquery.bxslider.min.js' | asset_url }}"></script>
+  {% endif %}
   <script defer src="{{ 'highlight.min.js' | asset_url }}"></script>
   <script defer src="{{ 'aos.js' | asset_url }}"></script>
   {% if template == 'index' or template == 'article' or template == 'article.dynamic' or template == 'product' %}
   <script src="{{ 'player.js' | asset_url }}"></script>
   {% endif %}
   <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
-  <!-- {{ 'luxy.js' | asset_url | script_tag }} -->
   <script defer src="{{ 'index.js' | asset_url }}"></script>
   <script>
     document.documentElement.className = document.documentElement.className.replace('no-js', '');
@@ -284,25 +287,34 @@
         }
       }
     });
-    jQuery(document).ready(function(){	
-      mySlider =  jQuery('.product_slider').bxSlider({
-        slideSelector: "div.slide-visible",	
-        pager : false,
-        responsive: true,
-        mode: 'fade',
-        pager: true,
-        preloadImages:'visible',
-        //auto: true,
-        //autoHover: true,
-        //autoControls: true
-        //infiniteLoop: false	
-      });
+    jQuery(document).ready(function(){
+      if (jQuery('.product_slider').length) {	
+        mySlider =  jQuery('.product_slider').bxSlider({
+          slideSelector: "div.slide-visible",	
+          pager : false,
+          responsive: true,
+          mode: 'fade',
+          pager: true,
+          preloadImages:'visible',
+          //auto: true,
+          //autoHover: true,
+          //autoControls: true
+          //infin
+          iteLoop: false	
+        });
+      }
     });
     if ( $('div.slide-visible').length > 1) {
       $('.responsive-image__wrapper a').css('pointer-events','');
     } else {
       $('.responsive-image__wrapper a').css('pointer-events','none');
     }
+document.addEventListener('lazybeforeunveil', function(e){
+  var bg = e.target.getAttribute('data-bg');
+  if(bg){
+      e.target.style.backgroundImage = 'url(' + bg + ')';
+  }
+});
   </script>
 </body>
 </html>

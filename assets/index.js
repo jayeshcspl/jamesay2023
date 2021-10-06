@@ -50,30 +50,32 @@ $(document).ready(function($) {
     }
   }
   $('#stories #fullpage section, .template-article #fullpage1 section, .template-product #fullpage1 section, .template-index #fullpage section').each(function (index, value){
-    console.log(index);
-    console.log($(this).attr('data-section'));
-    if($(this).attr('data-section') == "two-image") {
-      var element_bgimage = $(this).find('.section1_imgl');
-      var mobile_url = "";
-      $(this).find('.section1_imgl').each(function (i, v){
-        if( !$(this).hasClass('d-none') ){
-          mobile_url = $(this).find('.section1_imgl').attr('data-mobile-url');
-        }
-      });
-    } else if($(this).attr('data-section') == "video") {
-      var element_bgimage = $(this).find('.vimeo-wrapper');
-      var mobile_url = element_bgimage.attr('data-mobile-url');
-    } else {
-      var element_bgimage = $(this);
-      var mobile_url = $(this).attr('data-mobile-url');
-    }
-   console.log(mobile_url);
-    if(typeof mobile_url !== undefined && mobile_url !== false && mobile_url != undefined) {
-      console.log('inside condition');
-      if (deviceWidth < 575 ){
-        element_bgimage.css({"background-image": "url('"+mobile_url+"')"});
+    //setTimeout(() => {
+      console.log(index);
+      console.log($(this).attr('data-section'));
+      if($(this).attr('data-section') == "two-image") {
+        var element_bgimage = $(this).find('.section1_imgl');
+        var mobile_url = "";
+        $(this).find('.section1_imgl').each(function (i, v){
+          if( !$(this).hasClass('d-none') ){
+            mobile_url = $(this).find('.section1_imgl').attr('data-mobile-url');
+          }
+        });
+      } else if($(this).attr('data-section') == "video") {
+        var element_bgimage = $(this).find('.vimeo-wrapper');
+        var mobile_url = element_bgimage.attr('data-mobile-url');
+      } else {
+        var element_bgimage = $(this);
+        var mobile_url = $(this).attr('data-mobile-url');
       }
-    }
+     console.log(mobile_url);
+      if(typeof mobile_url !== undefined && mobile_url !== false && mobile_url != undefined) {
+        console.log('inside condition');
+        if (deviceWidth < 575 ){
+          element_bgimage.css({"background-image": "url('"+mobile_url+"')"});
+        }
+      }
+    //}, 2100);
   });
 
   /*var $isAnimatedFirst = $('.section-first .is-animated'),

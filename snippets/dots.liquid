@@ -50,16 +50,12 @@
       {% assign values = values | split: ',' %}
       <div data-value="{{ value | escape }}" class="swatch-element {% if is_color %}color {% endif %}{{ value | handle }} {% if variant.available %}available{% else %}soldout{% endif %}">
         {% if is_color %}
-        <!-- <div class="tooltip">{{ value }}</div> -->
-        {% endif %}
-        {% if is_color %}
-        <label for="swatch-{{ option_index }}-{{ value | handle }}" style="border-color: {{ value | split: ' ' | last | handle }};background-color: {{ value | split: ' ' | last | handle }}; background-image: url({{ value | handle | append: '_10.' | append: file_extension | asset_url }})">
-          <!-- <img class="crossed-out" src="{{ 'soldout.png' | asset_url }}" /> -->
+        <label for="swatch-{{ option_index }}-{{ value | handle }}" style="background-color: {{ value | split: ' ' | last | handle }};">
+          <img data-src="{{ value | handle | append: '_10.' | append: file_extension | asset_url }}" alt="" class="lazyload">
         </label>
         {% else %}
         <label for="swatch-{{ option_index }}-{{ value | handle }}">
           {{ value }}
-          <!-- <img class="crossed-out" src="{{ 'soldout.png' | asset_url }}" /> -->
         </label>
         {% endif %}
       </div>

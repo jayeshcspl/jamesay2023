@@ -118,7 +118,7 @@
               <div class="col-12 d-block d-md-none mb-4 no-gutter" style="border-bottom: 1px solid #dee2e6;">
                 <div class="row">
                   <div class="col-6">
-                    <p class="mt-2">{{ 'cart.general.Subtotal_incl_taxes' | t }}</p>
+                    <p class="mt-2">{{ 'cart.general.subtotal' | t }}</p>
                   </div>
                   <div class="col-6 text-right euro">
                     <p id="subtotal" class="cart-money">{{ cart.total_price | money }}</p>
@@ -126,12 +126,12 @@
                       <p>{{ 'cart.general.savings' | t }} {{ cart.total_discounts | money }}</p>
                     {% endif %}
                   </div>
-                  <div class="col"><p style="font-size: 1rem;">{{ 'cart.general.purchase_plants_tree_remove_waste' | t }}</p></div>
+                  <div class="col d-none"><p style="font-size: 1rem;">{{ 'cart.general.purchase_plants_tree_remove_waste' | t }}</p></div>
                 </div>                  
               </div>              
             </div>
             <div class="row pt-2 no-gutters">
-              <div class="col-md-6 text-center text-md-left">
+              <div class="col-md-6 text-center text-md-left invisible">
                 <p>{{ 'cart.general.shipping_at_checkout' | t }} ({{ 'cart.general.free_shipping_worldwide' | t }})</p>
               </div>
               <div class="col-md-6 text-center text-md-right">

@@ -283,7 +283,7 @@
       {% assign desktop_img = "eco-friendly-materials-james-ay_01.jpg" | file_url %}
     {% endif %}
     {% assign mobile_img = desktop_img %}
-    <section class="vertical-scrolling mx-auto h-100" style="background-image: url('{{desktop_img}}'); background-size: cover; background-repeat: no-repeat; background-position: center center;" data-desktop-url="{{desktop_img}}" data-mobile-url="{{mobile_img}}">
+    <section class="vertical-scrolling mx-auto h-100 lazyload" data-bg="{{desktop_img}}" style="background-size: cover; background-repeat: no-repeat; background-position: center center;" data-desktop-url="{{desktop_img}}" data-mobile-url="{{mobile_img}}">
       <div class="container-fluid h-100 px-0">
         <div class="row pl-50 pr-50 no-gutters min-vh-100">
           <div class="col-lg-10 mt-5">
@@ -420,7 +420,7 @@
   {% endif %}
   {% include 'one_column_story_in_product_page', section_number:"one_column_story_in_product_page", story_url:story_url %}  
   {% include 'collection_2021' %}
-  {% include 'followthesun_gif', section_number:"followthesun_gif" %}
+  {% include 'followthesun_video', section_number:"followthesun_video position-relative" %}
 </div>
 <style>
 {% assign width = '14px' %}
@@ -619,3 +619,16 @@
       }  
     </script>
   {% endif %}
+{% assign followthesun_video_id = 618752735 %}
+<script type="text/javascript">
+  if ($('#followthesun_video_id').length > 0) {
+    var options_story = {
+        id: {{followthesun_video_id}},
+        autoplay: true,
+        loop: true,
+        responsive: true,
+        background: true,
+    };
+    var chasing_story = new Vimeo.Player('followthesun_video_id', options_story);
+  }  
+</script>

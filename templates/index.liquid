@@ -13,7 +13,7 @@
   {% if shop.metafields.two_column_slide.display_slide == 1  %}
     {% include 'two_column_slide', section_number:"two_column_slide" %}
   {% endif %}
-  {% include 'followthesun_gif', section_number:"followthesun_gif" %}
+  {% include 'followthesun_video', section_number:"followthesun_video" %}
 </div>
 
 {% if shop.metafields.fp_fullslide_video.disable_video_slide != 1 %}
@@ -105,3 +105,17 @@
     </script>
   {% endif %}
 {% endif %}
+
+{% assign followthesun_video_id = 618752735 %}
+<script type="text/javascript">
+  if ($('#followthesun_video_id').length > 0) {
+    var options_story = {
+        id: {{followthesun_video_id}},
+        autoplay: true,
+        loop: true,
+        responsive: true,
+        background: true,
+    };
+    var chasing_story = new Vimeo.Player('followthesun_video_id', options_story);
+  }  
+</script>

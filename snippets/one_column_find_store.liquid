@@ -1,6 +1,6 @@
 {% assign desktop_img = 'general.label.find_store_image' | t %}
 {% assign mobile_img = desktop_img %}
-<section class="vertical-scrolling {{section_number}}" style="background-image: url('{{desktop_img}}'); background-size: cover; background-repeat: no-repeat; background-position: center center;" data-desktop-url="{{desktop_img}}" data-mobile-url="{{mobile_img}}">
+<section class="vertical-scrolling {{section_number}} lazyload" data-bg="{{desktop_img}}" style="background-size: cover; background-repeat: no-repeat; background-position: center center;" data-desktop-url="{{desktop_img}}" data-mobile-url="{{mobile_img}}">
   <div class="container-fluid h-100">
     <div class="row min-vh-100">
       <div class="col-lg-12 pl-50" style="z-index: 1000;">

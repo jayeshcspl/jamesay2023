@@ -23,9 +23,9 @@
 
 
 
-<section class="vertical-scrolling {{section_number}}" data-section="{{slide_type}}" style="background-image: url('{{desktop_img}}'); background-size: cover; background-repeat: no-repeat; background-position: center center;" data-desktop-url="{{desktop_img}}" data-mobile-url="{{mobile_img}}">
+<section class="vertical-scrolling {{section_number}} lazyload" data-bg="{{desktop_img}}" data-section="{{slide_type}}" style="background-size: cover; background-repeat: no-repeat; background-position: center center;" data-desktop-url="{{desktop_img}}" data-mobile-url="{{mobile_img}}">
   {% if article.metafields.other_information.display_video == 1 %}
-    <div class="vimeo-wrapper" style="background-image: url('{{desktop_img}}'); background-position: center center;" data-desktop-url="{{desktop_img}}" data-mobile-url="{{mobile_img}}">
+    <div class="vimeo-wrapper lazyload" data-bg="{{desktop_img}}"  style="background-position: center center;" data-desktop-url="{{desktop_img}}" data-mobile-url="{{mobile_img}}">
       {% if template != 'article' and  template != 'article.dynamic' %}
       	<div id="story_vimeo_video_id"></div>
       {% else %}

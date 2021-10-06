@@ -54,15 +54,9 @@
                       
                       <a href="{{ variant.url | within: collection }}">
                         <div class="reveal">
-                        <img src="{{ variant | img_url: '150x' }}" 
+                        <img width="446" height="463"  src="{{ variant | img_url: '150x' }}" 
                         data-sizes="auto" 
-                        data-src="{{ variant | img_url: '2000x' }} 2000w,
-                        {{ variant | img_url: '1800x' }} 1800w,
-                        {{ variant | img_url: '1600x' }} 1600w,
-                        {{ variant | img_url: '1400x' }} 1400w,
-                        {{ variant | img_url: '1200x' }} 1200w,
-                        {{ variant | img_url: '1000x' }} 1000w,
-                        {{ variant | img_url: '800x' }} 800w,
+                        data-src="{{ variant | img_url: '800x' }} 800w,
                         {{ variant | img_url: '600x' }} 600w,
                         {{ variant | img_url: '420x' }} 420w,
                         {{ variant | img_url: '300x' }} 300w" 
@@ -71,15 +65,9 @@
                         {% for image in product.images %}
                         {% assign model_image = variant.image.alt | append: " - Model" %}
                           {% if model_image == image.alt %}
-                            <img src="{{image | img_url: '150x'}}" 
+                            <img width="446" height="463" src="{{image | img_url: '1x'}}" 
                             data-sizes="auto" 
-                            data-src="{{ image | img_url: '2000x' }} 2000w,
-                            {{ image | img_url: '1800x' }} 1800w,
-                            {{ image | img_url: '1600x' }} 1600w,
-                            {{ image | img_url: '1400x' }} 1400w,
-                            {{ image | img_url: '1200x' }} 1200w,
-                            {{ image | img_url: '1000x' }} 1000w,
-                            {{ image | img_url: '800x' }} 800w,
+                            data-src="{{ image | img_url: '800x' }} 800w,
                             {{ image | img_url: '600x' }} 600w,
                             {{ image | img_url: '420x' }} 420w,
                             {{ image | img_url: '300x' }} 300w" 
@@ -139,23 +127,15 @@
       display:none;
     }
     .swatch label {
-      /* Rounded corners */
-      /* -webkit-border-radius:2px;
-      -moz-border-radius:2px;
-      border-radius:50%; */
-      /* To give width and height */
+      -webkit-border-radius:50%;
+      -moz-border-radius:50%;
+      border-radius:50%;
       float:left;
-      /* Color swatches contain no text so they need to have a width. */
       width:{{ width }} !important;
       min-width:{{ width }} !important; 
       height:{{ height }} !important;
-      /* No extra spacing between them */
       margin:0;
-      /* The border when the button is not selected */
-      /* border:#ccc 1px solid; */
-      /* Background color */
       background-color:#ddd;
-      /* Styling text */
       font-size:13px;
       text-align:center;
       line-height:{{ height }};
@@ -164,26 +144,6 @@
     }
     .swatch-element label { padding:0 10px; }
     .color.swatch-element label { padding:0; }
-    /* Styling selected swatch */
-    /* Slightly raised */
-    /*.swatch input:checked + label {
-      -webkit-box-shadow:0px 1px 2px rgba(0,0,0,0.8);
-      -moz-box-shadow:0px 1px 2px rgba(0,0,0,0.8);
-      box-shadow:0px 1px 2px rgba(0,0,0,0.8);
-      border-color:transparent;
-      width:21px !important;
-      height: 21px !important;
-      margin-top: -1px;
-    }
-    .swatch input:checked + label:after {
-      content: "";
-      border: 2px solid #ccc;
-      width: 29px !important;
-      height: 29px !important;
-      border-radius: 100px;
-      display: inline-block;
-      margin: -4px;
-    }*/
     .swatch .swatch-element {
       float:left;
       -webkit-transform:translateZ(0); /* webkit flicker fix */
@@ -301,6 +261,5 @@
     .swatch_area {
       border-top: 1px solid #ccc;
       padding: 20px 0 20px 0;
-      /* border-bottom: 1px solid #ccc; */
     }   
     </style>
