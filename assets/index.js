@@ -190,8 +190,9 @@ $(document).ready(function($) {
   $(window).scroll(function() {
     if ($(this).scrollTop() > 150) {
       $('.header-top').addClass('stuck');
-      //$('.james').hide();
-      //$('.ays').show();
+      $('.james').hide();
+      $('.ays').show();
+      $('.l-left svg').attr("viewBox", "0 0 320 68.4"); 
     } else {
       $('.header-top').removeClass('stuck');
       if($('body#store-locator').length){
@@ -199,8 +200,9 @@ $(document).ready(function($) {
       } else {
         $('.header-top').css({"background-color":"transparent"});
       }
-      //$('.james').show();
-      //$('.ays').hide();
+      $('.james').show();
+      $('.ays').hide();
+      $('.l-left svg').attr("viewBox", "0 0 575 68.4");
     }
     if ( deviceWidth > 991 ) {
       $('.stuck').css({"top":"0px"});

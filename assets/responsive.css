@@ -326,12 +326,12 @@
 		font-size: 26px !important;
 		line-height: normal !important;
 	}
-	.l-left svg .james {
+	/* .l-left svg .james {
 		display: none;
 	}
 	.l-left svg .ays {
 		display: block;
-	}
+	} */
 	.search-bar input {
 		text-align: center;
 	}
@@ -509,6 +509,9 @@
 	.template-index .slide_description_bottom_right.price_txt {
 		right: 30px;
 		bottom: 150px;
+	}
+	.template-index section.followthesun_gif {
+		background-color: transparent !important;
 	}
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
