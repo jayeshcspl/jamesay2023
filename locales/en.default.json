@@ -154,6 +154,8 @@
       "continue_shopping": "Continue shopping",
       "total_excl_vat": "Total excl. VAT",
       "total_incl_vat": "Total incl. VAT",
+      "total_excl_vat_au": "Total excl. GST(10%)",
+      "total_incl_vat_au": "Total incl. GST(10%)",
       "Subtotal_incl_taxes": "Subtotal incl. taxes",
       "purchase_plants_tree_remove_waste": "(Every pair of AY's you purchase plants one tree and removes a kilo of plastic waste from our oceans)",
       "free_shipping_worldwide": "Free shipping worldwide",
