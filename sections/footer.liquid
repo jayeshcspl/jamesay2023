@@ -71,11 +71,17 @@
             <li><a href="/pages/shipping-return">{{ 'general.footer.shipping_returns_txt' | t }}</a></li>
           </ul>
         </div>
-
+        {% if request.host == "jamesay-au.myshopify.com" or request.host == "jamesay.com.au" %}
+          {% assign mailtolink = "mailto:info@jamesay.com.au" %}
+          {% assign instagram_link = "https://www.instagram.com/jamesay_aus" %}
+        {% else %}
+          {% assign mailtolink = "mailto:hi@jamesay.com" %}
+          {% assign instagram_link = "https://www.instagram.com/jamesay_com" %}
+        {% endif %}
         <div class="col-6  col-lg-7  social-media">
           <p class="footer_title">{{ 'general.footer.connect_txt' | t }}</p>
           <ul class="mb-0">
-            <li><a href="https://www.instagram.com/jamesay_com" target="_blank">Instagram</a></li>
+            <li><a href="{{instagram_link}}" target="_blank">Instagram</a></li>
             <li><a href="https://www.facebook.com/jamesayofficial/" target="_blank">Facebook</a></li>
             <li><a href="https://www.youtube.com/channel/UCGzO6K0bWZlRD1trP3N64Tg" target="_blank">Youtube</a></li>
           </ul>

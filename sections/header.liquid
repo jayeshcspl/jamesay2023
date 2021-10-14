@@ -162,12 +162,14 @@
           </div>
         {% if request.host == "jamesay-au.myshopify.com" or request.host == "jamesay.com.au" %}
           {% assign mailtolink = "mailto:info@jamesay.com.au" %}
+          {% assign instagram_link = "https://www.instagram.com/jamesay_aus" %}
         {% else %}
           {% assign mailtolink = "mailto:hi@jamesay.com" %}
+          {% assign instagram_link = "https://www.instagram.com/jamesay_com" %}
         {% endif %}
           <div class="col-lg-6">
             <div class="social-media_header contact-track-ord mb-0 pt-5 pt-lg-0">
-              <div><a href="https://www.instagram.com/jamesay_com" target="_blank">Instagram</a></div>
+              <div><a href="{{instagram_link}}" target="_blank">Instagram</a></div>
               <div><a href="https://www.facebook.com/jamesayofficial/" target="_blank">Facebook</a></div>
               <div><a href="{{mailtolink}}" target="_blank">Email</a></div>
               <div class="d-none"><a href="https://www.youtube.com/channel/UCGzO6K0bWZlRD1trP3N64Tg" target="_blank">Youtube</a></div>
