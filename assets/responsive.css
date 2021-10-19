@@ -510,7 +510,8 @@
 		right: 30px;
 		bottom: 150px;
 	}
-	.template-index section.followthesun_gif {
+	.template-index section.followthesun_gif,
+	.template-product section.followthesun_gif {
 		background-color: transparent !important;
 	}
 }
