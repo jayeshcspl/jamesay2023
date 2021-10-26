@@ -506,6 +506,10 @@
 		background-size: contain;
 		background-position: 100% 35%;
 	}
+	.two_column_one_product .section1_imgl.right_column,
+	.two_column_two_product .section1_imgl.right_column {
+		border-left: 0px solid rgb(255, 255, 255) !important;
+	}
 	.template-index .slide_description_bottom_right.price_txt {
 		right: 30px;
 		bottom: 150px;

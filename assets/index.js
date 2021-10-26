@@ -87,7 +87,7 @@ $(document).ready(function($) {
   if ($('#fullpage').length) {
     $('#fullpage').fullpage({
       //sectionsColor: ['#000000', '#000000', '#000000', '#000000', '#000000'],
-      sectionsColor: ['#686868', '#f5f5f5', '#686868', '#f5f5f5', '#686868', '#686868', '#686868', '#686868', '#686868'],
+      //sectionsColor: ['#686868', '#f5f5f5', '#686868', '#686868', '#f5f5f5', '#686868', '#686868', '#686868', '#686868'],
       sectionSelector: '.vertical-scrolling',
       slideSelector: '.horizontal-scrolling',
       navigation: true,
