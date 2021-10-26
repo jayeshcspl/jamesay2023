@@ -518,6 +518,12 @@
 	.template-product section.followthesun_gif {
 		background-color: transparent !important;
 	}
+	.afterpay-paragraph_desktop {
+		display: none;
+	}
+	.afterpay-paragraph_mobile {
+		display: block;
+	}
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
 	.mt-30,.mt-40,.mt-50 {
