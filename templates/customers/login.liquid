@@ -1,95 +1,117 @@
-{% layout settings.customer_layout %}
+<div class="container-fluid">
 
-<div id="template">
-  <div id="customer">
-    <div class="template_header">
-      <h2 class="title">Customer Login</h2>
-    </div>
+  <div class="row hide">
+    {% include 'breadcrumbs' %}
+  </div>
 
-    {% form 'customer_login' %}
+  <div class="row mt100 align-items-center" data-login-form>
+    <div class="col-md-6 mx-auto mb-3  left_area">
+
+      <div class="text-success hide" data-reset-success>
+        {{ 'customer.recover_password.success' | t }}
+      </div>
+      <!-- <h1>{{ 'customer.login.title' | t }}</h1> -->
+      <h1 class="mb-5" style="max-width: 470px;">Welcome to our wholesale channel. Free shipping inside.</h1>
+      {% form 'customer_login' %}
+
       {{ form.errors | default_errors }}
 
-      <div id="login_email" class="clearfix large_form">
-        <label for="customer_email" class="login">Email Address</label>
-        <input type="email" value="" name="customer[email]" id="customer_email" class="large" size="30" />
+      <div class="form-group">
+        <label for="CustomerEmail" class="">
+          {{ 'customer.login.email' | t }}
+        </label>
+        <input type="email"
+               name="customer[email]"
+               id="CustomerEmail"
+               class="form-control {% if form.errors contains 'email' %}input-error{% endif %}"
+               placeholder="{{ 'customer.login.email' | t }}"
+               spellcheck="false"
+               autocomplete="off"
+               autocapitalize="off"
+               autofocus>
       </div>
 
       {% if form.password_needed %}
-
-        {% comment %}
-          Customer Account Login
-        {% endcomment %}
-
-        <div id="login_password" class="clearfix large_form">
-          <label for="customer_password" class="login">Password</label>
-          <input type="password" value="" name="customer[password]" id="customer_password" class="large password" size="16" />
-          <div id="forgot_password">
-            <a href="#" onclick="showRecoverPasswordForm();return false;">Forgot your password?</a>
-          </div>
+        <div class="form-group">
+          <label for="CustomerPassword" class="">
+            {{ 'customer.login.password' | t }}
+          </label>
+          <input type="password"
+                 name="customer[password]"
+                 id="CustomerPassword"
+                 class="form-control {% if form.errors contains 'password' %}input-error{% endif %}"
+                 placeholder="{{ 'customer.login.password' | t }}">
+          {% if form.password_needed %}
+            <small class="mt-3 d-block"><a href="#recover" data-recover-toggle>{{ 'customer.login.forgot_password' | t }}</a></small>
+          {% endif %}
         </div>
-
       {% endif %}
 
-      <div class="action_bottom">
-        <input class="btn" type="submit" value="Sign In" />
-        <span class="note">or <a href="{{ shop.url }}">Return to Store</a></span>
-      </div>
-    {% endform %}
-  </div>
+      <input type="submit" class="btn btn-primary mb-5" value="{{ 'customer.login.sign_in' | t }}">
 
-  {% comment %}
-    Recover Password Form
-  {% endcomment %}
+      {% endform %}
 
-  <div id="recover-password" style='display:none'>
-    <div class="template_header">
-      <h2 class="title">Reset Password</h2>
-      <p class="note">We will send you an email to reset your password.</p>
+      <!-- <h2>New Customer?</h2> -->
+      <!-- <p>Sign up for an account to take advantage of order history as well as
+      pre-filled forms during checkout on subsequent orders.</p> -->
+
+      <p class="mb-5">Wants to join the James Ay family? <br /> Create account <a style="text-decoration: underline !important;" href="/account/register">click here</a></p>
+      <!-- <a class="btn btn-primary mb-3" href="/account/register">
+        {{ 'layout.customer.create_account' | t }}
+      </a> -->
+
     </div>
-
-    {% form 'recover_customer_password' %}
-      {{ form.errors | default_errors }}
-
-      <div id="recover_email" class="clearfix large_form">
-        <label for="email" class="large">Email</label>
-        <input type="email" value="" size="30" name="email" id="recover-email" class="large" />
-      </div>
-      <div class="action_bottom">
-        <input class="btn" type="submit" value="Submit" />
-        <span class="note">or <a href="#" onclick="hideRecoverPasswordForm();return false;">Cancel</a></span>
-      </div>
-    {% endform %}
+    <div class="col-md-6 mx-auto mb-3 right_area">
+        <img class="max380 mx-auto d-block" src="https://cdn.shopify.com/s/files/1/0504/0773/5470/files/james-ay-diego-sunglasses.jpg?v=1612847784" alt="">
+    </div>
   </div>
 
+  <div class="hide row mt100 align-items-center" data-recover-form>
+    <div class="col-md-6 mx-auto mb-3  left_area">
+      <h1 class="mb-5">{{ 'customer.recover_password.title' | t }}</h1>
+      <p>{{ 'customer.recover_password.subtext' | t }}</p>
 
-  {% comment %}
-    Guest Login form for shops with optional customer accounts. This form is displayed only when users click on the checkout link
-    on the cart page.
-  {% endcomment %}
+      {% form 'recover_customer_password', class: 'reset_password_form' %}
+      <div class="form-group">
+        {{ form.errors | default_errors }}
+
+        {% if form.posted_successfully? %}
+          <span class="hide" data-form-state></span>
+        {% endif %}
+
+        <label for="RecoverEmail" class="label-hidden">
+          {{ 'customer.recover_password.email' | t }}
+        </label>
+        <input type="email"
+               name="email"
+               class="form-control"
+               id="RecoverEmail"
+               placeholder="{{ 'customer.recover_password.email' | t }}"
+               spellcheck="false"
+               autocomplete="off"
+               autocapitalize="off">
+
+      </div>
+      <div class="mb-3 pt-3">
+        <input type="submit" class="btn btn-primary" value="{{ 'customer.recover_password.submit' | t }}">
+
+        <button class="btn btn-primary" type="button" data-recover-toggle>
+          {{ 'customer.recover_password.cancel' | t }}
+        </button>
+      </div>
+
+        {% endform %}
+    </div>
+    <div class="col-md-6 mx-auto mb-3 right_area">
+      <img class="max380 mx-auto d-block" src="https://cdn.shopify.com/s/files/1/0504/0773/5470/files/james-ay-diego-sunglasses.jpg?v=1612847784" alt="">
+    </div>    
+  </div>
 
   {% if shop.checkout.guest_login %}
-  <div id="guest">
-    <div class="template_header">
-      <h3 class="title">Guest Login</h3>
-    </div>
+    <h2>{{ 'customer.login.guest_title' | t }}</h2>
+
     {% form 'guest_login' %}
-      <input class="btn" type="submit" value="Continue as Guest" />
+    <input type="submit" class="btn btn-primary" value="{{ 'customer.login.guest_continue' | t }}">
     {% endform %}
-  </div>
   {% endif %}
 </div>
-
-
-<script type="text/javascript">
-  function showRecoverPasswordForm() {
-    document.getElementById('recover-password').style.display = 'inline-block';
-    document.getElementById('customer').style.display='none';
-  }
-
-  function hideRecoverPasswordForm() {
-    document.getElementById('recover-password').style.display = 'none';
-    document.getElementById('customer').style.display = 'inline-block';
-  }
-
-  if (window.location.hash == '#recover') { showRecoverPasswordForm() }
-</script>
