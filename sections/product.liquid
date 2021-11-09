@@ -112,7 +112,9 @@
                     {% endfor %}
                   </select>
                 </noscript>
-                <input class="form-control" type="hidden" id="quantity" name="quantity" value="1" min="1">
+                {% if request.host != "wholesale.jamesay.com" %}
+                  <input class="form-control" type="hidden" id="quantity" name="quantity" value="1" min="1">
+                {% endif %}
               </div>
             </div>
             <h1 class="fs60 mb-5">{{ product.title }}</h1>
@@ -188,12 +190,23 @@
                     {% endfor %}
                   </select>
                 </noscript>
-                <input class="form-control" type="hidden" id="quantity" name="quantity" value="1" min="1">
+                {% if request.host != "wholesale.jamesay.com" %}
+                  <input class="form-control" type="hidden" id="quantity" name="quantity" value="1" min="1">
+                {% endif %}
               </div>
   
             </div>
           </div>
-          <div class="col-lg-8 offset-lg-2 buy-now-btn text-center text-lg-left">
+          <div class="col-lg-8 offset-lg-2 buy-now-btn text-lg-left">
+            {% if request.host == "wholesale.jamesay.com" %}
+              <div class="qtydiv mb-5">
+                <div class="qtybox">
+                  <span class="btnqty qtyminus icon icon-minus">-</span>
+                  <input type="text" id="quantity" name="quantity" value="1" min="1" class="quantity-selector quantity-input" readonly="">
+                  <span class="btnqty qtyplus icon icon-plus">+</span>
+                </div>
+              </div>
+            {% endif %}
             <button
             type="submit"
             name="add"

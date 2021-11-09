@@ -1,5 +1,18 @@
 var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 $(document).ready(function($) {
+  $('.qtybox .btnqty').on('click', function(){
+    var qty = parseInt($(this).parent('.qtybox').find('.quantity-input').val());
+    if($(this).hasClass('qtyplus')) {
+      qty++;
+    }else {
+      if(qty > 1) {
+        qty--;
+      }
+    }
+    qty = (isNaN(qty))?1:qty;
+    $(this).parent('.qtybox').find('.quantity-input').val(qty);
+  }); 
+  
   var hc_append_height_old = $('.hc-append').height()
   var hc_append_height = $('nav.shop_menu').height() - $('.cart_bottom').height();
   if(hc_append_height_old > hc_append_height) {
