@@ -418,7 +418,9 @@
       </div>
     </section>
   {% endunless %}
+  {% if request.host != "wholesale.jamesay.com" %}
   {% include 'one_column_find_store', section_number:"one_column_find_store" %}
+  {% endif %}
   {% if product.metafields.story_in_productpage.story_url != blank %}
   {% assign story_url = product.metafields.story_in_productpage.story_url %}
   {% else %}
