@@ -95,8 +95,17 @@
     </a>
     <!-- </div> -->
     {% endif %}     
-    <a class="l-right count{{ cart.item_count }} fadein">
+    <span class="l-right count{{ cart.item_count }} fadein">
       <ul>
+        {% if request.host == "wholesale-jamesay.myshopify.com" or request.host == "wholesale.jamesay.com" %}
+          <li class="d-none d-md-inline-block">
+            <span class="span_myaccount">
+              <span class="myaccount_style" style="color : {{color_code}}">
+                <a href="/account/login">My account</a>
+              </span>
+            </span>
+          </li>
+        {% endif %}
         <li class="d-none d-md-inline-block">
           <span class="search" OnClick="document.searchform.q.focus();""><span id="search_icon" style="color : {{color_code}}">{{ 'general.header.search_txt' | t }}</span></span>
         </li>
@@ -119,7 +128,7 @@
           {% endif %}
         </li>
       </ul>
-    </a>
+    </span>
     <div class="progress-container" style="display: none;">
       <div class="progress-bar" id="myBar"></div>
     </div>
