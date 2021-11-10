@@ -285,6 +285,13 @@
     },
     "register": {
       "title": "Create Account",
+      "company_name": "Company Name",
+      "phone_number": "Phone number",
+      "street_address": "Street address",
+      "zip_code": "Zip code",
+      "city": "City",
+      "country": "Country",
+      "vat_number": "VAT number",
       "first_name": "First Name",
       "last_name": "Last Name",
       "email": "Email",

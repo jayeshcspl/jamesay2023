@@ -4,14 +4,14 @@
     {% include 'breadcrumbs' %}
   </div>
 
-  <div class="row mt100 align-items-center" data-login-form>
-    <div class="col-md-6 mx-auto mb-3  left_area">
+  <div class="row mt100 align-items-center account_pages_vcenter" data-login-form>
+    <div class="col-md-12 mx-auto mb-3  left_area1" style="max-width: 320px; margin: 0px auto; ">
 
       <div class="text-success hide" data-reset-success>
         {{ 'customer.recover_password.success' | t }}
       </div>
       <!-- <h1>{{ 'customer.login.title' | t }}</h1> -->
-      <h1 class="mb-5" style="max-width: 470px;">Welcome to our wholesale channel. Free shipping inside.</h1>
+      <h1 class="mb-5 hide" style="max-width: 470px;">Welcome to our wholesale channel. Free shipping inside.</h1>
       {% form 'customer_login' %}
 
       {{ form.errors | default_errors }}
@@ -61,13 +61,13 @@
       </a> -->
 
     </div>
-    <div class="col-md-6 mx-auto mb-3 right_area">
+    <div class="col-md-6 mx-auto mb-3 right_area d-none">
         <img class="max380 mx-auto d-block" src="https://cdn.shopify.com/s/files/1/0504/0773/5470/files/james-ay-diego-sunglasses.jpg?v=1612847784" alt="">
     </div>
   </div>
 
-  <div class="hide row mt100 align-items-center" data-recover-form>
-    <div class="col-md-6 mx-auto mb-3  left_area">
+  <div class="hide row mt100 align-items-center  account_pages_vcenter" data-recover-form>
+    <div class="col-md-12 mx-auto mb-3  left_area1"  style="max-width: 320px; margin: 0px auto; ">
       <h1 class="mb-5">{{ 'customer.recover_password.title' | t }}</h1>
       <p>{{ 'customer.recover_password.subtext' | t }}</p>
 
@@ -102,7 +102,7 @@
 
         {% endform %}
     </div>
-    <div class="col-md-6 mx-auto mb-3 right_area">
+    <div class="col-md-6 mx-auto mb-3 right_area d-none">
       <img class="max380 mx-auto d-block" src="https://cdn.shopify.com/s/files/1/0504/0773/5470/files/james-ay-diego-sunglasses.jpg?v=1612847784" alt="">
     </div>    
   </div>
