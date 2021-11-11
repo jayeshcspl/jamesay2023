@@ -6,4 +6,3 @@ development:
   - '*.gif'
   - '*.jpg'
   - config/settings_data.json
-  - layout/theme.liquid
