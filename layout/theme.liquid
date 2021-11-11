@@ -1,15 +1,6 @@
 <!doctype html>
 <html class="no-js supports-no-cookies" lang="{{ shop.locale }}">
 <head>
-{% unless customer %}
-    {% if template contains 'customers' or request.path == "/challenge" %}
-        {% assign send_to_login = false %}
-    {% else %}
-        {% assign send_to_login = true %}
-    {% endif %}
-{% endunless %}{% if send_to_login %}
-<meta content="0; url=/account/login?checkout_url=/" http-equiv="refresh" />
-{% else %}
   {% include '3wh-gtm' %}
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -325,7 +316,6 @@ document.addEventListener('lazybeforeunveil', function(e){
 });
   </script>
 </body>
-{% endif %}
 </html>
 {% if request.host == "jamesay-au.myshopify.com" or request.host == "jamesay.com.au" %}
 <!-- Begin Shopify-Afterpay JavaScript Snippet (v1.0.10) -->
