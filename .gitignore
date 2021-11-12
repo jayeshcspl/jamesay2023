@@ -15,7 +15,7 @@ config/shopify.yml
 npm-debug.log
 .env
 .env.*
-layout/theme.liquid
+#layout/theme.liquid
 
 # Compiled source #
 ###################
