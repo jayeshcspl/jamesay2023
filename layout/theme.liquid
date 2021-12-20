@@ -36,13 +36,6 @@
   }
   </script>
   
-    {% if current_page > 1 %}
-  <link rel="canonical" href="{{ canonical_url | split: "?page=" | first }}" />
-  <link rel="alternate" hreflang="da" href="{{ canonical_url | split: "?page=" | first }}" />
-  <link rel="alternate" hreflang="en" href="{{ canonical_url | split: "?page=" | first | replace: shop.domain, 'jamesay.com' }}" />
-
-  {% endif %}
-  
   
   
   {%- if settings.favicon != blank -%}
