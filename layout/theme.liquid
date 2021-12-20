@@ -40,10 +40,7 @@
   <link rel="canonical" href="{{ canonical_url | split: "?page=" | first }}" />
   <link rel="alternate" hreflang="da" href="{{ canonical_url | split: "?page=" | first }}" />
   <link rel="alternate" hreflang="en" href="{{ canonical_url | split: "?page=" | first | replace: shop.domain, 'jamesay.com' }}" />
-  {% else %}
-  <link rel="canonical" href="{{ canonical_url }}" />
-  <link rel="alternate" hreflang="da" href="{{ canonical_url }}" />
-  <link rel="alternate" hreflang="en" href="{{ canonical_url | replace: shop.domain, 'jamesay.com' }}" />
+
   {% endif %}
   
   
