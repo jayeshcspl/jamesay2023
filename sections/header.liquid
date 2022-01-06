@@ -1,3 +1,12 @@
+<div class="footer_lifetime mt-0 mb-0">
+  <div class="js-conveyor-example">
+    <ul>
+      <li>{{shop.metafields.string_translation.free_shipping_worldwide}}</li>
+      <!-- <li class="d-none d-lg-inline-block"><span class="hide">{{shop.metafields.string_translation.one_order_one_kg_plastic}}</span></li> -->
+      <!-- <li>{{shop.metafields.string_translation.one_order_one_kg_planted_tree}}</li> -->
+    </ul>
+  </div>
+</div>
 {% if template != 'index' and template != 'blog' and template != 'article' and  template != 'article.dynamic' %} 
   {% if template contains 'page' and page.url == '/pages/store-locator' %}
     {% assign color_code = "#FFFFFF" %}
@@ -17,7 +26,7 @@
       <i></i>
       <i></i>
     </a>
-    <h1 class="l-left">
+    <span class="l-left">
       <a href="/">
         <?xml version="1.0" encoding="UTF-8"?>
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -83,7 +92,7 @@
           </g>
         </svg>
       </a>
-    </h1>
+    </span>
     {% if cart.total_price > 0 %}
     <!-- <div class="total_price_wrapper sticky_btn"> -->
     <a href="/cart" class="total_price_wrapper sticky_btn" style="display: none;">
@@ -162,12 +171,13 @@
             <ul>
               {% if request.host == "jamesay.myshopify.com" or request.host == "jamesay.com" or 
               request.host == "jamesay-dk.myshopify.com" or request.host == "jamesay.dk" %}
-                <li><a href="https://wholesale.jamesay.com/account/login">Wholesale login</a></li>
+                <li class="hide"><a href="https://wholesale.jamesay.com/account/login">Wholesale login</a></li>
               {% endif %}
               <li><a href="/pages/sustainability">{{ 'general.header.sustainability' | t }}</a></li>
-              <li><a href="/pages/we-give-back">{{ 'general.header.we_give_back' | t }}</a></li>
+              <li><a href="/pages/follow-the-sun">{{ 'general.header.followthesun' | t }}</a></li>
               {% if request.host != "wholesale.jamesay.com" %}
-                <li><a href="/pages/become-a-retailer">{{ 'general.header.become_a_retailer' | t }}</a></li>
+                <!-- <li><a href="/pages/become-a-retailer">{{ 'general.header.become_a_retailer' | t }}</a></li> -->
+                <li><a href="https://www.dropbox.com/sh/my4y9hfkvcmrk86/AACPYfCYsM7W1vpZfkX90jn_a?dl=0" target="_blank">{{ 'general.header.press' | t }}</a></li>
               {% endif %}
               <li><a href="/pages/terms-conditions">{{ 'general.header.terms_and_conditions' | t }}</a></li>
               <li class="d-none"><a href="/pages/contact">{{ 'general.header.customer_service' | t }}</a></li>

@@ -12,8 +12,7 @@
           {% render 'breadcrumbs' %}
         </div>
         <div class="product-filter offset-lg-2 col-lg-4 text-lg-right mb-5 justify-content-between d-flex">
-          <!-- <ul class="subnav clearfix"> -->
-            <div{% unless current_tags %} class="active"{% endunless %}>
+            <!-- <div {% unless current_tags %} class="active"{% endunless %}>
               {% if collection.handle %}
               <a href="/collections/{{ collection.handle }}{% if collection.sort_by %}?sort_by={{ collection.sort_by }}{% endif %}">{{ 'general.label.All' | t }}</a>
               {% elsif collection.current_type %}
@@ -33,8 +32,20 @@
                 {{ tag | link_to_tag: tag }}
               </div>
               {% endif %}
+            {% endfor %} -->
+
+            {% for collection1 in collections  %}
+            <!-- {{ collection1.url }} -->
+              {% if collection1.title contains collection.title %}
+              <div class="active">
+                <a href="{{ collection1.url }}">{{ collection1.title }}</a>
+              </div>
+              {% else %}
+              <div>
+                <a href="{{ collection1.url }}">{{ collection1.title }}</a>
+              </div>
+              {% endif %}
             {% endfor %}
-          <!-- </ul> -->
         </div>
       </div>
       <div class="row no-gutters">
@@ -72,7 +83,7 @@
                             {{ image | img_url: '420x' }} 420w,
                             {{ image | img_url: '300x' }} 300w" 
                             alt="{{ image.alt | escape }}" 
-                            class="hidden img-fluid w-100 lazyload">
+                            class="hidden1 img-fluid w-100 lazyload hide">
                           {% endif %}
                         {% endfor %}
                         </div>

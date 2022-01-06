@@ -116,6 +116,9 @@
 	.header-top {
 		padding: 25px 40px;
 	}
+	.header-top a.nav-hmenu {
+		left: 40px;
+	}
 	.pl-50 {
 		padding-left: 40px;
 	}
@@ -405,6 +408,9 @@
 	.header-top { 
 		padding: 20px;
 	}
+	.header-top a.nav-hmenu {
+		left: 20px;
+	}
 	.footer { 
 		padding: 30px 20px 20px;
 		font-size: 15px;
@@ -429,6 +435,10 @@
 		font-size: 38px;
 	}
 	.fs60 {
+		font-size: 38px;
+		line-height: 1.05;
+	}
+	.fs50 {
 		font-size: 38px;
 		line-height: 1.05;
 	}
@@ -486,7 +496,7 @@
 		width: 30px;
 	}
 	.product_overview { 
-		margin-top: 100px;
+		margin-top: 135px;
 	}
 	.toggle-menu i:nth-child(1) {
     top: 2px;
@@ -523,6 +533,15 @@
 	}
 	.afterpay-paragraph_mobile {
 		display: block;
+	}
+	[class*="js-conveyor-"] ul li {
+		font-size: 10px;
+	}
+	#openGeo .openGePopUp .openGeFix {
+    padding: 0 20px;
+	}
+	.template-product #fullpage1 {
+		padding-top: 35px;
 	}
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -565,7 +584,7 @@
 	#store-locator div#storemapper #storemapper-left {
 		position: fixed !important;
 		z-index: 12;
-		top: 80px;
+		top: 100px;
 		left: 40px;
 		float: none;
 		width: 320px;
@@ -591,6 +610,10 @@
 	}
 }
 @media only screen and (max-width: 669px) {
+	#store-locator div#storemapper #storemapper-left {
+		position: relative;
+		top: 41px;
+	}
 	#store-locator #storemapper #storemapper-list li,
 	#store-locator #storemapper #storemapper-form {
 		padding: 20px;
@@ -631,6 +654,11 @@
 	.mobile_min-vh-40 {
 		padding-top: 30vh;
     padding-bottom: 30vh;
+	}
+}
+@media screen and (max-width: 480px) {
+	#openGeo .openGePopUp {
+			width: 95%;
 	}
 }
 @media only screen and (max-width: 320px) {

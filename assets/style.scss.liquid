@@ -85,6 +85,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6  {
 	font-size: 60px;
 	line-height: 1.1;
 }
+.fs50 {
+	font-size: 50px;
+	line-height: 1.1;
+}
 .fs19 {
 	font-size: 19px;
 	line-height: 1.3;
@@ -224,7 +228,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6  {
 	clear: both;
 }
 
-h1.l-left {
+span.l-left {
 	float: left;
 	position: relative;
 	font-size: inherit;
@@ -370,7 +374,7 @@ li {
 	position: fixed;
 	top: 0px;
 	z-index: 12345;
-	margin: 0 auto;
+	margin: 36px auto 0;
 	left: 0;
 	right: 0;
 	background-color: transparent;
@@ -381,6 +385,12 @@ li {
   -o-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
   backface-visibility: hidden;
+}
+.header-top.open-menu { 
+	margin: 0px auto 0;
+}
+.header-top a.nav-hmenu {
+	left: 50px;
 }
 .template-index .fadein {
 	-webkit-animation: fadein 2s ease-in alternate;
@@ -404,6 +414,7 @@ li {
 .header-top.stuck {
 	// transition: 1s;
 	background-color: #ffffff !important;
+	margin: 0 auto 0;
     // background-color: transparent !important;
 }
 .template-login .toggle-menu,
@@ -481,10 +492,10 @@ span.l-right i {
 	-ms-transform: rotateZ(-45deg);
 	transform: rotateZ(-45deg);
 }
-.open-menu h1.l-left a {
+.open-menu span.l-left a {
 	color: #000 !important;
 }
-.open-menu h1.l-left a .st0 {
+.open-menu span.l-left a .st0 {
 	fill:#231F20;
 }
 .open-menu #Prelauch-01 {
@@ -829,7 +840,9 @@ a.search {
 
 .footer_lifetime {
 	margin: 50px auto;
-	position: relative;
+	position: fixed;
+	top: 0;
+	z-index: 999;
 	width: 100%;
 	background-color: #000;
 	box-sizing: content-box;
@@ -838,14 +851,8 @@ a.search {
 .template-product .footer_lifetime {
 	margin-top: 0;
 }
-.template-index .footer_lifetime {
-	position: fixed;
-	margin: 0;
-	bottom: 0;
-	display: none;
-}
 [class*="js-conveyor-"] {
-	height: 26px;
+	height: 36px;
 }
 [class*="js-conveyor-"] ul {
 	overflow: hidden;
@@ -853,8 +860,8 @@ a.search {
 }
 [class*="js-conveyor-"] ul li {
 	padding: 0 20px;
-	line-height: 26px;
-	font-size: 10px;
+	line-height: 36px;
+	font-size: 11px;
 	color: #fff;
 	display: inline-block;
 	width: calc(100%/3 - 20px);
@@ -2432,6 +2439,9 @@ section.homemade_glasses {
 	font-weight: normal;
 	padding: .375rem 1.75rem;
 }
+#shopify-section-footer {
+	border-top: 1px solid;
+}
 .template-login #shopify-section-footer,
 .template-register  #shopify-section-footer,
 .template-account #shopify-section-footer,
@@ -2488,7 +2498,26 @@ label[for="RecoverEmail"]
 .orders.table thead th:nth-child(4) {
 	background-color: #666666;
 }
-
+#openGeo .openGePopUp .openGeFix {
+	padding: 0 40px;
+}
+#openGeo .openGePopUp .openGeTexts {
+	text-align: left;
+	width: 100%;
+	padding-bottom: 40px;
+}
+.openGePopUp .openGeFix button {
+	font-weight: normal;
+	width: 48%;
+	margin-left: 0;
+	padding: 10px 11px 10px;
+}
+.openGePopUp .openGeFix button:first-child {
+	margin-right: 4%;
+}
+.openGeClose {
+	font-size: 20px;
+}
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
 	.w-sm-100 {

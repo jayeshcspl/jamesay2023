@@ -1,0 +1,18 @@
+{% if shop.metafields.followthesun.image_url != blank %}
+{% assign desktop_img = shop.metafields.followthesun.image_url %}
+{% else %}
+{% assign desktop_img = "default.png" | file_url %}
+{% endif %}
+{% if shop.metafields.followthesun.mobile_url != blank %}
+{% assign mobile_img = shop.metafields.followthesun.mobile_url %}
+{% else %}
+{% assign mobile_img = desktop_img %}
+{% endif %} 
+
+
+<section class="vertical-scrolling {{section_number}} lazyload section1_imgl" data-bg1="{{desktop_img}}" style="background-image: url({{desktop_img}}); background-color: #FFDE00; background-size: contain; background-repeat: no-repeat; background-position: center center;" data-desktop-url="{{desktop_img}}" data-mobile-url="{{mobile_img}}">
+  <div class="container-fluid h-100">
+    <div class="row min-vh-100">
+    </div>
+  </div>
+</section>
