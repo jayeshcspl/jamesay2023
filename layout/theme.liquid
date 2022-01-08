@@ -357,7 +357,7 @@ document.addEventListener('lazybeforeunveil', function(e){
       d.parentNode.insertBefore(e,d);
       })(document,window,cpm);
     </script>
-  {% elsif if request.host == "jamesay-au.myshopify.com" or request.host == "jamesay.com.au" %}
+  {% elsif request.host == "jamesay-au.myshopify.com" or request.host == "jamesay.com.au" %}
     <script type="text/javascript">
       var cpm = {};
       (function(h,u,b){
@@ -367,7 +367,7 @@ document.addEventListener('lazybeforeunveil', function(e){
       d.parentNode.insertBefore(e,d);
       })(document,window,cpm);
     </script>
-  {% elsif if request.host == "jamesay-dk.myshopify.com" or request.host == "jamesay.dk" %}
+  {% elsif request.host == "jamesay-dk.myshopify.com" or request.host == "jamesay.dk" %}
     <script type="text/javascript">
       var cpm = {};
       (function(h,u,b){
