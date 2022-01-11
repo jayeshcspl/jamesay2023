@@ -146,6 +146,7 @@
       "remove": "Fjern",
       "note": "Specielle instruktioner for sælger",
       "subtotal": "Sub total",
+      "total": "Total",
       "shipping_at_checkout": "Forsendelse og skatter bliver beregnet ved betaling",
       "update": "Opdater Kurv",
       "checkout": "Gå til betaling",
