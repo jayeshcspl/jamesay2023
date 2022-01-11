@@ -15,7 +15,7 @@
                         </div>
                         <div class="col-9 pl-4">
                             <div class="media-body">
-                                <h4><a href="{{ item.url }}">{{ item.variant.sku }} - {{ item.product.title }}</a></h4>
+                                <h4><a href="{{ item.url }}">{{ item.product.title }}</a></h4>
                                 {% unless item.product.has_only_default_variant %}
                                 <h4>{{ item.variant.title }}</h4>
                                 {% endunless %}
@@ -32,8 +32,6 @@
                                 {% endif %}
                                 x
                                 {{ item.quantity }}
-                                =
-                                {{ item.line_price | money }}
                             </li>
                             <li class="text-right float-right"><a href="/cart/change?line={{ forloop.index }}&quantity=0">
                                 {{ 'cart.general.remove' | t }}
