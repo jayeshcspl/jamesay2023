@@ -4,11 +4,11 @@
       {{ page.content }}
     </div>
   </section>
-  {% if page.handle == "about" %}
+  {% if page.handle == "about" or page.handle == "om-os" %}
     {% include 'collection_2021' %}
-  {% elsif page.handle == "sustainability" %}
+  {% elsif page.handle == "sustainability" or page.handle == "baeredygtighed" %}
     {% include 'collection_2021' %}
-  {% elsif page.handle == "contact" %}
+  {% elsif page.handle == "contact" or page.handle == "kontakt" %}
     {% include 'collection_2021' %}
   {% elsif page.handle == "follow-the-sun" %}
     {% include 'all_stroies' %}
