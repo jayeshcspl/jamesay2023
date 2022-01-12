@@ -147,7 +147,7 @@ window.onload = function() {
                   var price = Shopify.formatMoney(item.price,"{{ shop.money_with_currency_format }}");
                   var line_price = Shopify.formatMoney(item.line_price,"{{ shop.money_with_currency_format }}");
                   console.log("price = "+price+" line_price"+ line_price );
-                  $('.cart_top').append('<div class="row no-gutters mb-3"><div class="col-3 media"><a href="'+item.url+'"><img src="'+item.image+'" width="90px" ></a></div><div class="col-9 pl-4"><div class="media-body"><h4><a href="'+item.url+'">'+item.sku+' - '+item.product_title+'</a></h4>'+(item.variant_title ? "<h4>"+item.variant_title+"</h4>" : "")+'</div><ul class="justify-content-sm-between mt-4"><li>'+price+' x '+item.quantity+' = '+line_price+'</li><li class="text-right float-right"><a href="/cart/change?line='+index+'&amp;quantity=0">Remove</a></li></ul></div></div>');
+                  $('.cart_top').append('<div class="row no-gutters mb-3"><div class="col-3 media"><a href="'+item.url+'"><img src="'+item.image+'" width="90px" ></a></div><div class="col-9 pl-4"><div class="media-body"><h4><a href="'+item.url+'">'+item.sku+' - '+item.product_title+'</a></h4>'+(item.variant_title ? "<h4>"+item.variant_title+"</h4>" : "")+'</div><ul class="justify-content-sm-between mt-4"><li>'+price+' x '+item.quantity+'</li><li class="text-right float-right"><a href="/cart/change?line='+index+'&amp;quantity=0">Remove</a></li></ul></div></div>');
                   });
 
                   var total_price = Shopify.formatMoney(cart.total_price,"{{ shop.money_with_currency_format }}");
