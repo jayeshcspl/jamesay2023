@@ -610,6 +610,9 @@
 	}
 }
 @media only screen and (max-width: 669px) {
+	.mobile_only {
+		display: none;
+	}
 	#store-locator div#storemapper #storemapper-left {
 		position: relative;
 		top: 41px;
