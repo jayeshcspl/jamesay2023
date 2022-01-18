@@ -345,7 +345,9 @@
       "on_sale_from_html": "On Sale from {{ price }}",
       "from_text_html": "From {{ price }}",
       "quantity": "Quantity",
-      "add_to_cart": "Add to cart"
+      "add_to_cart": "Add to cart",
+      "thank_you": "Thank you!",
+      "adding": "Adding..."
     },
     "label": {
       "frame_sizing_txt" : "Frame sizing",
