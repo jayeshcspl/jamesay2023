@@ -2,8 +2,8 @@
   {% if shop.metafields.two_column_slide.display_slide == 1  %}
     {% include 'two_column_slide', section_number:"two_column_slide" %}
   {% endif %}
-  {% if shop.metafields.one_column_story.display_slide == 1  %}
-    {% include 'one_column_story', section_number:"one_column_story" %}
+  {% if shop.metafields.one_column_general.display_slide == 1  %}
+  {% include 'one_column_general_slide', section_number:"one_column_general_slide" %}
   {% endif %}
   {% if shop.metafields.2_column_1_product.display_slide == 1  %} 
     {% include 'two_column_one_product', section_number:"two_column_one_product" %}
@@ -11,11 +11,11 @@
   {% if shop.metafields.we_make_handmade.display_slide == 1  %}
     {% include 'homemade_glasses', section_number:"homemade_glasses" %}
   {% endif %}
-  {% if shop.metafields.one_column_general.display_slide == 1  %}
-  {% include 'one_column_general_slide', section_number:"one_column_general_slide" %}
-  {% endif %}  
   {% if shop.metafields.2_column_2_product.display_slide == 1  %}
     {% include 'two_column_two_product', section_number:"two_column_two_product" %}
+  {% endif %}
+  {% if shop.metafields.one_column_story.display_slide == 1  %}
+  {% include 'one_column_story', section_number:"one_column_story" %}
   {% endif %}
   {% include 'followthesun', section_number:"followthesun" %}
 </div>
