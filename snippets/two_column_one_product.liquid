@@ -83,10 +83,13 @@
           <tr>
             <td>{{product.metafields.product_frame_sizing.material}}</td>
           </tr>
-        </table>
-        <table class="product_info slide_description_bottom_right price_txt">
           <tr>
-            <td>{{json_product1.price | money}}</td>
+            <td><br>{{json_product1.price | money}}</td>
+          </tr>
+        </table>
+        <table class="product_info slide_description_bottom_right price_txt text-uppercase">
+          <tr>
+            <td>{{ 'cart.general.buy_now' | t }}</td>
           </tr>
         </table>
       </div>
