@@ -87,7 +87,11 @@
       "Home":"Home",
       "All":"All",
       "Shop":"Shop",
-      "READ_STORY": "READ STORY"
+      "READ_STORY": "READ STORY",
+      "male_text":"MALE",
+      "female_text":"FEMALE",
+      "male_link":"https://jamesay.com/collections/male",
+      "female_link":"https://jamesay.com/collections/female"
     },
     "header": {
       "sustainability": "Sustainability",

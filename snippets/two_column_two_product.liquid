@@ -48,19 +48,14 @@
           <div class="overlay">
           </div>
         </a>
-        <p class="slide_title_bottom fs80 mb-lg-0 text-capitalize">{{product_name1}}</p>
-        <table class="product_info slide_description_bottom_right">
+        <table class="product_info slide_title_bottom">
           <tr>
-            <td>{{product.title}} / {{json_product1.sku}}</td>
+            <td>{{product.title}} / {{json_product1.sku}}<br />{{product.metafields.product_frame_sizing.lens_length}}-{{product.metafields.product_frame_sizing.nose_bridge_size}}-{{product.metafields.product_frame_sizing.temple_size}} / {{json_product1.metafields.product_variant_info.color_code}}<br />{{product.metafields.product_frame_sizing.material}}<br /><br />{{product.price | money}}</td>
           </tr>
+        </table>
+        <table class="product_info slide_description_bottom_right price_txt text-uppercase">
           <tr>
-            <td>{{product.metafields.product_frame_sizing.lens_length}}-{{product.metafields.product_frame_sizing.nose_bridge_size}}-{{product.metafields.product_frame_sizing.temple_size}} / {{json_product1.metafields.product_variant_info.color_code}}</td>
-          </tr>
-          <tr>
-            <td>{{product.metafields.product_frame_sizing.material}}</td>
-          </tr>
-          <tr>
-            <td><p class="mt-3 mb-1">{{product.price | money}}</p></td>
+            <td>{{ 'cart.general.buy_now' | t }}</td>
           </tr>
         </table>
       </div>
@@ -69,25 +64,16 @@
           <div class="overlay">
           </div>
         </a>
-        <p class="slide_title_bottom fs80 mb-lg-0 text-capitalize d-none d-lg-flex">{{right_product_name1}}</p>
-        <table class="product_info slide_description_bottom_right">
+        <table class="product_info slide_title_bottom">
           <tr>
-            <td>{{right_product.title}} / {{right_json_product1.sku}}</td>
-          </tr>
+            <td>{{right_product.title}} / {{right_json_product1.sku}}<br />
+{{right_product.metafields.product_frame_sizing.lens_length}}-{{right_product.metafields.product_frame_sizing.nose_bridge_size}}-{{right_product.metafields.product_frame_sizing.temple_size}} / {{right_json_product1.metafields.product_variant_info.color_code}}<br />{{right_product.metafields.product_frame_sizing.material}}<br /><br />{{right_json_product1.price | money}}</td>
+</tr>
+</table>
+        <table class="product_info slide_description_bottom_right price_txt text-uppercase">
           <tr>
-            <td>{{right_product.metafields.product_frame_sizing.lens_length}}-{{right_product.metafields.product_frame_sizing.nose_bridge_size}}-{{right_product.metafields.product_frame_sizing.temple_size}} / {{right_json_product1.metafields.product_variant_info.color_code}}</td>
+            <td>{{ 'cart.general.buy_now' | t }}</td>
           </tr>
-          <tr>
-            <td>{{right_product.metafields.product_frame_sizing.material}}</td>
-          </tr>
-            <tr class="d-none d-lg-flex">
-              <td><p class="mt-3 mb-1">{{right_json_product1.price | money}}</p></td>
-            </tr>
-        </table>
-        <table class="product_info slide_description_bottom_right d-flex d-lg-none" style="right:30px;">
-            <tr>
-              <td><p class="mt-3 mb-1">{{right_json_product1.price | money}}</p></td>
-            </tr>
         </table>
       </div>
     </div>

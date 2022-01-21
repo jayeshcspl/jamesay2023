@@ -87,7 +87,11 @@
       "Home":"Hjem",
       "All":"Alle",
       "Shop":"Produkter",
-      "READ_STORY": "LÆS HISTORIE"
+      "READ_STORY": "LÆS HISTORIE",
+      "male_text":"MAND",
+      "female_text":"KVINDE",
+      "male_link":"https://jamesay.dk/collections/mand",
+      "female_link":"https://jamesay.dk/collections/kvinde"
     },
     "header": {
       "sustainability": "Bæredygtighed",
