@@ -91,7 +91,8 @@
       "male_text":"MAND",
       "female_text":"KVINDE",
       "male_link":"https://jamesay.dk/collections/mand",
-      "female_link":"https://jamesay.dk/collections/kvinde"
+      "female_link":"https://jamesay.dk/collections/kvinde",
+      "delivery":"Delivery"
     },
     "header": {
       "sustainability": "Bæredygtighed",

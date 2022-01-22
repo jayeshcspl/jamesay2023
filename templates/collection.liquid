@@ -89,7 +89,7 @@
                         </div>
                       </a>
                       <ul class="product_info d-flex justify-content-between">
-                        <li class="text-left"><a href="{{ variant.url | within: collection }}" class="product_link">{{product.title}}</a><br>{{variant.metafields.product_variant_info.acetate_color}} / {{variant.metafields.product_variant_info.lense_color}}<br><br> {{ variant.price | money }}</li>
+                        <li class="text-left"><a href="{{ variant.url | within: collection }}" class="product_link">{{product.title}}</a><br>{{variant.metafields.product_variant_info.acetate_color}} / {{variant.metafields.product_variant_info.lense_color}}<br>{{ 'general.label.delivery' | t }} : {{variant.metafields.product_variant_info.delivery}}<br><br> {{ variant.price | money }}</li>
                         <li class="text-right">{% include 'dots' with 'Color' %}{% unless variant.available %}<span class="sold_out_txt">sold out</span>{% endunless %}</li>
                       </ul>
                     </div>
