@@ -129,7 +129,12 @@
                 </span>
               </div></div>
             </div>
-            
+            <div class="viabill-pricetag"
+    data-view="product"
+    data-price="{{ product.price | money }}"
+    data-language="da"
+    data-currency="dkk">
+</div>
             {% assign short_description_old = product.metafields.cf_product.short_description %}
             {% if product.metafields.product_info.short_description != blank %}
               {% assign short_description = product.metafields.product_info.short_description %}
