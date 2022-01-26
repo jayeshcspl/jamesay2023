@@ -126,15 +126,16 @@
               <div class="col-6 text-right fs19 data-price-wrapper" data-price-wrapper> <div class="money">
                 <span data-product-price>
                   {{ current_variant.price | money }}
-                </span>
-              </div></div>
-            </div>
-            <div class="viabill-pricetag"
+                  <div class="viabill-pricetag"
     data-view="product"
     data-price="{{ product.price | money }}"
     data-language="da"
     data-currency="dkk">
 </div>
+                </span>
+              </div></div>
+            </div>
+       
             {% assign short_description_old = product.metafields.cf_product.short_description %}
             {% if product.metafields.product_info.short_description != blank %}
               {% assign short_description = product.metafields.product_info.short_description %}
