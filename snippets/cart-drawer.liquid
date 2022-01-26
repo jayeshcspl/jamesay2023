@@ -57,6 +57,12 @@
                             {% if cart.total_discounts > 0 %}
                             <p>{{ 'cart.general.savings' | t }} {{ cart.total_discounts | money }}</p>
                             {% endif %}
+                          <div class="viabill-pricetag"
+    data-view="basket"
+    data-price="{{ cart.total_price | money }}"
+    data-language="da"
+    data-currency="dkk">
+</div>
                         </li>
                         </ul>
                     </div>
@@ -108,3 +114,4 @@
     </div>
 {% endif %}
 </div>
+<script>(function(){var o=document.createElement('script');o.type='text/javascript';o.async=true;o.src='https://pricetag.viabill.com/script/hTezXmY_GJE%3D';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(o,s);})();</script>
