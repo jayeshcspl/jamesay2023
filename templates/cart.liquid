@@ -94,7 +94,13 @@
                         {{ item.line_price | money }}
                       </td>
                     </tr>
-                  {% endfor %}                
+                  {% endfor %}  
+<div class="viabill-pricetag"
+    data-view="basket"
+    data-price="{{ cart.total_price | money }}"
+    data-language="da"
+    data-currency="dkk">
+</div>                 
               </tbody>
             </table>
             <div class="form-row1 row no-gutters">
@@ -104,13 +110,7 @@
                   <textarea rows="7" class="form-control" placeholder="Add a note" name="note" id="CartSpecialInstructions">{{ cart.note }}</textarea>
                 </div>
               {% endif %}
-            </div>
-<div class="viabill-pricetag"
-    data-view="basket"
-    data-price="{{ cart.total_price | money }}"
-    data-language="da"
-    data-currency="dkk">
-</div>            
+            </div>           
             <div class="row no-gutters">
               <div class="col-12 d-none d-md-block mb-4 text-right euro no-gutter" style="border-bottom: 1px solid #dee2e6;">
                 <p id="subtotal" class="cart-money mb-0">{{ 'cart.general.total' | t }} {{ cart.total_price | money }}</p>
