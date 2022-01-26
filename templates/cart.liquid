@@ -106,6 +106,12 @@
                 </div>
               {% endif %}
             </div>
+<div class="viabill-pricetag"
+    data-view="basket"
+    data-price="{{ cart.total_price | money }}"
+    data-language="da"
+    data-currency="dkk">
+</div>            
             <div class="row no-gutters">
               <div class="col-12 d-none d-md-block mb-4 text-right euro no-gutter" style="border-bottom: 1px solid #dee2e6;">
                 <p id="subtotal" class="cart-money mb-0">{{ 'cart.general.total' | t }} {{ cart.total_price | money }}</p>
@@ -114,12 +120,7 @@
                   <p>{{ 'cart.general.savings' | t }} {{ cart.total_discounts | money }}</p>
                 {% endif %}
               </div>
-<div class="viabill-pricetag"
-    data-view="basket"
-    data-price="{{ cart.total_price | money }}"
-    data-language="da"
-    data-currency="dkk">
-</div>             
+             
               <div class="col-12 d-block d-md-none mb-4 no-gutter" style="border-bottom: 1px solid #dee2e6;">
                 <div class="row">
                   <div class="col-6">
