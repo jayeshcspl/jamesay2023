@@ -94,13 +94,14 @@
                         {{ item.line_price | money }}
                       </td>
                     </tr>
+
+                  {% endfor %}
 <div class="viabill-pricetag"
     data-view="product"
     data-price="{{ product.price | money }}"
     data-language="da"
     data-currency="dkk">
-</div>
-                  {% endfor %}
+</div>                
               </tbody>
             </table>
 
