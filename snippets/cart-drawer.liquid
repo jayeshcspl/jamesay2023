@@ -57,12 +57,7 @@
                             {% if cart.total_discounts > 0 %}
                             <p>{{ 'cart.general.savings' | t }} {{ cart.total_discounts | money }}</p>
                             {% endif %}
-                          <div class="viabill-pricetag"
-    data-view="basket"
-    data-price="{{ cart.total_price | money }}"
-    data-language="da"
-    data-currency="dkk">
-</div>
+        
                         </li>
                         </ul>
                     </div>
@@ -83,7 +78,12 @@
                             <p>{{ 'cart.general.savings' | t }} {{ cart.total_discounts | money }}</p>
                             {% endif %}</h4>
                     </div>
-                  
+                  <div class="viabill-pricetag"
+    data-view="basket"
+    data-price="{{ cart.total_price | money }}"
+    data-language="da"
+    data-currency="dkk">
+</div>
                 </div>
                 <div class="hide row vat-shipping">
                     <div class="col-8">
