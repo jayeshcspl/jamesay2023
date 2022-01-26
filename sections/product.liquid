@@ -130,12 +130,7 @@
                 </span>
               </div></div>
             </div>
-       <div class="viabill-pricetag"
-    data-view="product"
-    data-price="{{ product.price | money }}"
-    data-language="da"
-    data-currency="dkk">
-</div>
+   
             {% assign short_description_old = product.metafields.cf_product.short_description %}
             {% if product.metafields.product_info.short_description != blank %}
               {% assign short_description = product.metafields.product_info.short_description %}
@@ -227,6 +222,12 @@
                 {% endif %}
               </span>
             </button>
+            <div class="viabill-pricetag"
+    data-view="product"
+    data-price="{{ product.price | money }}"
+    data-language="da"
+    data-currency="dkk">
+</div>
           </div>
           <div class="col-lg-8 offset-lg-2 product-tabs-wrapper">
             <p data-toggle="collapse" aria-expanded="false" data-target="#tab_product_details" class="mb-1 mt-5 tab_title">{{ 'products.label.product_detail_txt' | t }}<span><i></i><i></i></span></p>
