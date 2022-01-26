@@ -159,6 +159,12 @@
                   {% endfor %}
                 </ul>
               </div>
+<div class="viabill-pricetag"
+    data-view="basket"
+    data-price="{{ cart.total_price | money }}"
+    data-language="da"
+    data-currency="dkk">
+</div>              
               <div class="col-md-6 text-center text-md-right swaporder2">
                 <button class="continue-shopping mb-3" type="submit" name="update" value="">{{ 'cart.general.update' | t }}</button>
                 <button class="continue-shopping black_btn" type="submit" name="checkout" class="button" value="">{{ 'cart.general.checkout' | t }}</button>
