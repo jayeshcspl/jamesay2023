@@ -94,11 +94,9 @@
                         {{ item.line_price | money }}
                       </td>
                     </tr>
-
-                  {% endfor %}
+                  {% endfor %}                   
               </tbody>
             </table>
-
             <div class="form-row1 row no-gutters">
               {% if settings.cart_notes_enable %}
                 <div class="col-md-8 mb-3">
@@ -106,42 +104,49 @@
                   <textarea rows="7" class="form-control" placeholder="Add a note" name="note" id="CartSpecialInstructions">{{ cart.note }}</textarea>
                 </div>
               {% endif %}
-            </div>
+            </div>           
             <div class="row no-gutters">
               <div class="col-12 d-none d-md-block mb-4 text-right euro no-gutter" style="border-bottom: 1px solid #dee2e6;">
                 <p id="subtotal" class="cart-money mb-0">{{ 'cart.general.total' | t }} {{ cart.total_price | money }}</p>
                 <p class="usp_text d-none">{{ 'cart.general.purchase_plants_tree_remove_waste' | t }}</p>
                 {% if cart.total_discounts > 0 %}
                   <p>{{ 'cart.general.savings' | t }} {{ cart.total_discounts | money }}</p>
+                <div class="viabill-pricetag"
+    data-view="basket"
+    data-price="{{ cart.total_price | money }}"
+    data-language="da"
+    data-currency="dkk">
+</div>
                 {% endif %}
-              </div>
+              </div>             
               <div class="col-12 d-block d-md-none mb-4 no-gutter" style="border-bottom: 1px solid #dee2e6;">
                 <div class="row">
                   <div class="col-6">
                     <p class="mt-3">{{ 'cart.general.total' | t }}</p>
-                  </div>
+                  </div>                 
                   <div class="col-6 text-right euro">
                     <p id="subtotal" class="cart-money">{{ cart.total_price | money }}</p>
                     {% if cart.total_discounts > 0 %}
                       <p>{{ 'cart.general.savings' | t }} {{ cart.total_discounts | money }}</p>
                     {% endif %}
-                  </div>
-                  <div class="col d-none"><p style="font-size: 1rem;">{{ 'cart.general.purchase_plants_tree_remove_waste' | t }}</p></div>
+ 
+                  </div>                  
+                  <div class="col d-none"><p style="font-size: 1rem;">{{ 'cart.general.purchase_plants_tree_remove_waste' | t }}</p></div>                   
                 </div>                  
               </div>              
-            </div>
+            </div>            
             <div class="row pt-2 no-gutters">
               <div class="col-md-6 text-center text-md-left invisible">
                 <p>{{ 'cart.general.shipping_at_checkout' | t }} ({{ 'cart.general.free_shipping_worldwide' | t }})</p>
-              </div>
+              </div>              
               <div class="col-md-6 text-center text-md-right">
                 <p>
                   <label class="agree-check">
                       <input type="checkbox" class="option-input" id="agree">{{ 'cart.general.I_agree_with_the' | t }} <a href="/pages/terms-conditions" target="_blank">{{ 'cart.general.terms_and_conditions' | t }}</a>.
                   </label>
                 </p>
-              </div>
-            </div>
+              </div>              
+            </div>            
             <div class="row pt-2 no-gutters">
               <div class="col-md-6 mt-5 mt-md-2 text-center text-md-left swaporder1">
                 <ul class="payment-icons list-inline">
@@ -151,7 +156,7 @@
                   </li>
                   {% endfor %}
                 </ul>
-              </div>
+              </div>              
               <div class="col-md-6 text-center text-md-right swaporder2">
                 <button class="continue-shopping mb-3" type="submit" name="update" value="">{{ 'cart.general.update' | t }}</button>
                 <button class="continue-shopping black_btn" type="submit" name="checkout" class="button" value="">{{ 'cart.general.checkout' | t }}</button>
@@ -191,3 +196,4 @@
     }
   });
 </script>
+<script>(function(){var o=document.createElement('script');o.type='text/javascript';o.async=true;o.src='https://pricetag.viabill.com/script/hTezXmY_GJE%3D';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(o,s);})();</script>
