@@ -15,50 +15,46 @@
         <p class="my-4 newsletter_text">{{ 'general.newsletter_form.join_our_newsletter_desc' | t }}</p>
       </div>
       <div class="col-lg-4 offset-lg-1">
-        {% if request.host == "jamesay-dk.myshopify.com" or request.host == "jamesay.dk" %}
-          DK site
-        {% else %}
-          <form class="omnisend-subscribe-form myclass" name="omnisend-subscribe-form">
-          <!-- {% form 'customer' %} -->
-              {{ form.errors | default_errors }}
-              {% if form.posted_successfully? %}
-                <p class="form--success">{{ 'general.newsletter_form.confirmation' | t }}</p>
-              {% else %}
-                <div class="row form-row input-group1 password__input-group no-gutters">
-                  <div class="col-12 mb-4">
-                    <input type="hidden" name="contact[tags]" value="newsletter">
-                    <input type="text"
-                    name="contact[name]"
-                    id="Name"
-                    class="input-group__field newsletter__input omnisend-subscribe-input-first-name form-control"
-                    value="{% if customer %}{{ customer.name }}{% endif %}"
-                    placeholder="{{ 'general.newsletter_form.your_name_txt' | t }}" required>
-                    <div class="invalid-feedback"></div> 
-                  </div>
-                  <div class="col-12 mb-4">
-                    <input type="email"
-                    name="contact[email]"
-                    id="Email"
-                    class="input-group__field newsletter__input omnisend-subscribe-input-email form-control"
-                    value="{% if customer %}{{ customer.email }}{% endif %}"
-                    placeholder="{{ 'general.newsletter_form.your_email_txt' | t }}"
-                    autocorrect="off"
-                    autocapitalize="off" required>
-                    <div class="invalid-feedback"></div>
-                  </div>
-                  <div class="col-12 mb-4 mt-4 newslater_privacy_text">{{ 'general.newsletter_form.accept_txt' | t }} <a href="/pages/cookies-privacy-policy" style="text-decoration: underline !important;">{{ 'general.newsletter_form.privacy_policy_txt' | t }}</a></div>
+        <form class="omnisend-subscribe-form myclass" name="omnisend-subscribe-form">
+        <!-- {% form 'customer' %} -->
+            {{ form.errors | default_errors }}
+            {% if form.posted_successfully? %}
+              <p class="form--success">{{ 'general.newsletter_form.confirmation' | t }}</p>
+            {% else %}
+              <div class="row form-row input-group1 password__input-group no-gutters">
+                <div class="col-12 mb-4">
+                  <input type="hidden" name="contact[tags]" value="newsletter">
+                  <input type="text"
+                  name="contact[name]"
+                  id="Name"
+                  class="input-group__field newsletter__input omnisend-subscribe-input-first-name form-control"
+                  value="{% if customer %}{{ customer.name }}{% endif %}"
+                  placeholder="{{ 'general.newsletter_form.your_name_txt' | t }}" required>
+                  <div class="invalid-feedback"></div> 
                 </div>
-                <div class="row">
-                  <span class="col-12 input-group__btn">
-                    <button type="submit" class="btn-signup newsletter__submit" name="commit" id="Subscribe">
-                      <span class="newsletter__submit-text--large">{{ 'general.newsletter_form.sign_up_txt' | t }}</span>
-                    </button>
-                  </span>
+                <div class="col-12 mb-4">
+                  <input type="email"
+                  name="contact[email]"
+                  id="Email"
+                  class="input-group__field newsletter__input omnisend-subscribe-input-email form-control"
+                  value="{% if customer %}{{ customer.email }}{% endif %}"
+                  placeholder="{{ 'general.newsletter_form.your_email_txt' | t }}"
+                  autocorrect="off"
+                  autocapitalize="off" required>
+                  <div class="invalid-feedback"></div>
                 </div>
-              {% endif %}
-            <!-- {% endform %} -->
-          </form>
-        {% endif %}
+                <div class="col-12 mb-4 mt-4 newslater_privacy_text">{{ 'general.newsletter_form.accept_txt' | t }} <a href="/pages/cookies-privacy-policy" style="text-decoration: underline !important;">{{ 'general.newsletter_form.privacy_policy_txt' | t }}</a></div>
+              </div>
+              <div class="row">
+                <span class="col-12 input-group__btn">
+                  <button type="submit" class="btn-signup newsletter__submit" name="commit" id="Subscribe">
+                    <span class="newsletter__submit-text--large">{{ 'general.newsletter_form.sign_up_txt' | t }}</span>
+                  </button>
+                </span>
+              </div>
+            {% endif %}
+          <!-- {% endform %} -->
+        </form>
       </div>
     </div>
   </div>  
