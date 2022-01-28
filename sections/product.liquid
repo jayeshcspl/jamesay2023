@@ -122,7 +122,7 @@
               <p class="afterpay-paragraph_desktop" data-product-id="6818314485946"><img class="afterpay-logo" src="https://static.afterpay.com/integration/product-page/logo-afterpay-colour.png" srcset="https://static.afterpay.com/integration/product-page/logo-afterpay-colour.png 1x, https://static.afterpay.com/integration/product-page/logo-afterpay-colour@2x.png 2x, https://static.afterpay.com/integration/product-page/logo-afterpay-colour@3x.png 3x" width="100" height="21" alt="Afterpay" style="vertical-align: middle; width: 100px; border: 0px;"><span class="afterpay-text3">&nbsp;</span><br><a class="afterpay-link" href="https://www.afterpay.com/terms" target="_blank"><u class="afterpay-link-inner" style="font-size: 12px; text-decoration: underline;">More info</u></a></p>
             {% endif %}
             <div class="row border-bottom pb-4 mb-5 border-dark no-gutters">
-              <div class="col-6 fs19">{{current_variant.sku}}</div>
+              <div class="col-6 fs19">{{current_variant.metafields.product_variant_info.style_number}}</div>
               <div class="col-6 text-right fs19 data-price-wrapper" data-price-wrapper> <div class="money">
                 <span data-product-price>
                   {{ current_variant.price | money }}
@@ -318,7 +318,7 @@
           <div class="col-lg-6">
             <div class="row no-gutters">
               <div class="col-lg-4">
-                <p>{{ product.title }} / {{current_variant.sku}}<br>
+                <p>{{ product.title }} / {{current_variant.metafields.product_variant_info.style_number}}<br>
                   {{product.metafields.product_frame_sizing.lens_length}}-{{product.metafields.product_frame_sizing.nose_bridge_size}}-{{product.metafields.product_frame_sizing.temple_size}} / {{current_variant.metafields.product_variant_info.color_code}}<br>
                   {{product.metafields.product_frame_sizing.material}}<br><br>
                   {{shop.metafields.string_translation.EN_ISO_AS_NZS}}</p>

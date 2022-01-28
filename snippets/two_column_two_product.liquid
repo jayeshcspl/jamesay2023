@@ -50,7 +50,7 @@
         </a>
         <table class="product_info slide_title_bottom">
           <tr>
-            <td>{{product.title}} / {{json_product1.sku}}<br />{{product.metafields.product_frame_sizing.lens_length}}-{{product.metafields.product_frame_sizing.nose_bridge_size}}-{{product.metafields.product_frame_sizing.temple_size}} / {{json_product1.metafields.product_variant_info.color_code}}<br />{{product.metafields.product_frame_sizing.material}}<br /><br />{{product.price | money}}</td>
+            <td>{{product.title}} / {{json_product1.metafields.product_variant_info.style_number}}<br />{{product.metafields.product_frame_sizing.lens_length}}-{{product.metafields.product_frame_sizing.nose_bridge_size}}-{{product.metafields.product_frame_sizing.temple_size}} / {{json_product1.metafields.product_variant_info.color_code}}<br />{{product.metafields.product_frame_sizing.material}}<br /><br />{{product.price | money}}</td>
           </tr>
         </table>
         <table class="product_info slide_description_bottom_right price_txt text-uppercase">
@@ -66,7 +66,7 @@
         </a>
         <table class="product_info slide_title_bottom">
           <tr>
-            <td>{{right_product.title}} / {{right_json_product1.sku}}<br />
+            <td>{{right_product.title}} / {{right_json_product1.metafields.product_variant_info.style_number}}<br />
 {{right_product.metafields.product_frame_sizing.lens_length}}-{{right_product.metafields.product_frame_sizing.nose_bridge_size}}-{{right_product.metafields.product_frame_sizing.temple_size}} / {{right_json_product1.metafields.product_variant_info.color_code}}<br />{{right_product.metafields.product_frame_sizing.material}}<br /><br />{{right_json_product1.price | money}}</td>
 </tr>
 </table>
