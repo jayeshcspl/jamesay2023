@@ -26,7 +26,12 @@
       <i></i>
       <i></i>
     </a>
-    <span class="shop_link" style="color : {{color_code}}"><a href="/collections/all">SHOP</a></span>
+    {% if request.host == "jamesay-dk.myshopify.com" or request.host == "jamesay.dk" %}
+      {% assign all_collection_link = "/collections/alle" %}
+    {% else %}
+      {% assign all_collection_link = "/collections/all" %}
+    {% endif %}
+    <span class="shop_link" style="color : {{color_code}}"><a href="{{all_collection_link}}">SHOP</a></span>
     <span class="l-left">
       <a href="/">
         <?xml version="1.0" encoding="UTF-8"?>
