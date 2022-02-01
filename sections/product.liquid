@@ -126,7 +126,12 @@
               <div class="col-6 text-right fs19 data-price-wrapper" data-price-wrapper> <div class="money">
                 <span data-product-price>
                   {{ current_variant.price | money }}
-  
+  <div class="viabill-pricetag"
+    data-view="product"
+    data-price="{{ product.price | money }}"
+    data-language="da"
+    data-currency="dkk">
+</div>
                 </span>
               </div></div>
             </div>
