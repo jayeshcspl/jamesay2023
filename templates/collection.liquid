@@ -8,8 +8,9 @@
         </div>
       </div>
       <div class="row pl-50 no-gutters pr-50">
+        
         <div class="col-lg-6 mb-5">
-          {% render 'breadcrumbs' %}
+          {{collection.description}}
         </div>
         <div class="product-filter offset-lg-2 col-lg-4 text-lg-right mb-5 justify-content-between d-flex">
             <!-- <div {% unless current_tags %} class="active"{% endunless %}>
@@ -106,6 +107,13 @@
       </div>
     </div>
   </section>
+  <section class="vertical-scrolling mx-auto h-100 mt-10">
+    <div class="container-fluid h-100 px-0">
+      <div class="row1 pl-50 pr-50 no-gutters two_column">
+        {{collection.metafields.collection.long_description}}
+      </div>
+    </div>
+  </section>  
   <section class="vertical-scrolling mx-auto h-100">
     <div class="container-fluid h-100 px-0">
       <div class="row pl-50 pr-50 no-gutters align-items-center h-100 mobile_min-vh-40 min-vh-100">
