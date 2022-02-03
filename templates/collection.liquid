@@ -34,17 +34,19 @@
               </div>
               {% endif %}
             {% endfor %} -->
-
+            {% assign default_collection = "All,Female,Gender Neutral,Lifestyle,Male,Alle,Kønsneutral,Kvinde,Livsstil,Mand" | split:"," %}
             {% for collection1 in collections  %}
             <!-- {{ collection1.url }} -->
-              {% if collection1.title contains collection.title %}
-              <div class="active">
-                <a href="{{ collection1.url }}">{{ collection1.title }}</a>
-              </div>
-              {% else %}
-              <div>
-                <a href="{{ collection1.url }}">{{ collection1.title }}</a>
-              </div>
+              {% if default_collection contains collection1.title %}
+                {% if collection1.title == collection.title %}
+                <div class="active">
+                  <a href="{{ collection1.url }}">{{ collection1.title }}</a>
+                </div>
+                {% else %}
+                <div>
+                  <a href="{{ collection1.url }}">{{ collection1.title }}</a>
+                </div>
+                {% endif %}
               {% endif %}
             {% endfor %}
         </div>
