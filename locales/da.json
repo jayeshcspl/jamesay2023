@@ -92,7 +92,8 @@
       "female_text": "KVINDE",
       "male_link": "https:\/\/jamesay.dk\/collections\/mand",
       "female_link": "https:\/\/jamesay.dk\/collections\/kvinde",
-      "delivery": "Levering"
+      "delivery": "Levering",
+      "out_of_stock":"Ikke på lager"
     },
     "header": {
       "sustainability": "Bæredygtighed",

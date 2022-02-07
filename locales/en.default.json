@@ -92,7 +92,8 @@
       "female_text":"FEMALE",
       "male_link":"https://jamesay.com/collections/male",
       "female_link":"https://jamesay.com/collections/female",
-      "delivery":"Delivery"
+      "delivery":"Delivery",
+      "out_of_stock":"Out of stock"
     },
     "header": {
       "sustainability": "Sustainability",
