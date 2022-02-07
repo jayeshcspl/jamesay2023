@@ -16,10 +16,11 @@
       </div>
       <div class="col-lg-4 offset-lg-1">
         {% if request.host == "jamesay-dk.myshopify.com" or request.host == "jamesay.dk" %}
-          <div class="klaviyo-form-TcEcVW"></div>
+          <div class="klaviyo-form-TcEcVW"></div> 
         {% else %}
-          <form class="omnisend-subscribe-form myclass" name="omnisend-subscribe-form">
-          <!-- {% form 'customer' %} -->
+          <div class="klaviyo-form-VqHTtm"></div>
+          <!-- <form class="omnisend-subscribe-form myclass" name="omnisend-subscribe-form">
+            {% form 'customer' %}
               {{ form.errors | default_errors }}
               {% if form.posted_successfully? %}
                 <p class="form--success">{{ 'general.newsletter_form.confirmation' | t }}</p>
@@ -56,12 +57,12 @@
                   </span>
                 </div>
               {% endif %}
-            <!-- {% endform %} -->
-          </form>
+            {% endform %}
+          </form> -->
         {% endif %}
       </div>
     </div>
-  </div>  
+  </div>
   <div class="container-fluid footer mt-5">
     <div class="row">
       <div class="col-lg-6">

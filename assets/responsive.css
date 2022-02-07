@@ -665,11 +665,6 @@
     padding-bottom: 30vh;
 	}
 }
-@media screen and (max-width: 480px) {
-	#openGeo .openGePopUp {
-			width: 95%;
-	}
-}
 @media only screen and (max-width: 320px) {
 	[class*="js-conveyor-"] ul li {
 		padding: 0 7px;
