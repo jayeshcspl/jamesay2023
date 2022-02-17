@@ -61,7 +61,7 @@ $(function() {
             // The Ajax request will return at the most 10 results.
             // If there are more than 10, let's link to the search results page.
             if(data.results_count > 10) {
-              resultsList.append('<li><span class="title"><a href="' + searchURL + '">See all results (' + data.results_count + ')</a></span></li>');
+              resultsList.append('<li><span class="title"><a href="' + searchURL + '">{{ 'general.search.See_all_results' | t }} (' + data.results_count + ')</a></span></li>');
             }
             resultsList.fadeIn(200);
           }
