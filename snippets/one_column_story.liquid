@@ -38,7 +38,7 @@
       <div class="col-lg-12 pl-50 pt-5" style="z-index: 997;">
         <a href="{{ article.url }}" class="testbg">
           {% if template != 'article' and  template != 'article.dynamic' %}
-            <table class="story_model_info text-white mt-8 pt-5 d-none d-lg-block">
+            <table class="story_model_info text-white1 mt-8 pt-5 d-none d-lg-block">
               <td>{{ article.metafields.story_model_info.model_name}}<br>
                 {{ article.metafields.story_model_info.age}}<br>
                 {{ article.metafields.story_model_info.city}}</td>
@@ -48,9 +48,9 @@
             </tr>
             </table>
           {% endif %}
-          <p class="slide_title_bottom story_title fs120 text-white mb-lg-0">{{ article.title }}</p>
+          <p class="slide_title_bottom story_title fs120 text-white1 mb-lg-0">{{ article.title }}</p>
           {% if template != 'article' and  template != 'article.dynamic' %}
-            <p class="slide_description_bottom_right text-white mb-0"><u>{{shop.metafields.one_column_story.right_text}}</u></p>
+            <p class="slide_description_bottom_right text-white1 mb-0"><u>{{shop.metafields.one_column_story.right_text}}</u></p>
           {% endif %}
         </a>
       </div>
