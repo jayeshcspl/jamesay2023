@@ -496,7 +496,7 @@
 		width: 30px;
 	}
 	.product_overview { 
-		margin-top: 135px;
+		padding-top: 135px;
 	}
 	.toggle-menu i:nth-child(1) {
     top: 2px;
