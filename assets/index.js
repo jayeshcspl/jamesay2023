@@ -80,7 +80,7 @@ $(document).ready(function($) {
       slidesNavigation: true,
       controlArrows: false,
       scrollOverflow:true,
-      anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection', 'sixthSection', 'seventhSection','eighthSection','ninethSection'],
+      anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection', 'sixthSection', 'seventhSection','eighthSection','ninethSection', 'thenthSection','elevenSection','twelfthSection'],
       menu: '#menu',
     });
   }
