@@ -297,7 +297,7 @@
         </div>
     </div>
   </section>
-  {% unless product.tags contains 'Lifestyle' %}
+  {% unless product.tags contains 'Lifestyle' or product.tags contains 'Livsstil'%}
     {% if product.metafields.product_info.premium_eco_materials != blank %}
       {% assign premium_eco_materials = product.metafields.product_info.premium_eco_materials %}
     {% else %}
