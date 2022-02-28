@@ -29,6 +29,16 @@
  
         </ul>
     </div>
+  <div style="margin: 1% 0;" class="col-md-6">
+  <h2>Pages</h2>
+        <ul>
+            {% for p in pages %}
+                <li>
+                    <a href="{{ p.url }}">{{ p.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+  </div>
 </div>
 </div>
 
