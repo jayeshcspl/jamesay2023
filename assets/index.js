@@ -40,35 +40,43 @@ $(document).ready(function($) {
       $(".l-right svg.show_open").css({"width":"23px"});
     }
   }
+if (deviceWidth < 575 ){
   $('#stories #fullpage section, .template-article #fullpage1 section, .template-product #fullpage1 section, .template-index #fullpage section').each(function (index, value){
-    //setTimeout(() => {
       console.log(index);
-      console.log($(this).attr('data-section'));
-      if($(this).attr('data-section') == "two-image") {
-        var element_bgimage = $(this).find('.section1_imgl');
-        var mobile_url = "";
-        $(this).find('.section1_imgl').each(function (i, v){
-          if( !$(this).hasClass('d-none') ){
-            mobile_url = $(this).find('.section1_imgl').attr('data-mobile-url');
-          }
+      console.log($(value).attr('data-section'));
+      if($(value).attr('data-section') == "two-image") {
+        $(value).find('.section1_imgl').each(function (i, v){
+          var element_bgimage = $(v);
+          //if( !$(v).hasClass('d-none') ){
+            var mobile_url = element_bgimage.attr('data-mobile-url');
+            if(typeof mobile_url !== undefined && mobile_url !== false && mobile_url != undefined) {
+              element_bgimage.attr('data-bg', mobile_url);
+              element_bgimage.css({"background-image": "url('"+mobile_url+"')"});
+            }
+          //}
         });
-      } else if($(this).attr('data-section') == "video") {
-        var element_bgimage = $(this).find('.vimeo-wrapper');
+      } else if($(value).attr('data-section') == "video") {
+        var element_bgimage = $(value).find('.vimeo-wrapper');
         var mobile_url = element_bgimage.attr('data-mobile-url');
+        if(typeof mobile_url !== undefined && mobile_url !== false && mobile_url != undefined) {
+          element_bgimage.attr('data-bg', mobile_url);
+          element_bgimage.css({"background-image": "url('"+mobile_url+"')"});
+        }
       } else {
-        var element_bgimage = $(this);
-        var mobile_url = $(this).attr('data-mobile-url');
-      }
-     console.log(mobile_url);
-      if(typeof mobile_url !== undefined && mobile_url !== false && mobile_url != undefined) {
-        console.log('inside condition');
-        if (deviceWidth < 575 ){
+        var element_bgimage = $(value);
+        var mobile_url = element_bgimage.attr('data-mobile-url');
+        if(typeof mobile_url !== undefined && mobile_url !== false && mobile_url != undefined) {
+          element_bgimage.attr('data-bg', mobile_url);
           element_bgimage.css({"background-image": "url('"+mobile_url+"')"});
         }
       }
-    //}, 2100);
+      // console.log(mobile_url);
+      // if(typeof mobile_url !== undefined && mobile_url !== false && mobile_url != undefined) {
+      //   console.log('inside condition');
+      //   element_bgimage.css({"background-image": "url('"+mobile_url+"')"});
+      // }
   });
-
+}
   // fullpage customization
   if ($('#fullpage').length) {
     $('#fullpage').fullpage({
