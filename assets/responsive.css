@@ -543,6 +543,16 @@
 	.template-product #fullpage1 {
 		padding-top: 35px;
 	}
+	.product_overview .product_info {
+		padding:  10px;
+	}
+	.dot_area {
+		order: 1;
+		text-align: left !important;
+	}
+	.desc_area {
+		order: 2;
+	}
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
 	.mt-30,.mt-40,.mt-50 {
