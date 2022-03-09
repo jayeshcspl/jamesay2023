@@ -143,13 +143,13 @@
                         </div>
                       </div>
                     </div>
-                {% capture tempList %}
-                {{colorlist | append: color | append: " " }}
-                {% endcapture %}
-                {% assign colorlist = tempList %}
+                  {% capture tempList %}
+                  {{colorlist | append: color | append: " " }}
+                  {% endcapture %}
+                  {% assign colorlist = tempList %}
+                  {% assign counter = counter | plus: 1 %}
+                  {% assign xyz = xyz | plus: 1 %}
                 {% endunless %}
-                {% assign counter = counter | plus: 1 %}
-                {% assign xyz = xyz | plus: 1 %}
               {% endfor %}
             {% endif %}
           {% endfor %}
