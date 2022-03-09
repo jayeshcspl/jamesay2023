@@ -130,7 +130,9 @@
                       <div class="row product_info d-flex justify-content-between">
                         <div class="col-lg-6  text-left desc_area">
                           <a href="{{ variant.url | within: collection }}" class="product_link">{{product.title}}</a><br>
-                          {{variant.metafields.product_variant_info.acetate_color}} / {{variant.metafields.product_variant_info.lense_color}}<br>
+                          {% if variant.metafields.product_variant_info.acetate_color != blank ||  variant.metafields.product_variant_info.lense_color %}
+                            {{variant.metafields.product_variant_info.acetate_color}} <span class="hide">/ {{variant.metafields.product_variant_info.lense_color}}</span><br>
+                          {% endif %}
                           {{ 'general.label.delivery' | t }} : {% if variant.inventory_quantity == 0 %} {{ 'general.label.out_of_stock' | t }}
                           {% else %}{{variant.metafields.product_variant_info.delivery}}{% endif %}<br><br>
                           {{ variant.price | money }}
