@@ -73,7 +73,7 @@
     {{ content_for_header }}
   {% endif %}
   {% if template == 'index' or template == 'blog' %}
-  <link defer rel="stylesheet" type="text/css" href="{{ 'jquery.fullPage.css' | asset_url }}">
+  <link defer rel="stylesheet" type="text/css" href="{{ 'jquery.fullpage.css' | asset_url }}">
   {% endif %}
   {% if template == 'product' %}
   <link defer rel="stylesheet" type="text/css" href="{{ 'jquery.bxslider.min.css' | asset_url }}">
@@ -164,7 +164,8 @@
   </style>
   <script src="{{ 'jquery-3.4.1.min.js' | asset_url }}"></script>
   {% if template == 'index' or template == 'blog' %}
-  <script defer src="{{ 'jquery.fullPage.min.js' | asset_url }}"></script>
+  <script defer src="{{ 'scrolloverflow.js' | asset_url }}"></script>
+  <script defer src="{{ 'jquery.fullpage.js' | asset_url }}"></script>
   {% endif %}
   {% if template == 'product' %}
   <script defer src="{{ 'jquery.bxslider.min.js' | asset_url }}"></script>
