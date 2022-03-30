@@ -83,11 +83,11 @@ if (deviceWidth < 575 ){
       //sectionsColor: ['#000000', '#000000', '#000000', '#000000', '#000000'],
       //sectionsColor: ['#686868', '#f5f5f5', '#686868', '#686868', '#f5f5f5', '#686868', '#686868', '#686868', '#686868'],
       sectionSelector: '.vertical-scrolling',
-      slideSelector: '.horizontal-scrolling',
+      slideSelector: '.container-fluid',
       navigation: true,
       slidesNavigation: true,
       controlArrows: false,
-      scrollOverflow:true,
+      scrollOverflow:false,
       anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection', 'sixthSection', 'seventhSection','eighthSection','ninethSection', 'thenthSection','elevenSection','twelfthSection'],
       menu: '#menu',
     });
