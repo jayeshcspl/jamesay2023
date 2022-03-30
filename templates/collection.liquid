@@ -201,16 +201,24 @@
       -moz-border-radius:50%;
       border-radius:50%;
       float:left;
-      width:{{ width }} !important;
-      min-width:{{ width }} !important; 
-      height:{{ height }} !important;
+      width: 10px !important;
+      min-width: 10px !important; 
+      height: 10px !important;
       margin:0;
       background-color:#ddd;
       font-size:0;
       text-align:center;
-      line-height:{{ height }};
+      line-height: 10px;
       white-space:nowrap;
       text-transform:uppercase;
+    }
+    @media (max-width: 767px) {
+      .swatch label {
+        width:{{ width }} !important;
+        min-width:{{ width }} !important; 
+        height:{{ height }} !important;
+        line-height:{{ height }};
+      }
     }
     .swatch-element label { padding:0 10px; }
     .color.swatch-element label { padding:0; }

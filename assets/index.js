@@ -77,6 +77,16 @@ if (deviceWidth < 575 ){
       // }
   });
 }
+
+jQuery('.dot_img').each(function( index ) {
+  var data_src = $( this ).attr('data-src');
+  console.log(data_src);
+  if(deviceWidth > 575 ) {
+    console.log(data_src.replace("_6", "_10"));
+    new_data_src = data_src.replace("_6", "_10");
+    jQuery( this ).attr('data-src', new_data_src);
+  }
+});
   // fullpage customization
   if ($('#fullpage').length) {
     $('#fullpage').fullpage({
