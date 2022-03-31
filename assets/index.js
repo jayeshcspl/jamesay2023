@@ -85,6 +85,7 @@ jQuery('.dot_img').each(function( index ) {
     console.log(data_src.replace("_6", "_10"));
     new_data_src = data_src.replace("_6", "_10");
     jQuery( this ).attr('data-src', new_data_src);
+    jQuery( this ).attr('src', new_data_src);
   }
 });
   // fullpage customization
