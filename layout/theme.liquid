@@ -83,12 +83,23 @@
   <link defer rel="stylesheet" type="text/css" href="{{ 'style.scss' | asset_url }}">
   <link defer rel="stylesheet" type="text/css" href="{{ 'responsive.css' | asset_url }}">
   <link defer rel="stylesheet" type="text/css" href="{{ 'product_rollover.css' | asset_url }}">
+
+{% if shop.metafields.one_column_general.image_url != blank %}
+{% assign desktop_img = shop.metafields.one_column_general.image_url %}
+{% else %}
+{% assign desktop_img = "default.png" | file_url %}
+{% endif %}
+{% if shop.metafields.one_column_general.mobile_image_url != blank %}
+{% assign mobile_img = shop.metafields.one_column_general.mobile_image_url %}
+{% else %}
+{% assign mobile_img = desktop_img %}
+{% endif %} 
   <style>
 
     @media screen and (min-width: 992px) {
       body:after{
         display:none;
-        content: {% if template == 'index' %} url({{ 'general.label.videobg_vimeo_image' | t }}) {% endif %}
+        content: {% if template == 'index' %} url({{ desktop_img }}) {% endif %}
         url({{ 'general.label.shop_menu_image' | t }})
         url({{ 'general.label.stories_menu_image' | t }})
         url({{ 'general.label.about_menu_image' | t }})
@@ -125,7 +136,7 @@
       {% if template == 'index' %}
       body:after{
         display:none;
-        content: url({{ 'general.label.videobg_vimeo_mobile_image' | t }});
+        content: url({{ mobile_img }});
       }
       {% endif %}
     }    
@@ -141,7 +152,7 @@
     } */
     @media screen and (min-width: 992px) {
       .vimeo-wrapper {
-        background-image: url({{ 'general.label.videobg_vimeo_image' | t }});
+        background-image: url({{ desktop_img }});
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -152,7 +163,7 @@
     }
     @media screen and (max-width: 991px) {
       .vimeo-wrapper {
-        background-image: url({{ 'general.label.videobg_vimeo_mobile_image' | t }});
+        background-image: url({{ mobile_img }});
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;        
