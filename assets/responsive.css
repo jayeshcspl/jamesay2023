@@ -364,6 +364,12 @@
 	.swaporder2 {
 		order: 1;
 	}
+	.color_swaporder1 {
+		order: 2;
+	}
+	.color_swaporder2 {
+		order: 1;
+	}
 	.swatch_area .swatch {
 		display: inline-block;
 	}
@@ -590,6 +596,12 @@
 	}
 	.cart_page.content_area .table tr td:first-child {
 		width: 75px;
+	}
+	.template-product .custom-select {
+		max-width: 100%;
+	}
+	.template-product .swatch_area {
+		padding: 0 0 20px;
 	}
 }
 

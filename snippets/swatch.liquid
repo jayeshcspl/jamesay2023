@@ -42,7 +42,7 @@
 </div>
 {% else %}
 <div class="selected_color">{{ 'general.label.COLOURS' | t }} / <span>{{option.selected_value}}</span></div>
-<div class="swatch clearfix" data-option-index="{{ option_index }}">
+<div class="swatch clearfix" data-option-index="{{ option_index }}" style="display: none;">
   {% assign values = '' %}
   {% for variant in product.variants %}
     {% assign value = variant.options[option_index] %}

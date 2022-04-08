@@ -80,10 +80,13 @@
                         {% endfor %}
   
                       {% else %}
+                        <div class="swatch_area">
+                          <div class="selected_color">{{ 'general.label.COLOURS' | t }} / <span>{{option.selected_value}}</span></div>
+                        </div>
                         <select
                           class="custom-select single-option-selector"
                           id="Option{{ option.position }}"
-                          name="options[{{ option.name | escape }}]" style="display: none;">
+                          name="options[{{ option.name | escape }}]" >
                           {% for value in option.values %}
                             <option
                               value="{{ value | escape }}"
@@ -92,7 +95,7 @@
                             </option>
                           {% endfor %}
                         </select>
-                        <div class="swatch_area">
+                        <div class="swatch_area" style="display:none;">
                             {% include 'swatch' with 'Color' %}
                         </div>
                       {% endif %}
@@ -159,10 +162,13 @@
                         {% endfor %}
   
                       {% else %}
+                        <div class="swatch_area">
+                          <div class="selected_color">{{ 'general.label.COLOURS' | t }} / <span>{{option.selected_value}}</span></div>
+                        </div>
                         <select
                           class="custom-select single-option-selector"
                           id="Option{{ option.position }}"
-                          name="options[{{ option.name | escape }}]" style="display: none;">
+                          name="options[{{ option.name | escape }}]" >
                           {% for value in option.values %}
                             <option
                               value="{{ value | escape }}"
@@ -171,7 +177,7 @@
                             </option>
                           {% endfor %}
                         </select>
-                        <div class="swatch_area">
+                        <div class="swatch_area" style="display:none;">
                             {% include 'swatch' with 'Color' %}
                         </div>
                       {% endif %}

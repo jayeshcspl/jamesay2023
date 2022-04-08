@@ -42,8 +42,8 @@ $(document).ready(function($) {
   }
 if (deviceWidth < 575 ){
   $('#stories #fullpage section, .template-article #fullpage1 section, .template-product #fullpage1 section, .template-index #fullpage section').each(function (index, value){
-      console.log(index);
-      console.log($(value).attr('data-section'));
+      //console.log(index);
+      //console.log($(value).attr('data-section'));
       if($(value).attr('data-section') == "two-image") {
         $(value).find('.section1_imgl').each(function (i, v){
           var element_bgimage = $(v);
