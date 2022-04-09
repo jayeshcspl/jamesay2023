@@ -141,7 +141,7 @@
 				onFormOptionChange(t) {
 					const e = t.dataset.variant;
          // alert(e.title.split(" / ")[0]);
-					this.renderSwatches(e), this.renderSelectedColor(e), this.renderImages(e), this.renderFancybox(e), this.renderPrice(e), this.renderComparePrice(e), this.renderSubmitButton(e), this.updateBrowserHistory(e)
+					this.renderSwatches(e), this.renderSelectedColor(e), this.renderImages(e), this.renderScrollToImages(e), this.renderFancybox(e), this.renderPrice(e), this.renderComparePrice(e), this.renderSubmitButton(e), this.updateBrowserHistory(e)
 				},
 				onThumbnailClick(t) {
 					const e = t.target.closest(h.thumbnail);
@@ -183,6 +183,11 @@
 						mySlider.reloadSlider();
 					})
 					// t && null !== t.featured_image && (this.renderFeaturedImage(t.featured_image.id), this.renderActiveThumbnail(t.featured_image.id))
+				},
+				renderScrollToImages(t) {
+					$("html, body").animate({
+						scrollTop: $(".bx-wrapper").offset().top
+					}, 500)
 				},
 				renderFancybox(t) {
 					$(".product-image .responsive-image__wrapper a").each(function() {
