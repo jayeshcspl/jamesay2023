@@ -101,6 +101,9 @@
 	.premium_packing .no-gutters .dpl {
 		padding-left: 10px !important;
 	}
+	.hidebr br {
+		display: none;
+	}
 }
 @media only screen and (max-width: 1400px) {
 	.fs120{
@@ -139,6 +142,9 @@
 	h3 br,
 	h1 br {
     display: none;
+	}
+	.hidebr br {
+		display: block;
 	}
 	.not_want_end img {
 		margin-top: 0rem;

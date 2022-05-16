@@ -134,3 +134,15 @@
   };
   var chasing = new Vimeo.Player('vimeo-video', options);
 </script>
+  {% if article.metafields.story_information.big_image_1 contains "vimeo.com" %}
+  <script type="text/javascript">
+  var options2 = {
+      id: 709049243,
+      autoplay: true,
+      loop: true,
+      responsive: true,
+      background: true,
+  };
+  var chasing2 = new Vimeo.Player('vimeo-video2', options2);
+</script>
+{% endif %}
