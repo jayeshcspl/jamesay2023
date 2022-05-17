@@ -101,9 +101,6 @@
 	.premium_packing .no-gutters .dpl {
 		padding-left: 10px !important;
 	}
-	.hidebr br {
-		display: none;
-	}
 }
 @media only screen and (max-width: 1400px) {
 	.fs120{
@@ -142,9 +139,6 @@
 	h3 br,
 	h1 br {
     display: none;
-	}
-	.hidebr br {
-		display: block;
 	}
 	.not_want_end img {
 		margin-top: 0rem;
@@ -564,6 +558,12 @@
 	}
 	.desc_area {
 		order: 2;
+	}
+	#jamesayxnorthside .vimeo-wrapper1 {
+		height: 80%;
+	}
+	#jamesayxnorthside .vimeo-wrapper #vimeo-video21 {
+		min-height: 80vh;
 	}
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
