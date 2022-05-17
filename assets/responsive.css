@@ -559,12 +559,11 @@
 	.desc_area {
 		order: 2;
 	}
-	#jamesayxnorthside .vimeo-wrapper1 {
-		height: 80%;
+
+	#jamesayxnorthside .vimeo-wrapper {
+		height: 107.5%;
 	}
-	#jamesayxnorthside .vimeo-wrapper #vimeo-video21 {
-		min-height: 80vh;
-	}
+	
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
 	.mt-30,.mt-40,.mt-50 {

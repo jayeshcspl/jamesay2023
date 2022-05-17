@@ -125,14 +125,16 @@
   {% include 'collection_2021' %}
 </div>
 <script type="text/javascript">
-  var options = {
-      id: {{vimeo_video_id}},
-      autoplay: true,
-      loop: true,
-      responsive: true,
-      background: true,
-  };
-  var chasing = new Vimeo.Player('vimeo-video', options);
+  $(document).ready(function($) {
+    var options = {
+        id: {{vimeo_video_id}},
+        autoplay: true,
+        loop: true,
+        responsive: true,
+        background: true
+    };
+    var chasing = new Vimeo.Player('vimeo-video', options);
+  });
 </script>
   {% if article.metafields.story_information.big_image_1 contains "vimeo.com" %}
   <script type="text/javascript">
