@@ -101,6 +101,10 @@
 	.premium_packing .no-gutters .dpl {
 		padding-left: 10px !important;
 	}
+	.row_6 {
+		padding-top: 10rem !important;
+		padding-bottom: 15rem !important;
+	}
 }
 @media only screen and (max-width: 1400px) {
 	.fs120{
@@ -561,10 +565,18 @@
 	}
 
 	#jamesayxnorthside .vimeo-wrapper {
-		height: 107.5%;
+		height: 107.4%;
 	}
 	
 }
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { 
+		#jamesayxnorthside .vimeo-wrapper {
+			height: 118.035%;
+		}
+	}
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
 	.mt-30,.mt-40,.mt-50 {
 		margin-top: 10rem !important;
