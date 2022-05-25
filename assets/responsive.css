@@ -564,7 +564,8 @@
 		order: 2;
 	}
 
-	#jamesayxnorthside .vimeo-wrapper {
+	#jamesayxnorthside .vimeo-wrapper,
+	#james-ay-x-northside-quot-savage-quot-limited-edition .vimeo-wrapper {
 		height: 107.4%;
 	}
 	
@@ -573,7 +574,8 @@
     and (device-width : 375px) 
     and (device-height : 812px) 
     and (-webkit-device-pixel-ratio : 3) { 
-		#jamesayxnorthside .vimeo-wrapper {
+		#jamesayxnorthside .vimeo-wrapper,
+		#james-ay-x-northside-quot-savage-quot-limited-edition .vimeo-wrapper {
 			height: 118.035%;
 		}
 	}
