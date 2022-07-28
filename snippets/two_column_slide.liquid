@@ -26,7 +26,11 @@
   {% assign left_bg_image_desktop = "default.png" | file_url %}
 {% endif %}
 {% if shop.metafields.two_column_slide.left_bg_image_mobile != blank %}
-{% assign left_bg_image_mobile = shop.metafields.two_column_slide.left_bg_image_mobile | file_img_url: '800x' %}
+  {% if request.host != "jamesay.myshopify.com" and request.host != "jamesay.com" %}
+  {% assign left_bg_image_mobile = "https://cdn.shopify.com/s/files/1/0224/6066/1824/files/" | append: shop.metafields.two_column_slide.left_bg_image_mobile %}
+  {% else %}
+  {% assign left_bg_image_mobile = shop.metafields.two_column_slide.left_bg_image_mobile | file_img_url: '800x' %}
+  {% endif %}
 {% else %}
 {% assign left_bg_image_mobile = left_bg_image_desktop %}
 {% endif %} 
@@ -60,7 +64,11 @@
   {% assign right_bg_image_desktop = "default.png" | file_url %}
 {% endif %}
 {% if shop.metafields.two_column_slide.right_bg_image_mobile != blank %}
-{% assign right_bg_image_mobile = shop.metafields.two_column_slide.right_bg_image_mobile | file_img_url: '800x' %}
+  {% if request.host != "jamesay.myshopify.com" and request.host != "jamesay.com" %}
+  {% assign right_bg_image_mobile = "https://cdn.shopify.com/s/files/1/0224/6066/1824/files/" | append: shop.metafields.two_column_slide.right_bg_image_mobile %}
+  {% else %}
+  {% assign right_bg_image_mobile = shop.metafields.two_column_slide.right_bg_image_mobile | file_img_url: '800x' %}
+  {% endif %}
 {% else %}
 {% assign right_bg_image_mobile = right_bg_image_desktop %}
 {% endif %}
