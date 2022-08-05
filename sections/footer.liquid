@@ -16,9 +16,14 @@
       </div>
       <div class="col-lg-4 offset-lg-1">
         {% if request.host == "jamesay-dk.myshopify.com" or request.host == "jamesay.dk" %}
+          {% assign lang = "da-DK" %}
+          {% assign trustpilot_width = "275px" %}
           <div class="klaviyo-form-TcEcVW"></div> 
         {% else %}
+          {% assign lang = "en-US" %}
+          {% assign trustpilot_width = "240px" %}
           <div class="klaviyo-form-VqHTtm"></div>
+        {% endif %}
           <!-- <form class="omnisend-subscribe-form myclass" name="omnisend-subscribe-form">
             {% form 'customer' %}
               {{ form.errors | default_errors }}
@@ -59,7 +64,6 @@
               {% endif %}
             {% endform %}
           </form> -->
-        {% endif %}
       </div>
     </div>
   </div>
@@ -97,7 +101,7 @@
       <div class="col-lg-5 offset-lg-1 trustpilot_area pt-4 pt-lg-0 mt-5 mt-lg-0">
         <p class="footer_title">{{ 'general.footer.reviews_txt' | t }}</p>
         <!-- TrustBox widget - Micro Review Count -->
-        <div class="trustpilot-widget" data-locale="da-DK" data-template-id="5419b6a8b0d04a076446a9ad" data-businessunit-id="5e20c5bba5ef500001737b06" data-style-height="100%" data-style-width="275px" data-theme="light" style="text-align:left;">
+        <div class="trustpilot-widget" data-locale="{{lang}}" data-template-id="5419b6a8b0d04a076446a9ad" data-businessunit-id="5e20c5bba5ef500001737b06" data-style-height="20px" data-style-width="{{trustpilot_width}}" data-theme="light" style="text-align:left;">
           <a href="https://dk.trustpilot.com/review/jamesay.com" target="_blank" rel="noopener">Trustpilot</a>
         </div>
         <!-- End TrustBox widget -->
