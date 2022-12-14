@@ -4,25 +4,27 @@
   width: 100vw;
   max-width: 100%;
   overflow: hidden;
-  .track {
+}
+.marquee-counter .track {
     position: absolute;
     white-space: nowrap;
     will-change: transform;
     -webkit-animation: marquee-counter 40s linear infinite;
     animation: marquee-counter 40s linear infinite;
-    .marquee-content {
-      text-transform: uppercase;
-    }
+}
+.marquee-counter .track .marquee-content {
+  text-transform: uppercase;
+}
+
+@keyframes marquee-counter {
+  from {
+    transform: translateX(0);
   }
-  @keyframes marquee-counter {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-50%);
-    }
+  to {
+    transform: translateX(-50%);
   }
 }
+
 </style>
 <div class="counter launched" id="counter">
     <div class="marquee-counter">
