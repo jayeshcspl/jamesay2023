@@ -3,110 +3,18 @@
   position: relative;
   width: 100vw;
   max-width: 100%;
-  height: $base * 5;
   overflow: hidden;
-  background-color: $corporateColor;
-  color: $body_bg;
-  // margin-bottom: $base * 2;
-  
-  @media (min-width: $breakpoint-laptop) {
-    height: $base * 11;
-    // margin-bottom: $base * 2;
-  }
-
   .track {
     position: absolute;
     white-space: nowrap;
     will-change: transform;
+    -webkit-animation: marquee-counter 40s linear infinite;
     animation: marquee-counter 40s linear infinite;
     .marquee-content {
-      font-size: $base * 5;
-      line-height: $base * 5;
       text-transform: uppercase;
-      @media (min-width: $breakpoint-laptop) {
-        font-size: $base * 11;
-        line-height: $base * 12;
-      }
     }
   }
   @keyframes marquee-counter {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-50%);
-    }
-  }
-}
-.marquee-center {
-  position: relative;
-  width: 100vw;
-  max-width: 100%;
-  height: $base * 5;
-  overflow: hidden;
-  @media (min-width: $breakpoint-laptop) {
-    height: $base * 21;
-  }
-  // background-color: $body_bg;
-  // margin-bottom: $base;
-
-  .track {
-    position: absolute;
-    white-space: nowrap;
-    will-change: transform;
-    animation: marquee-center 22s linear infinite;
-    @media (min-width: $breakpoint-laptop) {
-      animation: marquee-center 32s linear infinite;
-    }
-    .marquee-content {
-      font-size: $base * 5;
-      line-height: $base * 5;
-      text-transform: uppercase;
-      @media (min-width: $breakpoint-laptop) {
-        font-size: $base * 20;
-        line-height: $base * 21;
-      }
-    }
-  }
-  @keyframes marquee-center {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-50%);
-    }
-  }
-}
-
-.marquee-bottom {
-  position: relative;
-  width: 100vw;
-  max-width: 100%;
-  height: $base * 5;
-  overflow: hidden;
-  background-color: $body_color;
-  color: $body_bg;
-  @media (min-width: $breakpoint-laptop) {
-    height: $base * 10;
-  }
-  // margin-bottom: $base;
-
-  .track {
-    position: absolute;
-    white-space: nowrap;
-    will-change: transform;
-    animation: marquee-bottom 56s linear infinite;
-    .marquee-content {
-      font-size: $base * 5;
-      line-height: $base * 5;
-      text-transform: uppercase;
-      @media (min-width: $breakpoint-laptop) {
-        font-size: $base * 8;
-        line-height: $base * 10;
-      }
-    }
-  }
-  @keyframes marquee-bottom {
     from {
       transform: translateX(0);
     }
