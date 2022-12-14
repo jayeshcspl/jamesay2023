@@ -1,5 +1,7 @@
-<div class="partner_logo_slider">
-    {% for value in shop.metafields.partner_logo.logo_url %}
-        <div class="slide"><img src="{{value}}"></div>
-    {% endfor %}
-</div>
+<section class="sec_partner_logo">
+    <div class="partner_logo_slider">
+        {% for value in shop.metafields.partner_logo.logo_url %}
+            <div class="slide"><img src="{{value}}"></div>
+        {% endfor %}
+    </div>
+</section>
