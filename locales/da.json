@@ -94,7 +94,7 @@
       "male_link": "https:\/\/jamesay.dk\/collections\/mand",
       "female_link": "https:\/\/jamesay.dk\/collections\/kvinde",
       "delivery": "Levering",
-      "out_of_stock":"Ikke på lager"
+      "out_of_stock": "Ikke på lager"
     },
     "header": {
       "sustainability": "Bæredygtighed",
@@ -110,6 +110,7 @@
       "bag_txt": "KURV"
     },
     "footer": {
+      "customer_service_txt": "CUSTOMER SERVICE",
       "about_us_txt": "OM OS",
       "about_txt": "Om James Ay",
       "stories_txt": "Historier",
