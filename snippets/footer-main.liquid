@@ -1,12 +1,15 @@
+{% if request.host == "jamesay-au.myshopify.com" or request.host == "jamesay.com.au" %}
+{% assign mailtolink = "mailto:info@jamesay.com.au" %}
+{% assign instagram_link = "https://www.instagram.com/jamesay_aus" %}
+{% else %}
+{% assign mailtolink = "mailto:hi@jamesay.com" %}
+{% assign instagram_link = "https://www.instagram.com/jamesay_com" %}
+{% endif %}
 <div class="container-fluid footer mt-5">
   <div class="row">
-
       <div class="col-6  col-lg-3 links">
         <p class="footer_title">{{ 'general.footer.customer_service_txt' | t }}</p>
         <ul class="mb-0">
-          <li><a href="/pages/about">{{ 'general.footer.about_txt' | t }}</a></li>
-          <li><a href="/blogs/stories">{{ 'general.footer.stories_txt' | t }}</a></li>
-          <li><a href="/pages/contact">{{ 'general.footer.contact_us_txt' | t }}</a></li>
           <li><a href="/pages/shipping-return">{{ 'general.footer.shipping_returns_txt' | t }}</a></li>
           <li><a href="/pages/sitemap">Sitemap</a></li>
         </ul>
@@ -28,13 +31,6 @@
           <li><a href="/blogs/stories">{{ 'general.footer.stories_txt' | t }}</a></li>
         </ul>
       </div>
-      {% if request.host == "jamesay-au.myshopify.com" or request.host == "jamesay.com.au" %}
-        {% assign mailtolink = "mailto:info@jamesay.com.au" %}
-        {% assign instagram_link = "https://www.instagram.com/jamesay_aus" %}
-      {% else %}
-        {% assign mailtolink = "mailto:hi@jamesay.com" %}
-        {% assign instagram_link = "https://www.instagram.com/jamesay_com" %}
-      {% endif %}
       <div class="col-6  col-lg-3  social-media">
         <p class="footer_title">{{ 'general.footer.follow_us_txt' | t }}</p>
         <ul class="mb-0">
