@@ -1,13 +1,15 @@
 {% if request.host == "jamesay-au.myshopify.com" or request.host == "jamesay.com.au" %}
-{% assign mailtolink = "mailto:info@jamesay.com.au" %}
-{% assign instagram_link = "https://www.instagram.com/jamesay_aus" %}
-{% assign trustpilot_link = "https://dk.trustpilot.com/review/jamesay.com" %}
+  {% assign mailtolink = "mailto:info@jamesay.com.au" %}
+  {% assign instagram_link = "https://www.instagram.com/jamesay_aus" %}
+  {% assign trustpilot_link = "https://www.trustpilot.com/review/jamesay.com" %}
 {% elsif request.host == "jamesay.myshopify.com" or request.host == "jamesay.com" %}
-
+  {% assign mailtolink = "mailto:hi@jamesay.com" %}
+  {% assign instagram_link = "https://www.instagram.com/jamesay_com" %}
+  {% assign trustpilot_link = "https://www.trustpilot.com/review/jamesay.com" %}
 {% else %}
-{% assign mailtolink = "mailto:hi@jamesay.com" %}
-{% assign instagram_link = "https://www.instagram.com/jamesay_com" %}
-{% assign trustpilot_link = "https://dk.trustpilot.com/review/jamesay.com" %}
+  {% assign mailtolink = "mailto:hi@jamesay.com" %}
+  {% assign instagram_link = "https://www.instagram.com/jamesay_com" %}
+  {% assign trustpilot_link = "https://dk.trustpilot.com/review/jamesay.com" %}
 {% endif %}
 <div class="container-fluid footer mt-5">
   <div class="row">
