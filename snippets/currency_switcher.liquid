@@ -1,9 +1,14 @@
-<div class="footer_lifetime">
-  <div class="js-conveyor-example">
-    <ul>
-      <li>{{shop.metafields.string_translation.free_shipping_worldwide}}</li>
-      <li class="d-none d-lg-inline-block"><span class="hide">{{shop.metafields.string_translation.one_order_one_kg_plastic}}</span></li>
-      <li>{{shop.metafields.string_translation.one_order_one_kg_planted_tree}}</li>
-    </ul>
-  </div>
-</div>
+<li class="d-none d-md-inline-block">
+  <span class="currency_switcher">
+    <span class="currency_style" style="color : {{color_code}}">
+      <!-- {% form 'currency' %}
+        {{ form | currency_selector: class: 'select-css' }}
+      {% endform %} -->
+      {% if request.host == "jamesay-dk.myshopify.com" or request.host == "jamesay.dk" %}
+        <a href="https://jamesay.com" class="site_link">EUR</a>
+      {% else %}
+        <a href="https://jamesay.dk" class="site_link">DKK</a>
+      {% endif %}
+    </span>
+  </span>
+</li>
