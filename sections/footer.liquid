@@ -1,5 +1,13 @@
 {% if template != 'cart' %}
-  {% include 'usp_bar' %}
+  <div class="footer_lifetime hide1">
+    <div class="js-conveyor-example">
+      <ul>
+        <li>{{shop.metafields.string_translation.free_shipping_worldwide}}</li>
+        <li class="d-none d-lg-inline-block"><span class="hide">{{shop.metafields.string_translation.one_order_one_kg_plastic}}</span></li>
+        <li>{{shop.metafields.string_translation.one_order_one_kg_planted_tree}}</li>
+      </ul>
+    </div>
+  </div>
   {% include 'partner_logos' %}
   {% include 'marquee' %}
   {% include 'newsletter' %}
