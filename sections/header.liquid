@@ -115,20 +115,7 @@
         <li class="d-none d-md-inline-block hide">
           <span class="search" OnClick="document.searchform.q.focus();""><span id="search_icon" style="color : {{color_code}}">{{ 'general.header.search_txt' | t }}</span></span>
         </li>
-        <li class="d-none d-md-inline-block">
-          <span class="currency_switcher">
-            <span class="currency_style" style="color : {{color_code}}">
-              <!-- {% form 'currency' %}
-                {{ form | currency_selector: class: 'select-css' }}
-              {% endform %} -->
-              {% if request.host == "jamesay-dk.myshopify.com" or request.host == "jamesay.dk" %}
-                <a href="https://jamesay.com" class="site_link">EUR</a>
-              {% else %}
-                <a href="https://jamesay.dk" class="site_link">DKK</a>
-              {% endif %}
-            </span>
-          </span>
-        </li>
+
         <li>
           {% if cart.item_count > -1 %}
             <span class="show_open">
