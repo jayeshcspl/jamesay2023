@@ -115,7 +115,7 @@
         <li class="d-none d-md-inline-block hide">
           <span class="search" OnClick="document.searchform.q.focus();""><span id="search_icon" style="color : {{color_code}}">{{ 'general.header.search_txt' | t }}</span></span>
         </li>
-        {% include 'currency_switcher' %}
+        {% comment %} {% include 'currency_switcher' %} {% endcomment %}
         <li>
           {% if cart.item_count > -1 %}
             <span class="show_open">
