@@ -116,10 +116,10 @@
             </span>
           </li>
         {% endif %}
-        <li class="d-none d-md-inline-block hide">
-          <span style="color : {{color_code}}"><a href="https://jamesay.dk" class="site_link"></a></span>
+        <li class="d-none d-md-inline-block">
+          <span style="color : {{color_code}}"><a href="{{site_link}}" class="site_link">{{lang_code}}</a></span>
         </li>
-        <li class="d-none d-md-inline-block hide1">
+        <li class="d-none d-md-inline-block hide">
           <span class="search" OnClick="document.searchform.q.focus();"><span id="search_icon" style="color : {{color_code}}">{{ 'general.header.search_txt' | t }}</span></span>
         </li>
         {% comment %} {% include 'currency_switcher' %} {% endcomment %}
