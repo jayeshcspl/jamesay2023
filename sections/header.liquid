@@ -19,8 +19,12 @@
     </a>
     {% if request.host == "jamesay-dk.myshopify.com" or request.host == "jamesay.dk" %}
       {% assign all_collection_link = "/collections/alle" %}
+      {% assign lang_code = "EN" %}
+      {% assign site_link = "https://jamesay.com" %}
     {% else %}
       {% assign all_collection_link = "/collections/all" %}
+      {% assign lang_code = "DE" %}
+      {% assign site_link = "https://jamesay.dk" %}
     {% endif %}
     <span class="shop_link" style="color : {{color_code}}"><a href="{{all_collection_link}}">SHOP</a></span>
     <span class="l-left">
@@ -112,6 +116,9 @@
             </span>
           </li>
         {% endif %}
+        <li class="d-none d-md-inline-block hide">
+          <span id="search_icon" style="color : {{color_code}}">{{ 'general.header.search_txt' | t }}</span>
+        </li>
         <li class="d-none d-md-inline-block hide1">
           <span class="search" OnClick="document.searchform.q.focus();"><span id="search_icon" style="color : {{color_code}}">{{ 'general.header.search_txt' | t }}</span></span>
         </li>
