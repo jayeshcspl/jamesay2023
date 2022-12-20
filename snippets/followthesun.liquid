@@ -9,8 +9,13 @@
 {% assign mobile_img = desktop_img %}
 {% endif %} 
 
+{% if shop.metafields.followthesun.sec_order != blank %}
+{% assign sec_order = shop.metafields.followthesun.sec_order %}
+{% else %}
+{% assign sec_order = 0 %}
+{% endif %} 
 
-<section class="vertical-scrolling {{section_number}} lazyload section1_imgl" data-bg1="{{desktop_img}}" style="background-image: url({{desktop_img}}); background-color: #FFDE00; background-size: contain; background-repeat: no-repeat; background-position: center center; order: 1;" data-desktop-url="{{desktop_img}}" data-mobile-url="{{mobile_img}}">
+<section class="vertical-scrolling {{section_number}} lazyload section1_imgl" data-bg1="{{desktop_img}}" style="background-image: url({{desktop_img}}); background-color: #FFDE00; background-size: contain; background-repeat: no-repeat; background-position: center center; order: {{sec_order}};" data-desktop-url="{{desktop_img}}" data-mobile-url="{{mobile_img}}">
   <div class="container-fluid h-100">
     <div class="row min-vh-100 custom_overlay">
       <a href="/pages/follow-the-sun"><div class="overlay">
