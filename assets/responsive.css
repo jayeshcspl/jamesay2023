@@ -654,9 +654,6 @@
 	}
 }
 @media only screen and (max-width: 669px) {
-	.shop_link1 {
-		display: none;
-	}
 	.mobile_only {
 		display: none;
 	}
