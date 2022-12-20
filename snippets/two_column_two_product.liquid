@@ -40,6 +40,13 @@
 
 {% assign right_bg_image_desktop = right_json_product1.image.src | img_url : '1600x' %}
 {% assign right_bg_image_mobile = right_bg_image_desktop %}
+
+{% if shop.metafields.2_column_2_product.order != blank %}
+{% assign sec_order = shop.metafields.2_column_2_product.order %}
+{% else %}
+{% assign sec_order = "modish=39462672957493" %}
+{% endif %}
+
 <section class="fp-auto-height-responsive vertical-scrolling {{section_number}}" data-section="two-image" style="background-color: #f2f2f2; order: 4;">
   <div class="container-fluid h-100">
     <div class="row h-100">
