@@ -73,6 +73,12 @@
 {% assign right_bg_image_mobile = right_bg_image_desktop %}
 {% endif %}
 
+{% if shop.metafields.two_column_slide.sec_order != blank %}
+{% assign sec_order = shop.metafields.two_column_slide.sec_order %}
+{% else %}
+{% assign sec_order = "" %}
+{% endif %}
+
 <section class="fp-auto-height-responsive vertical-scrolling {{section_number}}" data-section="two-image" style="background-color: #f0f0f0; order: {{sec_order}};">
   <div class="container-fluid h-100">
     <div class="row h-100">
