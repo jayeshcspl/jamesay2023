@@ -14,6 +14,11 @@
   {% if shop.metafields.2_column_2_product.display_slide == 1  %}
     {% include 'two_column_two_product', section_number:"two_column_two_product" %}
   {% endif %}
+
+  {% if shop.metafields.2_column_2_product.display_slide == 1  %}
+  {% include '3_column_3_product', section_number:"3_column_3_product" %}
+  {% endif %}
+
   {% if shop.metafields.one_column_story.display_slide == 1  %}
   {% include 'one_column_story', section_number:"one_column_story" %}
   {% endif %}
