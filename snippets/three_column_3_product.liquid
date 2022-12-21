@@ -1,5 +1,5 @@
-{% if shop.metafields.three_column_3_product.product_variant_id != blank %}
-{% assign productname_variantid = shop.metafields.three_column_3_product.product_variant_id %}
+{% if shop.metafields.three_col_3_product.product_variant_id != blank %}
+{% assign productname_variantid = shop.metafields.three_col_3_product.product_variant_id %}
 {% else %}
 {% assign productname_variantid = "modish=39462672957493" %}
 {% endif %}
@@ -20,8 +20,8 @@
 {% assign left_bg_image_desktop = json_product1.image.src | img_url : '1600x' %}
 {% assign left_bg_image_mobile = left_bg_image_desktop %}
 
-{% if shop.metafields.three_column_3_product.middle_product_variant_id != blank %}
-{% assign middle_productname_variantid = shop.metafields.three_column_3_product.middle_product_variant_id %}
+{% if shop.metafields.three_col_3_product.middle_product_variant_id != blank %}
+{% assign middle_productname_variantid = shop.metafields.three_col_3_product.middle_product_variant_id %}
 {% else %}
 {% assign middle_productname_variantid = "unbound=39467412258869" %}
 {% endif %}
@@ -43,8 +43,8 @@
 {% assign middle_bg_image_mobile = middle_bg_image_desktop %}
 
 
-{% if shop.metafields.three_column_3_product.right_product_variant_id != blank %}
-{% assign right_productname_variantid = shop.metafields.three_column_3_product.right_product_variant_id %}
+{% if shop.metafields.three_col_3_product.right_product_variant_id != blank %}
+{% assign right_productname_variantid = shop.metafields.three_col_3_product.right_product_variant_id %}
 {% else %}
 {% assign right_productname_variantid = "unbound=39467412258869" %}
 {% endif %}
@@ -65,8 +65,8 @@
 {% assign right_bg_image_desktop = right_json_product1.image.src | img_url : '1600x' %}
 {% assign right_bg_image_mobile = right_bg_image_desktop %}
 
-{% if shop.metafields.three_column_3_product.order != blank %}
-{% assign sec_order = shop.metafields.three_column_3_product.order %}
+{% if shop.metafields.three_col_3_product.order != blank %}
+{% assign sec_order = shop.metafields.three_col_3_product.order %}
 {% else %}
 {% assign sec_order = 0 %}
 {% endif %}
