@@ -215,13 +215,13 @@
         if (src) {
           return Shopify.Image.getSizedImageUrl(src, size);
         } else {
-          return Shopify.Image.getSizedImageUrl('https://cdn.shopify.com/s/images/admin/no-image-.gif', size).replace('-_', '-');
+          return Shopify.Image.getSizedImageUrl('https://cdn.shopify.com/s/files/1/0224/6066/1824/files/default.png', size).replace('-_', '-');
         }
       } else {
         if (src) {
           return src;
         } else {
-          return 'https://cdn.shopify.com/s/images/admin/no-image-large.gif';
+          return 'https://cdn.shopify.com/s/files/1/0224/6066/1824/files/default.png';
         }
       }
     }
