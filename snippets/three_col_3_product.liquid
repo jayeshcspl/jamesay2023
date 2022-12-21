@@ -65,8 +65,8 @@
 {% assign right_bg_image_desktop = right_json_product1.image.src | img_url : '1600x' %}
 {% assign right_bg_image_mobile = right_bg_image_desktop %}
 
-{% if shop.metafields.three_col_3_product.order != blank %}
-{% assign sec_order = shop.metafields.three_col_3_product.order %}
+{% if shop.metafields.three_col_3_product.sec_order != blank %}
+{% assign sec_order = shop.metafields.three_col_3_product.sec_order %}
 {% else %}
 {% assign sec_order = 0 %}
 {% endif %}
