@@ -18,7 +18,7 @@
 
 {% if shop.metafields.2_column_1_product.left_bg_image != blank %}
   {% if request.host != "jamesay.myshopify.com" and request.host != "jamesay.com" %}
-    {% assign left_bg_image_desktop = "https://cdn.shopify.com/s/files/1/0224/6066/1824/files/" | append: shop.metafields.2_column_1_product.left_bg_image %}
+    {% assign left_bg_image_desktop = {{settings.cdn_file_url}} | append: shop.metafields.2_column_1_product.left_bg_image %}
   {% else %}
     {% assign left_bg_image_desktop = shop.metafields.2_column_1_product.left_bg_image | file_url %}
   {% endif %}
