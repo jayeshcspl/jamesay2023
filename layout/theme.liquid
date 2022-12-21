@@ -75,9 +75,7 @@
   {% if template == 'index' or template == 'blog' %}
   <link defer rel="stylesheet" type="text/css" href="{{ 'jquery.fullpage.css' | asset_url }}">
   {% endif %}
-  {% if template == 'product' %}
   <link defer rel="stylesheet" type="text/css" href="{{ 'jquery.bxslider.min.css' | asset_url }}">
-  {% endif %}
   <link defer rel="stylesheet" type="text/css" href="{{ 'animate.min.css' | asset_url }}">
   <link defer rel="stylesheet" type="text/css" href="{{ 'aos.css' | asset_url }}">
   <link defer rel="stylesheet" type="text/css" href="{{ 'style.scss' | asset_url }}">
@@ -178,9 +176,7 @@
   <script defer src="{{ 'scrolloverflow.js' | asset_url }}"></script>
   <script defer src="{{ 'jquery.fullpage.js' | asset_url }}"></script>
   {% endif %}
-  {% if template == 'product' %}
   <script defer src="{{ 'jquery.bxslider.min.js' | asset_url }}"></script>
-  {% endif %}
   <script defer src="{{ 'highlight.min.js' | asset_url }}"></script>
   <script defer src="{{ 'aos.js' | asset_url }}"></script>
   {% if template == 'index' or template == 'article' or template == 'article.dynamic' or template == 'product' %}
@@ -347,6 +343,27 @@
           //autoControls: true
           //infin
           iteLoop: false	
+        });
+      }
+      if (jQuery('.partner_logo_slider').length) {	
+        mySlider =  jQuery('.partner_logo_slider').bxSlider({
+          //slideSelector: "div.slide",	
+          //pagerType: 'short',
+          //responsive: true,
+          //mode: 'fade',
+          pager: false,
+          controls: false,
+          //preloadImages:'visible',
+          auto: true,
+          //autoHover: true,
+          autoControls: false,
+          //infin
+          //iteLoop: false,
+          //  slideWidth: 250,
+          minSlides: 1,
+          maxSlides: 5,
+          //moveSlides: 3,
+          //slideMargin: 120	
         });
       }
     });

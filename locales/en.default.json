@@ -57,6 +57,8 @@
       "email_placeholder": "Email address",
       "confirmation": "Thanks for subscribing",
       "submit": "Subscribe",
+      "newsletter_txt": "NEWSLETTER",
+      "newsletter_desc": "Sign up to our newsletter and get inspiration to free thinking and the journeys ahead. Follow the sun.",
       "join_our_newsletter_txt": "Join our newsletter",
       "join_our_newsletter_desc": "We wish to give you inspiration on how to live a more fulfilling life. So, sign up to our newsletter to follow what goes on in our universe.",
       "accept_txt": "On sign up you accept our",
@@ -97,7 +99,7 @@
       "out_of_stock": "Out of stock"
     },
     "header": {
-      "sustainability": "Sustainability",
+      "sustainability": "Responsibility",
       "we_give_back": "We give back",
       "followthesun": "Follow the sun",
       "become_a_retailer": "Become a retailer",
@@ -110,6 +112,10 @@
       "bag_txt": "BAG"
     },
     "footer": {
+      "customer_service_txt": "CUSTOMER SERVICE",
+      "the_company_txt": "THE COMPANY",
+      "ethos_txt": "ETHOS",
+      "follow_us_txt": "FOLLOW US",
       "about_us_txt": "ABOUT US",
       "about_txt": "About",
       "stories_txt": "Stories",

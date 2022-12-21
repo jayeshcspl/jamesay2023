@@ -6,7 +6,7 @@
 {% if shop.metafields.one_column_general.description != blank %}
 {% assign description = shop.metafields.one_column_general.description %}
 {% else %}
-{% assign description = "Description" %}
+{% assign description = "" %}
 {% endif %}
 
 {% if shop.metafields.one_column_general.link != blank %}
@@ -32,7 +32,13 @@
 {% assign slide_type = "one-image" %}
 {% endif %}
 
-<section class="vertical-scrolling {{section_number}} {{slide_type}} lazyload" data-bg="{{desktop_img}}" style="background-size: cover; background-repeat: no-repeat; background-position: center center; background-color: #686868;" data-desktop-url="{{desktop_img}}" data-mobile-url="{{mobile_img}}">
+{% if shop.metafields.one_column_general.sec_order != blank %}
+{% assign sec_order = shop.metafields.one_column_general.sec_order %}
+{% else %}
+{% assign sec_order = 0 %}
+{% endif %}
+
+<section class="vertical-scrolling {{section_number}} {{slide_type}} lazyload" data-bg="{{desktop_img}}" style="background-size: cover; background-repeat: no-repeat; background-position: center center; background-color: #686868; order: {{sec_order}};" data-desktop-url="{{desktop_img}}" data-mobile-url="{{mobile_img}}">
   {% if shop.metafields.one_column_general.display_video == 1 %}
   <div class="vimeo-wrapper lazyload" data-bg="{{desktop_img}}"  style="background-position: center center;" data-desktop-url="{{desktop_img}}" data-mobile-url="{{mobile_img}}">
     <div id="one_column_general_vimeo-video"></div>
@@ -42,7 +48,7 @@
     <div class="row min-vh-100">
       <div class="col-lg-12 pl-50" style="z-index: 997;">
         <a href="{{ link_url }}" class="testbg">
-          <p class="slide_title_bottom story_title fs120 text-white mb-lg-0">{{ title }}</p>
+          <p class="slide_title_bottom story_title fs80 text-white mb-lg-0">{{ title }}</p>
         </a>
           <p class="slide_description_bottom_right text-white mb-0">
           <u>{{ description }}</u>

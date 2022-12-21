@@ -18,7 +18,7 @@
 
 {% if shop.metafields.two_column_slide.left_bg_image != blank %}
   {% if request.host != "jamesay.myshopify.com" and request.host != "jamesay.com" %}
-    {% assign left_bg_image_desktop = "https://cdn.shopify.com/s/files/1/0224/6066/1824/files/" | append: shop.metafields.two_column_slide.left_bg_image %}
+    {% assign left_bg_image_desktop = {{settings.cdn_file_url}} | append: shop.metafields.two_column_slide.left_bg_image %}
   {% else %}
     {% assign left_bg_image_desktop = shop.metafields.two_column_slide.left_bg_image | file_url %}
   {% endif %}
@@ -27,7 +27,7 @@
 {% endif %}
 {% if shop.metafields.two_column_slide.left_bg_image_mobile != blank %}
   {% if request.host != "jamesay.myshopify.com" and request.host != "jamesay.com" %}
-  {% assign left_bg_image_mobile = "https://cdn.shopify.com/s/files/1/0224/6066/1824/files/" | append: shop.metafields.two_column_slide.left_bg_image_mobile %}
+  {% assign left_bg_image_mobile = {{settings.cdn_file_url}} | append: shop.metafields.two_column_slide.left_bg_image_mobile %}
   {% else %}
   {% assign left_bg_image_mobile = shop.metafields.two_column_slide.left_bg_image_mobile | file_img_url: '800x' %}
   {% endif %}
@@ -56,7 +56,7 @@
 
 {% if shop.metafields.two_column_slide.right_bg_image != blank %}
   {% if request.host != "jamesay.myshopify.com" and request.host != "jamesay.com" %}
-    {% assign right_bg_image_desktop = "https://cdn.shopify.com/s/files/1/0224/6066/1824/files/" | append: shop.metafields.two_column_slide.right_bg_image %}
+    {% assign right_bg_image_desktop = {{settings.cdn_file_url}} | append: shop.metafields.two_column_slide.right_bg_image %}
   {% else %}
     {% assign right_bg_image_desktop = shop.metafields.two_column_slide.right_bg_image | file_url %}
   {% endif %}
@@ -65,7 +65,7 @@
 {% endif %}
 {% if shop.metafields.two_column_slide.right_bg_image_mobile != blank %}
   {% if request.host != "jamesay.myshopify.com" and request.host != "jamesay.com" %}
-  {% assign right_bg_image_mobile = "https://cdn.shopify.com/s/files/1/0224/6066/1824/files/" | append: shop.metafields.two_column_slide.right_bg_image_mobile %}
+  {% assign right_bg_image_mobile = {{settings.cdn_file_url}} | append: shop.metafields.two_column_slide.right_bg_image_mobile %}
   {% else %}
   {% assign right_bg_image_mobile = shop.metafields.two_column_slide.right_bg_image_mobile | file_img_url: '800x' %}
   {% endif %}
@@ -73,7 +73,13 @@
 {% assign right_bg_image_mobile = right_bg_image_desktop %}
 {% endif %}
 
-<section class="fp-auto-height-responsive vertical-scrolling {{section_number}}" data-section="two-image" style="background-color: #f0f0f0;">
+{% if shop.metafields.two_column_slide.sec_order != blank %}
+{% assign sec_order = shop.metafields.two_column_slide.sec_order %}
+{% else %}
+{% assign sec_order = 0 %}
+{% endif %}
+
+<section class="fp-auto-height-responsive vertical-scrolling {{section_number}}" data-section="two-image" style="background-color: #f0f0f0; order: {{sec_order}};">
   <div class="container-fluid h-100">
     <div class="row h-100">
       <div class="col-lg-6 pl-50 my-auto section1_imgl  custom_overlay lazyload" data-bg="{{left_bg_image_desktop}}" data-desktop-url="{{left_bg_image_desktop}}" data-mobile-url="{{left_bg_image_mobile}}">

@@ -118,7 +118,7 @@
 		padding: 40px;
 	}
 	.header-top {
-		padding: 25px 40px;
+		padding: 15px 40px;
 	}
 	.header-top a.nav-hmenu {
 		left: 40px;
@@ -514,10 +514,6 @@
 	.toggle-menu i {
 		height: 2px;
 	}
-	.l-right span.show_open {
-		font-size: 14px;
-		line-height: 1.16;
-	}
 	section.followthesun_gif h1 {
     color: #F1F512;
 	}
@@ -654,9 +650,6 @@
 	}
 }
 @media only screen and (max-width: 669px) {
-	.shop_link {
-		display: none;
-	}
 	.mobile_only {
 		display: none;
 	}

@@ -157,5 +157,11 @@
         "info": "Will be scaled down to 32 x 32px"
       }
     ]
+  },
+  {
+    "type": "text",
+    "id": "cdn_file_url",
+    "label": "CDN FILE URL",
+    "default": "https://cdn.shopify.com/s/files/1/0224/6066/1824/files/"
   }
 ]
