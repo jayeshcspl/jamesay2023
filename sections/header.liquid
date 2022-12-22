@@ -1,4 +1,4 @@
-{% if template != 'index' and template != 'blog' and template != 'article' and  template != 'article.dynamic' %} 
+{% if template == 'index' and template != 'blog' and template != 'article' and  template != 'article.dynamic' %} 
   {% if template contains 'page' and page.url == '/pages/store-locator' %}
     {% assign color_code = "#FFFFFF" %}
     {% assign color_class = "white" %}
