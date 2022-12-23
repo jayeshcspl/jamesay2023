@@ -1,12 +1,16 @@
 <section class="sec_partner_logo">
     <div class="partner_logo_slider">
-        <div class="slide"><img src="https://cdn.shopify.com/s/files/1/0224/6066/1824/files/mrporter.com.svg"></div>
+        {% for value in shop.metafields.partner_logo.logo_url %}
+            <div class="slide"><img src="{{value}}"></div>
+        {% endfor %}
+
+        {% comment %} <div class="slide"><img src="https://cdn.shopify.com/s/files/1/0224/6066/1824/files/mrporter.com.svg"></div>
         <div class="slide"><img src="https://cdn.shopify.com/s/files/1/0224/6066/1824/files/conranshop.co.uk.svg?v=1671799579"></div>
         <div class="slide"><img src="https://cdn.shopify.com/s/files/1/0224/6066/1824/files/dac.svg?v=1671799579"></div>
         <div class="slide"><img src="https://cdn.shopify.com/s/files/1/0224/6066/1824/files/shop.gleneagles.com.svg?v=1671799579"></div>
         <div class="slide"><img src="https://cdn.shopify.com/s/files/1/0224/6066/1824/files/heartmus.dk.svg?v=1671799580"></div>
         <div class="slide"><img src="https://cdn.shopify.com/s/files/1/0224/6066/1824/files/ka-pok.com.svg?v=1671799579"></div>
         <div class="slide"><img src="https://cdn.shopify.com/s/files/1/0224/6066/1824/files/Optica-Thordsen_brilleleje.dk.svg?v=1671799579"></div>
-        <div class="slide"><img src="https://cdn.shopify.com/s/files/1/0224/6066/1824/files/helleheinoptik.dk.svg?v=1671799580"></div>  
+        <div class="slide"><img src="https://cdn.shopify.com/s/files/1/0224/6066/1824/files/helleheinoptik.dk.svg?v=1671799580"></div>   {% endcomment %}
     </div>
 </section>
