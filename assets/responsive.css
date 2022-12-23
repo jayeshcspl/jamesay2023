@@ -524,6 +524,11 @@
 		background-size: contain;
 		background-position: 100% 35%;
 	}
+	.two_column_one_product .right_column .section1_imgl, 
+	.two_column_slide .right_column .section1_imgl {
+		min-height: 75vh;
+		width: 70%;
+	}
 	.two_column_one_product .section1_imgl.right_column,
 	.two_column_two_product .section1_imgl.right_column {
 		border-left: 0px solid rgb(255, 255, 255) !important;
