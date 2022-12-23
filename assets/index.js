@@ -177,8 +177,10 @@ jQuery('.dot_img').each(function( index ) {
     } else {
       $('.header-top').removeClass('stuck');
       if($('body#store-locator').length){
+        console.log('body#store-locator');
         $('.header-top').css({"background-color":"#ffffff"});
       } else {
+        console.log('NOT body#store-locator');
         $('.header-top').css({"background-color":"transparent"});
       }
       $('.james').show();
