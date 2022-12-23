@@ -414,9 +414,11 @@
 		min-height: inherit;
 		display: inherit;
 	}
-	#signUpModal,
-	.header-top { 
+	#signUpModal{ 
 		padding: 20px;
+	}
+	.header-top { 
+		padding: 15px 20px;
 	}
 	.header-top a.nav-hmenu {
 		left: 20px;
