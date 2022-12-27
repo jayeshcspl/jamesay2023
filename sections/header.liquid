@@ -1,15 +1,5 @@
-{% if template == 'index' and template != 'blog' and template != 'article' and  template != 'article.dynamic' %} 
-  {% if template contains 'page' and page.url == '/pages/store-locator' %}
-    {% assign color_code = "#FFFFFF"  %}
-    {% assign color_class = "white" %}
-  {% else %} 
-    {% assign color_code = "#000000" %}
-    {% assign color_class = "blk" %}
-  {% endif %} 
-{% else %} 
-  {% assign color_code = "#FFFFFF" %}
-  {% assign color_class = "white" %}
-{% endif %}
+{% assign color_code = "#000000" %}
+{% assign color_class = "blk" %}
 <header>
   <div class="header-top clearfix">
     <a class="toggle-menu nav-hmenu menu_middle {{color_class}} fadein href="javaScript:void(0);">
