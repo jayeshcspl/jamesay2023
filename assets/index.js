@@ -177,11 +177,11 @@ jQuery('.dot_img').each(function( index ) {
     } else {
       $('.header-top').removeClass('stuck');
       //if($('body#store-locator').length || $('body.template-index').length){
-      if($('body#store-locator').length){
-        $('.header-top').css({"background-color":"#ffffff"});
-      } else {
-        $('.header-top').css({"background-color":"transparent"});
-      }
+      // if($('body#store-locator').length){
+      //   $('.header-top').css({"background-color":"#ffffff"});
+      // } else {
+      //   $('.header-top').css({"background-color":"transparent"});
+      // }
       $('.james').show();
       $('.ays').hide();
       // $('.l-left svg').attr("viewBox", "0 0 575 68.4");
