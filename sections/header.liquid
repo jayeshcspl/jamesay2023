@@ -1,6 +1,6 @@
 {% if template == 'index' and template != 'blog' and template != 'article' and  template != 'article.dynamic' %} 
   {% if template contains 'page' and page.url == '/pages/store-locator' %}
-    {% assign color_code = "#FFFFFF" %}
+    {% assign color_code = "#FFFFFF"  %}
     {% assign color_class = "white" %}
   {% else %} 
     {% assign color_code = "#000000" %}
@@ -58,7 +58,7 @@
         <li class="d-none d-md-inline-block hide">
           <span class="search" OnClick="document.searchform.q.focus();"><span id="search_icon" style="color : {{color_code}}">{{ 'general.header.search_txt' | t }}</span></span>
         </li>
-        {% comment %} {% include 'currency_switcher' %} {% endcomment %}
+        {% comment %} {% include 'currency_switcher', color_code: color_code %} {% endcomment %}
         <li>
           {% if cart.item_count > -1 %}
             <span class="show_open">
