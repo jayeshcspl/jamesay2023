@@ -414,9 +414,11 @@
 		min-height: inherit;
 		display: inherit;
 	}
-	#signUpModal,
-	.header-top { 
+	#signUpModal{ 
 		padding: 20px;
+	}
+	.header-top { 
+		padding: 15px 20px;
 	}
 	.header-top a.nav-hmenu {
 		left: 20px;
@@ -522,6 +524,11 @@
 		background-size: contain;
 		background-position: 100% 35%;
 	}
+	.two_column_one_product .right_column .section1_imgl, 
+	.two_column_slide .right_column .section1_imgl {
+		/* min-height: 100%; */
+		width: 96%;
+	}
 	.two_column_one_product .section1_imgl.right_column,
 	.two_column_two_product .section1_imgl.right_column {
 		border-left: 0px solid rgb(255, 255, 255) !important;
@@ -621,6 +628,10 @@
 }
 
 @media only screen and (min-width: 700px) {
+	#shopify-privacy-banner-wrapper #shopify-privacy-banner {
+		bottom: 40px !important;
+		left: 40px;
+	}
 	#store-locator div#storemapper #storemapper-left {
 		position: fixed !important;
 		z-index: 12;

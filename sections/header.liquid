@@ -1,15 +1,5 @@
-{% if template != 'index' and template != 'blog' and template != 'article' and  template != 'article.dynamic' %} 
-  {% if template contains 'page' and page.url == '/pages/store-locator' %}
-    {% assign color_code = "#FFFFFF" %}
-    {% assign color_class = "white" %}
-  {% else %} 
-    {% assign color_code = "#000000" %}
-    {% assign color_class = "blk" %}
-  {% endif %} 
-{% else %} 
-  {% assign color_code = "#FFFFFF" %}
-  {% assign color_class = "white" %}
-{% endif %}
+{% assign color_code = "#000000" %}
+{% assign color_class = "blk" %}
 <header>
   <div class="header-top clearfix">
     <a class="toggle-menu nav-hmenu menu_middle {{color_class}} fadein href="javaScript:void(0);">
@@ -53,12 +43,12 @@
           </li>
         {% endif %}
         <li class="d-none d-md-inline-block">
-          <span class="site_link" style="color : {{color_code}}"><a href="{{site_link}}">{{lang_code}}</a></span>
+          <span class="site_link pr-3" style="color : {{color_code}}"><a href="{{site_link}}">{{lang_code}}</a></span>
         </li>
         <li class="d-none d-md-inline-block hide">
           <span class="search" OnClick="document.searchform.q.focus();"><span id="search_icon" style="color : {{color_code}}">{{ 'general.header.search_txt' | t }}</span></span>
         </li>
-        {% comment %} {% include 'currency_switcher' %} {% endcomment %}
+        {% comment %} {% include 'currency_switcher', color_code: color_code %} {% endcomment %}
         <li>
           {% if cart.item_count > -1 %}
             <span class="show_open">

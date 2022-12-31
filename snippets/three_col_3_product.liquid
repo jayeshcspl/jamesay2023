@@ -74,23 +74,23 @@
 <section class="vertical-scrolling {{section_number}}" data-section="two-image" style="background-color: #f2f2f2; order: {{sec_order}};">
   <div class="container-fluid h-75">
     <div class="row h-75">
-      <div class="d-none d-lg-flex col-lg-4 pl-50 my-auto section1_imgl custom_overlay lazyload left_column" data-bg="{{left_bg_image_desktop}}" style="border-right: 3px solid #ffffff;" data-desktop-url="{{left_bg_image_desktop}}" data-mobile-url="{{left_bg_image_mobile}}">
+      <div class="d-lg-flex col-lg-4 pl-20 my-auto section1_imgl custom_overlay lazyload left_column" data-bg="{{left_bg_image_desktop}}" style="border-right: 3px solid #ffffff;" data-desktop-url="{{left_bg_image_desktop}}" data-mobile-url="{{left_bg_image_mobile}}">
         <a href="{{json_product1.url}}">
           <div class="overlay">
           </div>
         </a>
         <table class="product_info slide_title_bottom">
           <tr>
-            <td>{{product.title}} / {{json_product1.metafields.product_variant_info.style_number}}<br />{{product.metafields.product_frame_sizing.lens_length}}-{{product.metafields.product_frame_sizing.nose_bridge_size}}-{{product.metafields.product_frame_sizing.temple_size}} / {{json_product1.metafields.product_variant_info.color_code}}<br />{{product.metafields.product_frame_sizing.material}}<br /><br />{{product.price | money}}</td>
+            <td>{{product.title}} / {{json_product1.metafields.product_variant_info.style_number}}<br />{{product.metafields.product_frame_sizing.lens_length}}-{{product.metafields.product_frame_sizing.nose_bridge_size}}-{{product.metafields.product_frame_sizing.temple_size}} / {{json_product1.metafields.product_variant_info.color_code}}<br />{{product.metafields.product_frame_sizing.material}}<br />{{product.price | money}}</td>
           </tr>
         </table>
-        <table class="product_info slide_description_bottom_right price_txt text-uppercase">
+        <table class="product_info slide_description_bottom_right price_txt text-uppercase hide">
           <tr>
             <td><u>{{ 'cart.general.buy_now' | t }}</u></td>
           </tr>
         </table>
       </div>
-      <div class="col-lg-4 pl-50 my-auto section1_imgl custom_overlay lazyload right_column" data-bg="{{middle_bg_image_desktop}}" style="border-left: 3px solid #ffffff; border-right: 3px solid #ffffff;" data-desktop-url="{{middle_bg_image_desktop}}" data-mobile-url="{{middle_bg_image_mobile}}">
+      <div class="col-lg-4 pl-20 my-auto section1_imgl custom_overlay lazyload right_column" data-bg="{{middle_bg_image_desktop}}" style="border-left: 3px solid #ffffff; border-right: 3px solid #ffffff;" data-desktop-url="{{middle_bg_image_desktop}}" data-mobile-url="{{middle_bg_image_mobile}}">
         <a href="{{middle_json_product1.url}}">
           <div class="overlay">
           </div>
@@ -98,16 +98,16 @@
         <table class="product_info slide_title_bottom">
           <tr>
             <td>{{middle_product.title}} / {{middle_json_product1.metafields.product_variant_info.style_number}}<br />
-{{middle_product.metafields.product_frame_sizing.lens_length}}-{{middle_product.metafields.product_frame_sizing.nose_bridge_size}}-{{middle_product.metafields.product_frame_sizing.temple_size}} / {{middle_json_product1.metafields.product_variant_info.color_code}}<br />{{middle_product.metafields.product_frame_sizing.material}}<br /><br />{{middle_json_product1.price | money}}</td>
+{{middle_product.metafields.product_frame_sizing.lens_length}}-{{middle_product.metafields.product_frame_sizing.nose_bridge_size}}-{{middle_product.metafields.product_frame_sizing.temple_size}} / {{middle_json_product1.metafields.product_variant_info.color_code}}<br />{{middle_product.metafields.product_frame_sizing.material}}<br />{{middle_json_product1.price | money}}</td>
 </tr>
 </table>
-        <table class="product_info slide_description_bottom_right price_txt text-uppercase">
+        <table class="product_info slide_description_bottom_right price_txt text-uppercase hide">
           <tr>
             <td><u>{{ 'cart.general.buy_now' | t }}</u></td>
           </tr>
         </table>
       </div>
-      <div class="col-lg-4 pl-50 my-auto section1_imgl custom_overlay lazyload right_column" data-bg="{{right_bg_image_desktop}}" style="border-left: 3px solid #ffffff;" data-desktop-url="{{right_bg_image_desktop}}" data-mobile-url="{{right_bg_image_mobile}}">
+      <div class="col-lg-4 pl-20 my-auto section1_imgl custom_overlay lazyload right_column" data-bg="{{right_bg_image_desktop}}" style="border-left: 3px solid #ffffff;" data-desktop-url="{{right_bg_image_desktop}}" data-mobile-url="{{right_bg_image_mobile}}">
         <a href="{{right_json_product1.url}}">
           <div class="overlay">
           </div>
@@ -115,10 +115,10 @@
         <table class="product_info slide_title_bottom">
           <tr>
             <td>{{right_product.title}} / {{right_json_product1.metafields.product_variant_info.style_number}}<br />
-{{right_product.metafields.product_frame_sizing.lens_length}}-{{right_product.metafields.product_frame_sizing.nose_bridge_size}}-{{right_product.metafields.product_frame_sizing.temple_size}} / {{right_json_product1.metafields.product_variant_info.color_code}}<br />{{right_product.metafields.product_frame_sizing.material}}<br /><br />{{right_json_product1.price | money}}</td>
+{{right_product.metafields.product_frame_sizing.lens_length}}-{{right_product.metafields.product_frame_sizing.nose_bridge_size}}-{{right_product.metafields.product_frame_sizing.temple_size}} / {{right_json_product1.metafields.product_variant_info.color_code}}<br />{{right_product.metafields.product_frame_sizing.material}}<br />{{right_json_product1.price | money}}</td>
 </tr>
 </table>
-        <table class="product_info slide_description_bottom_right price_txt text-uppercase">
+        <table class="product_info slide_description_bottom_right price_txt text-uppercase hide">
           <tr>
             <td><u>{{ 'cart.general.buy_now' | t }}</u></td>
           </tr>
