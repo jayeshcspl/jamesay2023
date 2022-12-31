@@ -48,7 +48,11 @@
         <li class="d-none d-md-inline-block hide">
           <span class="search" OnClick="document.searchform.q.focus();"><span id="search_icon" style="color : {{color_code}}">{{ 'general.header.search_txt' | t }}</span></span>
         </li>
+<<<<<<< HEAD
+        {% comment %} {% include 'currency_switcher', color_code: color_code %} {% endcomment %}
+=======
         {% include 'currency_switcher', color_code: color_code %}
+>>>>>>> e93427a0679e590242e9e3ac86693f67cdd4998f
         <li>
           {% if cart.item_count > -1 %}
             <span class="show_open">
