@@ -628,6 +628,10 @@
 }
 
 @media only screen and (min-width: 700px) {
+	#shopify-privacy-banner-wrapper #shopify-privacy-banner {
+		bottom: 40px !important;
+		left: 40px;
+	}
 	#store-locator div#storemapper #storemapper-left {
 		position: fixed !important;
 		z-index: 12;
