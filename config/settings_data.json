@@ -19,8 +19,7 @@
     "social_youtube_link": "",
     "social_vimeo_link": "",
     "cart_notes_enable": false,
-    "cdn_file_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0224\/6066\/1824\/files\/",
-    "favicon": "shopify:\/\/shop_images\/favicon-ays-JA.png",
+    "favicon": "shopify:\/\/shop_images\/favicon23.png",
     "checkout_header_image": "",
     "checkout_logo_image": "shopify:\/\/shop_images\/jamesay.png",
     "checkout_logo_position": "center",
@@ -35,6 +34,7 @@
     "checkout_accent_color": "#000000",
     "checkout_button_color": "#000000",
     "checkout_error_color": "#e32c2b",
+    "cdn_file_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0224\/6066\/1824\/files\/",
     "sections": {
       "collection-list": {
         "type": "collection-list",
