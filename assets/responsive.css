@@ -634,6 +634,9 @@
 		bottom: 40px !important;
 		left: 40px;
 	}
+	#shopify-privacy-banner-div a {
+		display: block;
+	}
 	#store-locator div#storemapper #storemapper-left {
 		position: fixed !important;
 		z-index: 12;
