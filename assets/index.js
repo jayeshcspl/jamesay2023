@@ -195,7 +195,9 @@ jQuery('.dot_img').each(function( index ) {
     }    
   });
 
-  document.forms['searchform'].elements['q'].focus();
+  if (document.forms['searchform'].elements['q'].length) {
+    document.forms['searchform'].elements['q'].focus();
+  }
 
 	$("#jamesay").click(function() {
       $('html, body').animate({scrollTop: $("#jamesay-data").offset().top-200}, 2000);
