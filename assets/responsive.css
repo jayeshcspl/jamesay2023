@@ -530,6 +530,9 @@
 		width: calc(100% - 10px);
 		min-height: 70vh;
 	}
+	.three_col_3_product .section1_imgl.middle_column {
+		margin-bottom: 20px !important;
+	}
 	.two_column_one_product .right_column .section1_imgl{
 		margin-bottom: 20px !important;
 	} 
