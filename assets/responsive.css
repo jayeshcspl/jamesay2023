@@ -571,7 +571,9 @@
 	#james-ay-x-northside-quot-savage-quot-limited-edition .vimeo-wrapper {
 		height: 107.4%;
 	}
-	
+	#shopify-privacy-banner-button-div {
+		justify-content: flex-start;
+	}
 }
 @media only screen 
     and (device-width : 375px) 
