@@ -1,6 +1,8 @@
 {% if template != 'cart' %}
   {% comment %} {% include 'usp_bar' %} {% endcomment %}
+  {% if template == 'index' %}
   {% include 'partner_logos' %}
+  {% endif %}
   {% include 'newsletter' %}
   {% include 'footer-main' %}
 	<a id="return-to-top">
