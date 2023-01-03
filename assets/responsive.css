@@ -526,7 +526,7 @@
 	}
 	.two_column_one_product .right_column .section1_imgl, 
 	.two_column_slide .right_column .section1_imgl {
-		width: calc(96%-40);
+		width: calc(100% - 10px);
 		min-height: 70vh;
 		margin-bottom: 20px !important;
 	}
