@@ -519,8 +519,8 @@
 	section.followthesun_gif h1 {
     color: #F1F512;
 	}
-	.two_column_one_product .section1_imgl,
-	.two_column_two_product .section1_imgl {
+	.two_column_one_product .section1_imgl1,
+	.two_column_two_product .section1_imgl1 {
 		background-size: contain;
 		background-position: 100% 35%;
 	}
