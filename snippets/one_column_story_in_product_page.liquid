@@ -1,8 +1,8 @@
 {% assign article1 = articles[story_url] %}
 {% assign desktop_img = article1.image | img_url: "master" %}
-{% if article1.metafields.cf_story.mobile_img and article1.metafields.cf_story.mobile_img != blank %}
+{% if article1.metafields.cf_story.mobile_img %}
   {% if request.host != "jamesay.myshopify.com" and request.host != "jamesay.com" %}
-    {% assign mobile_img = settings.cdn_file_url | append: article1.metafields.cf_story.mobile_img %}
+    {% assign mobile_img = {{settings.cdn_file_url}} | append: article1.metafields.cf_story.mobile_img %}
   {% else %}
     {% assign mobile_img = article1.metafields.cf_story.mobile_img | file_img_url: '800x' %}
   {% endif %}
@@ -40,7 +40,7 @@
         <a href="{{ article1.url }}" class="testbg">
           <table class="story_model_info text-yellow mt-8 d-none d-lg-block">
             <tr>
-              <td>{{ settings.cdn_file_url }}<br>{{ article1.metafields.cf_story.mobile_img }}<br>{{ article1.metafields.story_model_info.model_name }}<br>
+              <td>{{ article1.metafields.story_model_info.model_name }}<br>
                 {{ article1.metafields.story_model_info.age }}<br>
                 {{ article1.metafields.story_model_info.city }}</td>
               <td>{{ article1.metafields.story_model_info.style_name_and_number }}<br>
