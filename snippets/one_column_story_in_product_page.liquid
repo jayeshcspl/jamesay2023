@@ -1,6 +1,6 @@
 {% assign article1 = articles[story_url] %}
 {% assign desktop_img = article1.image | img_url: "master" %}
-{% if article1.metafields.cf_story.mobile_img %}
+{% if article1.metafields.cf_story.mobile_img and article1.metafields.cf_story.mobile_img != blank %}
   {% if request.host != "jamesay.myshopify.com" and request.host != "jamesay.com" %}
     {% assign mobile_img = "https://cdn.shopify.com/s/files/1/0224/6066/1824/files/" | append: article1.metafields.cf_story.mobile_img %}
   {% else %}
