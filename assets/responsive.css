@@ -667,6 +667,9 @@
 	}
 }
 @media only screen and (max-width: 669px) {
+	#fullpage1.homepage { 
+		margin-top: 54px;
+	}
 	.mobile_only {
 		display: none;
 	}
