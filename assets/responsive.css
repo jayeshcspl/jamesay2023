@@ -672,6 +672,9 @@
 	}
 }
 @media only screen and (max-width: 669px) {
+	.template-index .slide_title_bottom {
+		bottom: 20px;
+	}
 	#fullpage1.homepage { 
 		margin-top: 61px;
 	}
