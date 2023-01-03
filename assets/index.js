@@ -195,7 +195,7 @@ jQuery('.dot_img').each(function( index ) {
     }    
   });
 
-  if (document.forms['searchform'].length) {
+  if ($('form[name="searchform"]').length) {
     document.forms['searchform'].elements['q'].focus();
   }
 
