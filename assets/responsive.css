@@ -529,7 +529,7 @@
 		width: calc(100% - 10px);
 		min-height: 70vh;
 	}
-	.three_col_3_product .section1_imgl.middle_column {
+	.three_col_3_product .section1_imgl.middle_column  {
 		margin-top: 20px !important;
 		margin-bottom: 20px !important;
 	}
