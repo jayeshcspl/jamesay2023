@@ -107,8 +107,8 @@
 	}
 	.marquee {
 		overflow-x: hidden;
-	  }
-	  .marquee p {
+	}
+	.marquee p {
 		position: absolute;
 		width: 100%;
 		text-align: center;
@@ -119,27 +119,27 @@
 		-webkit-animation: scroll-left 2s linear infinite;
 		animation: scroll-left 20s linear infinite;
 		white-space: nowrap;
-	  }
+	}
 	  
-	  @-moz-keyframes scroll-left {
+	@-moz-keyframes scroll-left {
 		0% {
 		  -moz-transform: translateX(100%);
 		}
 		100% {
 		  -moz-transform: translateX(-100%);
 		}
-	  }
+	}
 	  
-	  @-webkit-keyframes scroll-left {
+	@-webkit-keyframes scroll-left {
 		0% {
 		  -webkit-transform: translateX(100%);
 		}
 		100% {
 		  -webkit-transform: translateX(-100%);
 		}
-	  }
+	}
 	  
-	  @keyframes scroll-left {
+	@keyframes scroll-left {
 		0% {
 		  -moz-transform: translateX(100%);
 		  -webkit-transform: translateX(100%);
@@ -150,7 +150,7 @@
 		  -webkit-transform: translateX(-100%);
 		  transform: translateX(-100%);
 		}
-	  }
+	}
 }
 @media only screen and (max-width: 1400px) {
 	.fs120{
