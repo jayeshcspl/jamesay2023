@@ -41,7 +41,7 @@ $(document).ready(function($) {
     }
   }
 if (deviceWidth < 575 ){
-  $('#stories #fullpage section, .template-article #fullpage1 section, .template-product #fullpage1 section, .template-index #fullpage section').each(function (index, value){
+  $('#stories #fullpage section, .template-article #fullpage1 section, .template-product #fullpage1 section, .template-index #fullpage section, .template-index #fullpage1 section').each(function (index, value){
       //console.log(index);
       //console.log($(value).attr('data-section'));
       if($(value).attr('data-section') == "two-image") {
@@ -195,7 +195,9 @@ jQuery('.dot_img').each(function( index ) {
     }    
   });
 
-  document.forms['searchform'].elements['q'].focus();
+  if ($('form[name="searchform"]').length) {
+    document.forms['searchform'].elements['q'].focus();
+  }
 
 	$("#jamesay").click(function() {
       $('html, body').animate({scrollTop: $("#jamesay-data").offset().top-200}, 2000);
