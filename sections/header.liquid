@@ -13,13 +13,13 @@
       {% assign site_link = "https://jamesay.com" %}
     {% else %}
       {% assign all_collection_link = "/collections/all" %}
-      {% assign lang_code = "DE" %}
+      {% assign lang_code = "DK" %}
       {% assign site_link = "https://jamesay.dk" %}
     {% endif %}
     <span class="shop_link" style="color : {{color_code}}">
-      <a href="{{all_collection_link}}">SHOP</a>
+      <a href="{{all_collection_link}}" class="fadein">SHOP</a>
     </span>
-    <span class="l-left">
+    <span class="l-left fadein">
       <a href="/">{% include 'logo-svg' %}</a>
     </span>
     {% if cart.total_price > 0 %}
