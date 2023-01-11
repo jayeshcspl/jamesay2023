@@ -196,7 +196,9 @@
 			transform: translateX(-100%); 
 		}
 	}
-
+	.followthesun .custom_overlay {
+		min-height: 80vh;
+	}
 }
 @media only screen and (max-width: 1400px) {
 	.fs120{
