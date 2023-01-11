@@ -9,7 +9,7 @@
 {% else %}
 {% assign sec_order = 0 %}
 {% endif %}
-<section class="vertical-scrolling h-100 marquee1" style="order: {{sec_order}};">
+<section class="vertical-scrolling h-100 marquee1 example1" style="order: {{sec_order}};">
   <div class="container-fluid h-100 px-0">
     <div class="row pl-50 pr-50 no-gutters align-items-center mobile_min-vh-40 min-vh-100">
       {% if request.host == "jamesay-dk.myshopify.com" or request.host == "jamesay.dk" %}
@@ -19,9 +19,7 @@
       {% endif %}
       <div class="col-12">
         <a href="{{all_collection_link}}">
-          <div class="example1">
             <h3 class="fs60">{{scrolling_text}}</h3>
-          </div>
         </a>
       </div>
   </div>
