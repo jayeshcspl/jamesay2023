@@ -196,8 +196,8 @@
 			transform: translateX(-100%); 
 		}
 	}
-	.followthesun .custom_overlay1 {
-		min-height: 80vh;
+	.followthesun .custom_overlay {
+		min-height: 100vh;
 	}
 }
 @media only screen and (max-width: 1400px) {
