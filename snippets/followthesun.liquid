@@ -9,6 +9,12 @@
 {% assign mobile_img = desktop_img %}
 {% endif %} 
 
+{% if shop.metafields.followthesun.bgcolor != blank %}
+{% assign bgcolor = shop.metafields.followthesun.bgcolor %}
+{% else %}
+{% assign bgcolor = "#FFDF30" %}
+{% endif %} 
+
 {% if shop.metafields.followthesun.sec_order != blank %}
 {% assign sec_order = shop.metafields.followthesun.sec_order %}
 {% else %}
