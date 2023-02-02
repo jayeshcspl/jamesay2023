@@ -298,7 +298,7 @@
                 {% if product.metafields.product_frame_sizing.frame_width_image != blank %}
                   {% assign frame_width_image = product.metafields.product_frame_sizing.frame_width_image %}
                 {% else %}
-                  {% assign frame_width_image = "{{settings.cdn_file_url}}cannes_frame_width.png?v=1617622313" %}
+                  {% assign frame_width_image = settings.cdn_file_url | append: "cannes_frame_width.png?v=1617622313" %}
                 {% endif %}
                 <img src="{{frame_width_image}}" class="img-fluid mb-5" alt="">
                 <p>{{ 'products.label.width_txt' | t }}: {{product.metafields.product_frame_sizing.frame_width}}mm</p>
