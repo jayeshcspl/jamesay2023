@@ -358,7 +358,7 @@
     {% if product.metafields.product_info.tree_planted_image != blank %}
       {% assign tree_planted_image = product.metafields.product_info.tree_planted_image %}
     {% else %}
-      {% assign tree_planted_image = "{{settings.cdn_file_url}}one_order_one_tree_planted.png?v=1617715925" %}
+      {% assign tree_planted_image = settings.cdn_file_url | append: "one_order_one_tree_planted.png?v=1617715925" %}
     {% endif %}
     {% if product.metafields.product_info.tree_planted_title != blank %}
       {% assign tree_planted_title = product.metafields.product_info.tree_planted_title %}
