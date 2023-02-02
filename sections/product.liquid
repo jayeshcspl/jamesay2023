@@ -343,7 +343,7 @@
     {% if product.metafields.product_info.packaging_image != blank %}
       {% assign packaging_image = product.metafields.product_info.packaging_image %}
     {% else %}
-      {% assign packaging_image = settings.cdn_file_url | append: "premium_packaging.png?v=1617715925" %}
+      {% assign packaging_image = settings.cdn_file_url | append: "packaging-sustainable-james-ay.jpg" %}
     {% endif %}
       {% if product.metafields.product_info.packaging_title != blank %}
       {% assign packaging_title = product.metafields.product_info.packaging_title %}
@@ -358,7 +358,7 @@
     {% if product.metafields.product_info.tree_planted_image != blank %}
       {% assign tree_planted_image = product.metafields.product_info.tree_planted_image %}
     {% else %}
-      {% assign tree_planted_image = settings.cdn_file_url | append: "one_order_one_tree_planted.png?v=1617715925" %}
+      {% assign tree_planted_image = settings.cdn_file_url | append: "climaider-james-ay-trees.jpg" %}
     {% endif %}
     {% if product.metafields.product_info.tree_planted_title != blank %}
       {% assign tree_planted_title = product.metafields.product_info.tree_planted_title %}
