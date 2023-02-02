@@ -159,9 +159,14 @@
     ]
   },
   {
-    "type": "text",
-    "id": "cdn_file_url",
-    "label": "CDN FILE URL",
-    "default": "https://cdn.shopify.com/s/files/1/0224/6066/1824/files/"
+    "name": "CDN FILE URL",
+    "settings": [
+      {
+        "type": "text",
+        "id": "cdn_file_url",
+        "label": "CDN FILE URL",
+        "default": "https://cdn.shopify.com/s/files/1/0224/6066/1824/files/"
+      }
+    ]
   }
 ]
