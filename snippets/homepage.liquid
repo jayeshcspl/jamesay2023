@@ -124,22 +124,23 @@
         };
         var chasing_story = new Vimeo.Player('followthesun_video_id', options_story);
       }</script>
-
-{% if shop.metafields.one_column_general.display_video == 1 %}
-  {% if shop.metafields.one_column_general.video_id != blank %}
-    {% assign vimeo_video = shop.metafields.one_column_general.video_id %}
-  {% else %}
-    {% assign vimeo_video = 693990646 %}
+{% if shop.metafields.one_column_general.display_slide == 1 %}
+  {% if shop.metafields.one_column_general.display_video == 1 %}
+    {% if shop.metafields.one_column_general.video_id != blank %}
+      {% assign vimeo_video = shop.metafields.one_column_general.video_id %}
+    {% else %}
+      {% assign vimeo_video = 693990646 %}
+    {% endif %}
+    <script type="text/javascript">
+      if ($('#one_column_general_vimeo-video').length > 0) { 
+      var options = {
+                    id: {{ vimeo_video }},
+      autoplay: true,
+                    loop: true,
+                    responsive: true,
+                    background: true,
+                };
+                var chasing = new Vimeo.Player('one_column_general_vimeo-video', options);
+              }</script>
   {% endif %}
-  <script type="text/javascript">
-    if ($('#one_column_general_vimeo-video').length > 0) { 
-    var options = {
-                  id: {{ vimeo_video }},
-    autoplay: true,
-                  loop: true,
-                  responsive: true,
-                  background: true,
-              };
-              var chasing = new Vimeo.Player('one_column_general_vimeo-video', options);
-            }</script>
 {% endif %}
