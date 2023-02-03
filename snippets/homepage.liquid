@@ -2,8 +2,9 @@
   {% if shop.metafields.two_column_slide.display_slide == 1 %}
     {% include 'two_column_slide', section_number: "two_column_slide" %}
   {% endif %}
-  {% include 'one_column_general_slide', section_number: "one_column_general_slide" %}
-
+  {% if shop.metafields.one_column_general.display_slide == 1 %}
+    {% include 'one_column_general_slide', section_number: "one_column_general_slide" %}
+  {% endif %}
   {% comment %} {% if shop.metafields.we_make_handmade.display_slide == 1  %}
     {% include 'homemade_glasses', section_number:"homemade_glasses" %}
   {% endif %} {% endcomment %}{% comment %} {% if shop.metafields.2_column_2_product.display_slide == 1  %}
@@ -123,22 +124,23 @@
         };
         var chasing_story = new Vimeo.Player('followthesun_video_id', options_story);
       }</script>
-
-{% if shop.metafields.one_column_general.display_video == 1 %}
-  {% if shop.metafields.one_column_general.video_id != blank %}
-    {% assign vimeo_video = shop.metafields.one_column_general.video_id %}
-  {% else %}
-    {% assign vimeo_video = 693990646 %}
+{% if shop.metafields.one_column_general.display_slide == 1 %}
+  {% if shop.metafields.one_column_general.display_video == 1 %}
+    {% if shop.metafields.one_column_general.video_id != blank %}
+      {% assign vimeo_video = shop.metafields.one_column_general.video_id %}
+    {% else %}
+      {% assign vimeo_video = 693990646 %}
+    {% endif %}
+    <script type="text/javascript">
+      if ($('#one_column_general_vimeo-video').length > 0) { 
+      var options = {
+                    id: {{ vimeo_video }},
+      autoplay: true,
+                    loop: true,
+                    responsive: true,
+                    background: true,
+                };
+                var chasing = new Vimeo.Player('one_column_general_vimeo-video', options);
+              }</script>
   {% endif %}
-  <script type="text/javascript">
-    if ($('#one_column_general_vimeo-video').length > 0) { 
-    var options = {
-                  id: {{ vimeo_video }},
-    autoplay: true,
-                  loop: true,
-                  responsive: true,
-                  background: true,
-              };
-              var chasing = new Vimeo.Player('one_column_general_vimeo-video', options);
-            }</script>
 {% endif %}
