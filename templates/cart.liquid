@@ -152,7 +152,7 @@
                 <ul class="payment-icons list-inline">
                   {% comment %} {% for type in shop.enabled_payment_types %} {% endfor %}{% endcomment %}
                   {% if request.host == "jamesay-dk.myshopify.com" or request.host == "jamesay.dk" %}
-                  {% assign enabled_payment_types = 'visa,master,american_express,dankort,diners_club,ideal,mobilepay,klarna,apple_pay' | remove: ' ' | split: ',' %}
+                  {% assign enabled_payment_types = 'visa,master,american_express,dankort,diners_club,ideal,mobilepay,klarna,apple_pay,sofort' | remove: ' ' | split: ',' %}
                   {% else %}
                   {% assign enabled_payment_types = 'visa,master,american_express,dankort,diners_club,ideal,klarna,apple_pay' | remove: ' ' | split: ',' %}
                   {% endif %}
