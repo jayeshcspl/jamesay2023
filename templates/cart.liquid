@@ -151,7 +151,7 @@
               <div class="col-md-6 mt-5 mt-md-2 text-center text-md-left swaporder1">
                 <ul class="payment-icons list-inline">
                   {% comment %} {% for type in shop.enabled_payment_types %} {% endfor %}{% endcomment %}
-                  {% assign enabled_payment_types = 'afterpay,visa,master,mobilepay,klarna,apple_pay,dankort,diners_club,ideal' | remove: ' ' | split: ',' %}
+                  {% assign enabled_payment_types = 'visa,master,mobilepay,klarna,apple_pay,dankort,diners_club,ideal' | remove: ' ' | split: ',' %}
                   {% for type in enabled_payment_types %}
                   <li class="list-inline-item mr-1 pb-1">
                     {{ type | payment_type_svg_tag: class: 'payment-cc-icon' }}
