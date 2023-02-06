@@ -793,6 +793,9 @@
 	.desktop_only {
 		display: none;
 	}
+	.mobile_only {
+		display: block;
+	}
 	#store-locator div#storemapper #storemapper-left {
 		position: relative;
 		top: 41px;
