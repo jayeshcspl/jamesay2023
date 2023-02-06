@@ -738,6 +738,12 @@
 }
 
 @media only screen and (min-width: 700px) {
+	.desktop_only {
+		display: block;
+	}
+	.mobile_only {
+		display: none;
+	}
 	#shopify-privacy-banner-wrapper #shopify-privacy-banner {
 		bottom: 40px !important;
 		left: 40px;
