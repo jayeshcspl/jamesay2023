@@ -69,7 +69,7 @@
                           {{ 'cart.general.remove' | t }}
                         </a>
                       </td>
-                      <td scope="col" class="text-center text-md-left cart-money mobile_only" data-label="{{ 'cart.label.price' | t }}">
+                      <td scope="col" class="text-center text-md-left cart-money desktop_only" data-label="{{ 'cart.label.price' | t }}">
                         {% if item.original_line_price != item.line_price %}
                           <span class="visually-hidden">{{ 'cart.label.discounted_price' | t }}</span>
                           {{ item.price | money }}
