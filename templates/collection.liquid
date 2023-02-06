@@ -103,7 +103,8 @@
                       <a href="{{ variant.url | within: collection }}">
                         <div class="reveal">
                           {% if variant.metafields.product_variant_info.new_style == 1 %}
-                            <div class="new_style"><span>NEW</span> <span>NEW</span> <span>NEW</span> <span>NEW</span> <span>NEW</span> <span>NEW</span> <span>NEW</span> <span>NEW</span> <span>NEW</span> <span>NEW</span> <span>NEW</span></div>
+                            <div class="new_style desktop_only"><span>NEW</span> <span>NEW</span> <span>NEW</span> <span>NEW</span> <span>NEW</span> <span>NEW</span> <span>NEW</span> <span>NEW</span> <span>NEW</span> <span>NEW</span> <span>NEW</span></div>
+                            <div class="new_style mobile_only"><span>NEW</span> <span>NEW</span> <span>NEW</span> <span>NEW</span> <span>NEW</span> <span>NEW</span> <span>NEW</span> <span>NEW</span> <span>NEW</span> <span>NEW</span> <span>NEW</span></div>
                           {% endif %}
                         <img width="446" height="463"  src="{{ variant | img_url: '150x' }}" 
                         data-sizes="auto" 
