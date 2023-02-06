@@ -790,7 +790,7 @@
 	.three_col_3_product .section1_imgl {
 		min-height: 55vh;
 	}
-	.mobile_only {
+	.desktop_only {
 		display: none;
 	}
 	#store-locator div#storemapper #storemapper-left {
