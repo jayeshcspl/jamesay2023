@@ -744,6 +744,7 @@
 	.mobile_only {
 		display: none;
 	}
+	body .shopify-pc__banner__dialog,
 	#shopify-privacy-banner-wrapper #shopify-privacy-banner {
 		bottom: 40px !important;
 		left: 40px;
