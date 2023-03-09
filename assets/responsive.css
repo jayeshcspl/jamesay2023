@@ -679,6 +679,7 @@
 	#james-ay-x-northside-quot-savage-quot-limited-edition .vimeo-wrapper {
 		height: 107.4%;
 	}
+	#shopify-pc__banner .shopify-pc__banner__btns,
 	#shopify-privacy-banner #shopify-privacy-banner-button-div {
 		justify-content: flex-start;
 	}
@@ -738,6 +739,13 @@
 }
 
 @media only screen and (min-width: 700px) {
+	.desktop_only {
+		display: block;
+	}
+	.mobile_only {
+		display: none;
+	}
+	body .shopify-pc__banner__dialog,
 	#shopify-privacy-banner-wrapper #shopify-privacy-banner {
 		bottom: 40px !important;
 		left: 40px;
@@ -790,8 +798,11 @@
 	.three_col_3_product .section1_imgl {
 		min-height: 55vh;
 	}
-	.mobile_only {
+	.desktop_only {
 		display: none;
+	}
+	.mobile_only {
+		display: block;
 	}
 	#store-locator div#storemapper #storemapper-left {
 		position: relative;

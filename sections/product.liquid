@@ -77,7 +77,9 @@
                 </span>
               </div></div>
             </div>
-   
+            <span data-product-price class="price_non_eu">
+             Price for Non-EU Destinations {{ current_variant.price | times:0.8 | money }}
+            </span>
             {% assign short_description_old = product.metafields.cf_product.short_description %}
             {% if product.metafields.product_info.short_description != blank %}
               {% assign short_description = product.metafields.product_info.short_description %}

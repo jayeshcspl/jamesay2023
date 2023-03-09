@@ -2807,20 +2807,25 @@ input.needsclick {
   outline: 0;
   box-shadow: none;
 }
+body .shopify-pc__banner__dialog,  
 #shopify-privacy-banner-wrapper #shopify-privacy-banner {
-  max-width: 550px;
+  max-width: 560px;
   background-color: #000000;
   font-size: 12px;
 }
+#shopify-pc__banner .shopify-pc__banner__btns,
 #shopify-privacy-banner #shopify-privacy-banner-button-div {
   min-width: inherit;
+  justify-content: center;
 }
 #shopify-privacy-banner-wrapper #shopify-privacy-banner h3 {
   display: none;
 }
+#shopify-pc__banner #shopify-pc__banner__btn-decline,
 #shopify-privacy-banner-decline-button {
   display: none;
 }
+#shopify-pc__banner #shopify-pc__banner__btn-accept,
 #shopify-privacy-banner-div #shopify-privacy-banner-wrapper button.accept {
   border: 1px solid #fff;
   background: transparent;
@@ -2869,11 +2874,16 @@ input.needsclick {
 }
 .new_style {
   position: absolute;
-  font-size: 13px;
-  padding-top: 5px;
+  padding:7px 10px;
+  font-size: 85%;
+  line-height: 1.4;
 }
-.new_style span {
-  padding: 0px 4px;
+.price_non_eu {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid;
+  display: block;
+  display: none;
 }
 /* Small devices (landscape phones, 576px and up)*/
 @media(min-width: 576px) {
