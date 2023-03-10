@@ -72,11 +72,11 @@
                       <td scope="col" class="text-center text-md-left cart-money desktop_only" data-label="{{ 'cart.label.price' | t }}">
                         {% if item.original_line_price != item.line_price %}
                           <span class="visually-hidden">{{ 'cart.label.discounted_price' | t }}</span>
-                          {{ item.price | money }}
+                          {{ item.price | times: 1.25 | money }}
                           <span class="visually-hidden">{{ 'cart.label.original_price' | t }}</span>
-                          <s>{{ item.original_price | money }}</s>
+                          <s>{{ item.original_price| times: 1.25 | money }}</s>
                         {% else %}
-                          {{ item.price | money }}
+                          {{ item.price | times: 1.25 | money }}
                         {% endif %}
                       </td>
                       <td scope="col" class="text-center text-md-left" data-label="{{ 'cart.label.quantity' | t }}">
