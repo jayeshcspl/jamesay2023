@@ -144,8 +144,8 @@
                     $('.hc-append').append('<form action="/cart" method="post" novalidate class="d-flex align-items-end flex-column h-100"><div class="w-100 hc-mini-table"><div class="cart_top">');
                     $(cart.items).each(function(index, item) {
                       index++;
-                      var price = Shopify.formatMoney(item.price,"{{ shop.money_with_currency_format }}");
-                      var line_price = Shopify.formatMoney(item.line_price,"{{ shop.money_with_currency_format }}");
+                      var price = Shopify.formatMoney(item.price * 1.25,"{{ shop.money_with_currency_format }}");
+                      var line_price = Shopify.formatMoney(item.line_price * 1.25,"{{ shop.money_with_currency_format }}");
                       console.log("price = " + price + " line_price" + line_price);
                       $('.cart_top').append('<div class="row no-gutters mb-3"><div class="col-3 media"><a href="' + item.url + '"><img src="' + item.image + '" width="90px" ></a></div><div class="col-9 pl-4"><div class="media-body"><h4><a href="' + item.url + '">' + item.product_title + '</a></h4>' + (
                         item.variant_title
