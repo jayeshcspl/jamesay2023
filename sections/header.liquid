@@ -30,7 +30,7 @@
         style="display: none;">
         <div class="vcenter">
           <div id="cart-price" class="site-header__cart-count">
-            <span>{{ cart.total_price | money }}</span>
+            <span>{{ cart.total_price | times: 1.25 | money }}</span>
           </div>
           | {{ 'cart.general.buy_now' | t }}
         </div>
