@@ -30,11 +30,11 @@
                   <li>
                     {% if item.original_line_price != item.line_price %}
                       <span class="visually-hidden">{{ 'cart.label.discounted_price' | t }}</span>
-                      {{ item.price | times: 1.25 | money }}
+                      {{ item.price | money }}
                       <span class="visually-hidden">{{ 'cart.label.original_price' | t }}</span>
-                      <s>{{ item.original_price | times: 1.25 | money }}</s>
+                      <s>{{ item.original_price | money }}</s>
                     {% else %}
-                      {{ item.price | times: 1.25 | money }}
+                      {{ item.price | money }}
                     {% endif %}
                     x
                     {{ item.quantity }}
