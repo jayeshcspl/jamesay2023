@@ -137,7 +137,7 @@
                             {% endif %}
                             {{ 'general.label.delivery' | t }} : {% if variant.inventory_quantity == 0 %} {{ 'general.label.out_of_stock' | t }}
                             {% else %}{{variant.metafields.product_variant_info.delivery}}{% endif %}<br>
-                            {{ variant.price | money }}
+                            {{ variant.price | times: 1.25 | money }}
                           </div>
                         </div>
                         <div class="col-lg-6 text-right dot_area hide_{{color | strip}}">
