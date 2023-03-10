@@ -125,9 +125,9 @@
                     <p class="mt-3">{{ 'cart.general.total' | t }}</p>
                   </div>                 
                   <div class="col-6 text-right euro">
-                    <p id="subtotal" class="cart-money">{{ cart.total_price | money }}</p>
+                    <p id="subtotal" class="cart-money">{{ cart.total_price | times: 1.25 | money }}</p>
                     {% if cart.total_discounts > 0 %}
-                      <p>{{ 'cart.general.savings' | t }} {{ cart.total_discounts | money }}</p>
+                      <p>{{ 'cart.general.savings' | t }} {{ cart.total_discounts | times: 1.25 | money }}</p>
                     {% endif %}
  
                   </div>                  
