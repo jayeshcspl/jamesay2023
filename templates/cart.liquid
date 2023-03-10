@@ -91,7 +91,7 @@
                               aria-label="{{ 'cart.general.item_quantity' | t }}">
                       </td>
                       <td scope="col" class="text-right cart-money" data-label="{{ 'cart.label.total' | t }}">
-                        {{ item.line_price | money }}
+                        {{ item.line_price | times: 1.25 | money }}
                       </td>
                     </tr>
                   {% endfor %}                   
@@ -107,7 +107,7 @@
             </div>           
             <div class="row no-gutters">
               <div class="col-12 d-none d-md-block mb-4 text-right euro no-gutter" style="border-bottom: 1px solid #dee2e6;">
-                <p id="subtotal" class="cart-money mb-0">{{ 'cart.general.total' | t }} {{ cart.total_price | money }}</p>
+                <p id="subtotal" class="cart-money mb-0">{{ 'cart.general.total' | t }} {{ cart.total_price | times: 1.25 | money }}</p>
                 <p class="usp_text d-none">{{ 'cart.general.purchase_plants_tree_remove_waste' | t }}</p>
                 {% if cart.total_discounts > 0 %}
                   <p>{{ 'cart.general.savings' | t }} {{ cart.total_discounts | money }}</p>
