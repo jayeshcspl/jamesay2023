@@ -202,7 +202,7 @@
 				},
 				renderPrice(t) {
 					const e = this.container.querySelector(h.productPrice);
-					this.container.querySelector(h.priceWrapper).classList.toggle(d, !t), t && (e.innerText = Object(c.formatMoney)(t.price, theme.moneyFormat))
+					this.container.querySelector(h.priceWrapper).classList.toggle(d, !t), t && (e.innerText = Object(c.formatMoney)(t.price * 1.25, theme.moneyFormat))
 				},
 				renderComparePrice(t) {
 					if (!t) return;
