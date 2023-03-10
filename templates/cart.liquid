@@ -113,7 +113,7 @@
                   <p>{{ 'cart.general.savings' | t }} {{ cart.total_discounts | money }}</p>
                 <div class="viabill-pricetag"
     data-view="basket"
-    data-price="{{ cart.total_price | money }}"
+    data-price="{{ cart.total_price | times: 1.25 | money }}"
     data-language="da"
     data-currency="dkk">
 </div>
