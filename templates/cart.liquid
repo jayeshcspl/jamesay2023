@@ -72,11 +72,11 @@
                       <td scope="col" class="text-center text-md-left cart-money desktop_only" data-label="{{ 'cart.label.price' | t }}">
                         {% if item.original_line_price != item.line_price %}
                           <span class="visually-hidden">{{ 'cart.label.discounted_price' | t }}</span>
-                          {{ item.price | money }}
+                          {{ item.price | times: 1.25 | money }}
                           <span class="visually-hidden">{{ 'cart.label.original_price' | t }}</span>
-                          <s>{{ item.original_price | money }}</s>
+                          <s>{{ item.original_price| times: 1.25 | money }}</s>
                         {% else %}
-                          {{ item.price | money }}
+                          {{ item.price | times: 1.25 | money }}
                         {% endif %}
                       </td>
                       <td scope="col" class="text-center text-md-left" data-label="{{ 'cart.label.quantity' | t }}">
@@ -91,7 +91,7 @@
                               aria-label="{{ 'cart.general.item_quantity' | t }}">
                       </td>
                       <td scope="col" class="text-right cart-money" data-label="{{ 'cart.label.total' | t }}">
-                        {{ item.line_price | money }}
+                        {{ item.line_price | times: 1.25 | money }}
                       </td>
                     </tr>
                   {% endfor %}                   
@@ -107,13 +107,13 @@
             </div>           
             <div class="row no-gutters">
               <div class="col-12 d-none d-md-block mb-4 text-right euro no-gutter" style="border-bottom: 1px solid #dee2e6;">
-                <p id="subtotal" class="cart-money mb-0">{{ 'cart.general.total' | t }} {{ cart.total_price | money }}</p>
+                <p id="subtotal" class="cart-money mb-0">{{ 'cart.general.total_incl_vat' | t }} {{ cart.total_price | times: 1.25 | money }}</p>
                 <p class="usp_text d-none">{{ 'cart.general.purchase_plants_tree_remove_waste' | t }}</p>
                 {% if cart.total_discounts > 0 %}
                   <p>{{ 'cart.general.savings' | t }} {{ cart.total_discounts | money }}</p>
                 <div class="viabill-pricetag"
     data-view="basket"
-    data-price="{{ cart.total_price | money }}"
+    data-price="{{ cart.total_price | times: 1.25 | money }}"
     data-language="da"
     data-currency="dkk">
 </div>
@@ -122,12 +122,12 @@
               <div class="col-12 d-block d-md-none mb-4 no-gutter" style="border-bottom: 1px solid #dee2e6;">
                 <div class="row">
                   <div class="col-6">
-                    <p class="mt-3">{{ 'cart.general.total' | t }}</p>
+                    <p class="mt-3">{{ 'cart.general.total_incl_vat' | t }}</p>
                   </div>                 
                   <div class="col-6 text-right euro">
-                    <p id="subtotal" class="cart-money">{{ cart.total_price | money }}</p>
+                    <p id="subtotal" class="cart-money">{{ cart.total_price | times: 1.25 | money }}</p>
                     {% if cart.total_discounts > 0 %}
-                      <p>{{ 'cart.general.savings' | t }} {{ cart.total_discounts | money }}</p>
+                      <p>{{ 'cart.general.savings' | t }} {{ cart.total_discounts | times: 1.25 | money }}</p>
                     {% endif %}
  
                   </div>                  

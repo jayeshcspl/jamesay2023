@@ -72,13 +72,13 @@
               <div class="col-6 fs19">{{current_variant.metafields.product_variant_info.style_number}}</div>
               <div class="col-6 text-right fs19 data-price-wrapper" data-price-wrapper> <div class="money">
                 <span data-product-price>
-                  {{ current_variant.price | money }}
+                  {{ current_variant.price | times:1.25 | money }}
   
                 </span>
               </div></div>
             </div>
             <span data-product-price class="price_non_eu">
-             Price for Non-EU Destinations {{ current_variant.price | times:0.8 | money }}
+             Price for Non-EU Destinations {{ current_variant.price | money }}
             </span>
             {% assign short_description_old = product.metafields.cf_product.short_description %}
             {% if product.metafields.product_info.short_description != blank %}
