@@ -204,7 +204,7 @@
             {% endif %}
             <div id="shiping_and_returns" class="tab_content collapse"><div>{{ shiping_and_returns }}</div></div>
 
-            <p data-toggle="collapse" aria-expanded="false" data-target="#reviews" class="mb-0 tab_title">{{ 'products.label.reviews_txt' | t }}<span><i></i><i></i></span></p>
+            <p data-toggle="collapse" aria-expanded="false" data-target="#reviews" class="mb-0 tab_title last">{{ 'products.label.reviews_txt' | t }}<span><i></i><i></i></span></p>
             {% if product.metafields.product_info.reviews != blank %}
               {% assign reviews = product.metafields.product_info.reviews %}
             {% else %}
