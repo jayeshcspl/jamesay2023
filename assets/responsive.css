@@ -849,6 +849,11 @@
 		padding-top: 30vh;
     padding-bottom: 30vh;
 	}
+	body .shopify-pc__banner__dialog,
+	#shopify-privacy-banner-wrapper #shopify-privacy-banner {
+		left: 0;
+		width: 100%;
+	}
 }
 @media only screen and (max-width: 320px) {
 	[class*="js-conveyor-"] ul li {
